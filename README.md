@@ -14,6 +14,8 @@ If you are new to the topic, start with [Fundamentals & Getting Started](#fundam
 
 This is a community-maintained and evolving list. Contributions, missing papers, new benchmarks, frameworks, and suggestions for improving the taxonomy are very welcome.
 
+The taxonomy is organizational rather than mutually exclusive; many systems span multiple layers and mechanisms.
+
 ## Contents
 
 - [Fundamentals & Getting Started](#fundamentals--getting-started)
@@ -29,10 +31,15 @@ This is a community-maintained and evolving list. Contributions, missing papers,
   - [Self-Verification & Self-Correction](#self-verification--self-correction)
   - [Self-Evolving Agent Frameworks](#self-evolving-agent-frameworks)
 - [Multi-Agent Self-Improvement](#multi-agent-self-improvement)
+  - [Co-Evolution](#co-evolution)
+  - [Inference-time Debate](#inference-time-debate)
 - [Coding / Software-Engineering Self-Improvement](#coding--software-engineering-self-improvement)
+  - [Self-Modifying Coding Agents](#self-modifying-coding-agents)
+  - [Iterative Repair & Training](#iterative-repair--training)
 - [Automated AI R&D](#automated-ai-rd)
 - [Evolutionary & Open-Ended RSI](#evolutionary--open-ended-rsi)
 - [Safety, Alignment & Theory](#safety-alignment--theory)
+  - [Supporting Safety Foundations](#supporting-safety-foundations)
 - [Introspection & Self-Modeling](#introspection--self-modeling)
 - [Benchmarks & Evaluations](#benchmarks--evaluations)
   - [Direct RSI & Self-Improvement Evaluations](#direct-rsi--self-improvement-evaluations)
@@ -81,7 +88,6 @@ Methods that improve model weights or training behavior through self-generated f
 
 - [Learning to Self-Evolve](https://arxiv.org/abs/2603.18620) - Uses reinforcement learning to teach models how to edit their own contexts for stronger performance on future tasks. (2026)
 - [Teaching LLMs to Self-Evolve: Cultivating Core Meta-Skills with Reinforcement Learning](https://arxiv.org/abs/2607.21971) - Trains MetaEvolve's reflection and feedback-driven refinement skills before applying inference-time evolutionary search to open-ended optimization. (2026)
-- [Agent0: Unleashing Self-Evolving Agents from Zero Data via Tool-Integrated Reasoning](https://arxiv.org/abs/2511.16043) - Co-evolves curriculum and executor agents initialized from the same base model to improve tool-using reasoning without human-curated data. (2025)
 - [Self-Adapting Language Models](https://arxiv.org/abs/2506.10943) - Introduces SEAL, which generates its own update data and fine-tuning directives to adapt model weights to new tasks. (2025)
 - [Meta-Rewarding Language Models: Self-Improving Alignment with LLM-as-a-Meta-Judge](https://arxiv.org/abs/2407.19594) - Lets a language model judge its own judgments and iteratively improve both evaluation and instruction-following ability. (2024)
 - [Self-Improvement in Language Models: The Sharpening Mechanism](https://arxiv.org/abs/2412.01951) - Formalizes self-improvement as amortizing a model's verifier-guided search into a sharper post-trained policy. (2024)
@@ -92,7 +98,6 @@ Methods that improve model weights or training behavior through self-generated f
 
 - [rStar-Math: Small LLMs Can Master Math Reasoning with Self-Evolved Deep Thinking](https://arxiv.org/abs/2501.04519) - Couples Monte Carlo tree search with self-evolved training data and a process preference model to improve mathematical reasoning. (2025)
 - [Quiet-STaR: Language Models Can Teach Themselves to Think Before Speaking](https://arxiv.org/abs/2403.09629) - Trains language models to generate useful internal rationales throughout arbitrary text rather than only on question-answer tasks. (2024)
-- [Language Agent Tree Search Unifies Reasoning, Acting, and Planning in Language Models](https://arxiv.org/abs/2310.04406) - Combines Monte Carlo tree search, model-based value estimates, environment feedback, and self-reflection without updating base weights. (2023)
 - [STaR: Bootstrapping Reasoning With Reasoning](https://arxiv.org/abs/2203.14465) - Alternates rationale generation, answer filtering, rationalization, and fine-tuning to bootstrap reasoning ability. (2022)
 
 ## Harness-level RSI
@@ -103,6 +108,7 @@ Methods that improve prompts, memory, verification, tools, or agent policies aro
 
 - [Automated Design of Agentic Systems](https://arxiv.org/abs/2408.08435) - Uses a meta-agent to invent and iteratively improve agent architectures represented as executable code. (2024)
 - [TextGrad: Automatic "Differentiation" via Text](https://arxiv.org/abs/2406.07496) - Backpropagates textual feedback through compound AI systems to optimize prompts, code, and other textual variables. (2024)
+- [Language Agent Tree Search Unifies Reasoning, Acting, and Planning in Language Models](https://arxiv.org/abs/2310.04406) - Combines Monte Carlo tree search, model-based value estimates, environment feedback, and self-reflection without updating base weights. (2023)
 - [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](https://arxiv.org/abs/2310.03714) - Compiles declarative LM programs by optimizing prompts and demonstrations against a user-defined metric. (2023)
 - [Large Language Models as Optimizers](https://arxiv.org/abs/2309.03409) - Introduces OPRO, which iteratively proposes and evaluates natural-language solutions and prompts from a history of scored attempts. (2023)
 - [Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution](https://arxiv.org/abs/2309.16797) - Evolves both task prompts and the mutation prompts that generate future prompt improvements. (2023)
@@ -119,6 +125,7 @@ Methods that improve prompts, memory, verification, tools, or agent policies aro
 
 ### Harness & Scaffold Evolution
 
+- [MetaSkill-Evolve: Recursive Self-Improvement of LLM Agents via Two-Timescale Meta-Skill Evolution](https://arxiv.org/abs/2607.05297) - Evolves task skills in a fast loop and the meta-skills governing its Analyzer, Retriever, Allocator, Proposer, and Evolver in a slower recursive loop. (2026)
 - [Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses](https://arxiv.org/abs/2604.25850) - Autonomously evolves tools, middleware, memory, and prompts through observable edits whose predictions are verified on later tasks. (2026)
 - [AutoHarness: Improving LLM Agents by Automatically Synthesizing a Code Harness](https://arxiv.org/abs/2603.03329) - Synthesizes and iteratively refines executable harnesses from environment feedback, eliminating illegal actions across 145 TextArena games. (2026)
 - [MemoHarness: Agent Harnesses That Learn from Experience](https://arxiv.org/abs/2607.14159) - Learns case-adaptive configurations across six harness control dimensions from execution diagnoses and a reusable experience bank. (2026)
@@ -146,9 +153,15 @@ Methods that improve prompts, memory, verification, tools, or agent policies aro
 
 Systems that use interaction among multiple agents to improve reasoning, policies, or agent populations.
 
+### Co-Evolution
+
 - [DEBATE, TRAIN, EVOLVE: Self Evolution of Language Model Reasoning](https://arxiv.org/abs/2505.15734) - Fine-tunes a model on its own multi-agent debate traces and repeats the debate-training loop without ground-truth labels. (2025)
+- [Agent0: Unleashing Self-Evolving Agents from Zero Data via Tool-Integrated Reasoning](https://arxiv.org/abs/2511.16043) - Co-evolves curriculum and executor agents initialized from the same base model to improve tool-using reasoning without human-curated data. (2025)
 - [EvoAgent: Towards Automatic Multi-Agent Generation via Evolutionary Algorithms](https://arxiv.org/abs/2406.14228) - Applies mutation, crossover, and selection to expand a specialized agent into a diverse multi-agent system. (2024)
 - [SOTOPIA-π: Interactive Learning of Socially Intelligent Language Agents](https://arxiv.org/abs/2403.08715) - Improves an agent policy through behavior cloning and self-reinforcement on filtered multi-agent social interactions. (2024)
+
+### Inference-time Debate
+
 - [Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate](https://arxiv.org/abs/2305.19118) - Uses adversarial debate and a judge to counter degeneration of thought during iterative reflection. (2023)
 - [Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325) - Iterates proposals and peer critiques among model instances to converge on more factual and accurate answers. (2023)
 
@@ -156,15 +169,20 @@ Systems that use interaction among multiple agents to improve reasoning, policie
 
 Agents and training loops that improve code, software-engineering performance, or their own implementations.
 
+### Self-Modifying Coding Agents
+
 - [A Self-Improving Coding Agent](https://arxiv.org/abs/2504.15228) - Demonstrates a coding agent that edits its own implementation and empirically improves on SWE-bench Verified. (2025)
 - [Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents](https://arxiv.org/abs/2505.22954) - Evolves a coding agent by modifying its own code and retaining empirically validated improvements in an open-ended archive. (2025)
+
+### Iterative Repair & Training
+
 - [Training Software Engineering Agents and Verifiers with SWE-Gym](https://arxiv.org/abs/2412.21139) - Supplies executable repository tasks and trajectories for training both SWE agents and inference-time verifiers. (2024)
 - [AgentCoder: Multi-Agent-based Code Generation with Iterative Testing and Optimisation](https://arxiv.org/abs/2312.13010) - Coordinates programmer, test-designer, and test-executor agents in a feedback loop that iteratively repairs generated code. (2023)
 - [Teaching Large Language Models to Self-Debug](https://arxiv.org/abs/2304.05128) - Teaches models to inspect execution results, explain their code, and repair failures through iterative prompting. (2023)
 
 ## Automated AI R&D
 
-- [autoresearch](https://github.com/karpathy/autoresearch) - Runs an autonomous loop that edits an LLM training program, trains for five minutes, and keeps only changes that improve validation bits per byte. (2026)
+- [Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering](https://arxiv.org/abs/2607.28568) - Connects execution-grounded operator training with long-horizon evolution in the open OpenMLE stack, using machine-learning engineering as an AI4AI testbed for RSI. (2026)
 - [FT-Dojo: Towards Autonomous LLM Fine-Tuning with Language Agents](https://arxiv.org/abs/2603.01712) - Turns data collection, training, evaluation, diagnosis, and strategy revision into an executable environment for autonomous fine-tuning agents. (2026)
 - [Towards End-to-End Automation of AI Research (The AI Scientist-v2)](https://doi.org/10.1038/s41586-026-10265-5) - Uses template-free agentic tree search to propose hypotheses, run experiments, analyze results, and write complete research papers. (2026)
 - [Towards Execution-Grounded Automated AI Research](https://arxiv.org/abs/2601.14525) - Converts LLM pre-training and post-training into executable research environments where evolutionary search learns from experimental outcomes. (2026)
@@ -176,6 +194,7 @@ Evolutionary, quality-diversity, and open-ended processes that continually disco
 
 - [PACEvolve: Enabling Long-Horizon Progress-Aware Consistent Evolution](https://arxiv.org/abs/2601.10657) - Combines hierarchical context management, backtracking, and adaptive sampling to sustain collaborative long-horizon evolutionary search. (2026)
 - [AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery](https://arxiv.org/abs/2506.13131) - Combines language-model code generation, automated evaluation, and evolutionary search to improve algorithms, including components used in AI training. (2025)
+- [Higher Order and Self-Referential Evolution for Population-based Methods](https://openreview.net/forum?id=3tk6AES1Aj) - Evolves mutation rates and higher-order meta-mutation rates, including a self-referential top-level parameter that modifies itself. (2024)
 - [Mathematical Discoveries from Program Search with Large Language Models](https://www.nature.com/articles/s41586-023-06924-6) - Introduces FunSearch, an evolutionary loop that pairs a frozen code model with evaluators to discover new programs and mathematical results. (2024)
 - [AutoML-Zero: Evolving Machine Learning Algorithms From Scratch](https://arxiv.org/abs/2003.03384) - Evolves complete learning algorithms from elementary mathematical operations with minimal human design bias. (2020)
 - [AI-GAs: AI-Generating Algorithms, an Alternate Paradigm for Producing General Artificial Intelligence](https://arxiv.org/abs/1905.10985) - Proposes open-ended systems that automatically generate environments, architectures, and learning algorithms. (2019)
@@ -194,20 +213,23 @@ Safety, stability, goal preservation, corrigibility, and oversight mechanisms fo
 - [Escaping Model Collapse via Synthetic Data Verification: Near-term Improvements and Long-term Convergence](https://arxiv.org/abs/2510.16657) - Studies when iterative training on self-generated data collapses and shows how external verification can stabilize self-improvement while exposing long-run limits. (2025)
 - [Evaluating Goal Drift in Language Model Agents](https://arxiv.org/abs/2505.02709) - Measures whether long-horizon agents gradually deviate from their assigned objectives under competing environmental pressures. (2025)
 - [Your Agent May Misevolve: Emergent Risks in Self-evolving LLM Agents](https://arxiv.org/abs/2509.26354) - Studies harmful drift across model, memory, tool, and workflow evolution pathways and proposes the concept of misevolution. (2025)
+- [AGI Agent Safety by Iteratively Improving the Utility Function](https://arxiv.org/abs/2007.05411) - Designs a safety mechanism that allows an agent's utility function to be iteratively updated while reducing incentives to manipulate the improvement process. (2020)
+- [Performance of Bounded-Rational Agents With the Ability to Self-Modify](https://arxiv.org/abs/2011.06275) - Shows that self-modification can amplify errors and gradually misalign bounded-rational agents even when ideal rational agents would preserve their objectives. (2020)
+- [Scalable Agent Alignment via Reward Modeling: A Research Direction](https://arxiv.org/abs/1811.07871) - Outlines recursive reward modeling for supervising agents on tasks too complex for direct human evaluation. (2018)
+- [Self-Modification of Policy and Utility Function in Rational Agents](https://arxiv.org/abs/1605.03142) - Formalizes when rational agents preserve or modify their policies and utility functions and derives conditions under which self-modification remains goal-preserving. (2016)
+- [Intelligence Explosion Microeconomics](https://intelligence.org/files/IEM.pdf) - Models the returns and bottlenecks that determine whether recursive improvement accelerates, plateaus, or becomes explosive. (2013)
+
+### Supporting Safety Foundations
+
 - [AI Sandbagging: Language Models can Strategically Underperform on Evaluations](https://arxiv.org/abs/2406.07358) - Shows that models can selectively hide capabilities or target lower scores, undermining evaluation-based governance of self-improvement. (2024)
 - [Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training](https://arxiv.org/abs/2401.05566) - Demonstrates deceptive policies that remain hidden through standard safety training and can become more robust to detection. (2024)
 - [Model Evaluation for Extreme Risks](https://arxiv.org/abs/2305.15324) - Proposes capability and alignment evaluations for dangerous emergent abilities, including autonomous replication and adaptation. (2023)
 - [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073) - Uses written principles and model-generated critiques to scale supervision while retaining explicit behavioral constraints. (2022)
 - [Optimal Policies Tend to Seek Power](https://arxiv.org/abs/1912.01683) - Proves conditions under which optimal agents are incentivized to preserve options and seek control of their environment. (2021)
-- [AGI Agent Safety by Iteratively Improving the Utility Function](https://arxiv.org/abs/2007.05411) - Designs a safety mechanism that allows an agent's utility function to be iteratively updated while reducing incentives to manipulate the improvement process. (2020)
-- [Performance of Bounded-Rational Agents With the Ability to Self-Modify](https://arxiv.org/abs/2011.06275) - Shows that self-modification can amplify errors and gradually misalign bounded-rational agents even when ideal rational agents would preserve their objectives. (2020)
 - [Reward Tampering Problems and Solutions in Reinforcement Learning: A Causal Influence Diagram Perspective](https://arxiv.org/abs/1908.04734) - Characterizes incentives to corrupt reward processes and gives design principles that remove them. (2019)
 - [Risks from Learned Optimization in Advanced Machine Learning Systems](https://arxiv.org/abs/1906.01820) - Analyzes mesa-optimizers whose learned objectives may diverge from the objectives used to train them. (2019)
-- [Scalable Agent Alignment via Reward Modeling: A Research Direction](https://arxiv.org/abs/1811.07871) - Outlines recursive reward modeling for supervising agents on tasks too complex for direct human evaluation. (2018)
 - [Concrete Problems in AI Safety](https://arxiv.org/abs/1606.06565) - Frames practical research problems such as reward hacking, scalable oversight, safe exploration, and robustness to distribution shift. (2016)
 - [Safely Interruptible Agents](https://auai.org/~w-auai/uai2016/proceedings/papers/68.pdf) - Shows how reinforcement-learning agents can be designed without incentives to resist human interruption. (2016)
-- [Self-Modification of Policy and Utility Function in Rational Agents](https://arxiv.org/abs/1605.03142) - Formalizes when rational agents preserve or modify their policies and utility functions and derives conditions under which self-modification remains goal-preserving. (2016)
-- [Intelligence Explosion Microeconomics](https://intelligence.org/files/IEM.pdf) - Models the returns and bottlenecks that determine whether recursive improvement accelerates, plateaus, or becomes explosive. (2013)
 
 ## Introspection & Self-Modeling
 
