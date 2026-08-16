@@ -1,6 +1,3 @@
-<!--lint disable awesome-github-->
-<!-- This repository is intentionally local-only until the publication step. -->
-
 # Awesome RSI (Recursive Self-Improvement) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 > A curated list of resources on recursive self-improvement in artificial intelligence.
