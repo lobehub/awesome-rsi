@@ -1,7 +1,5 @@
 # Awesome RSI (Recursive Self-Improvement) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-## About Awesome RSI
-
 Recursive Self-Improvement (RSI) refers to AI systems improving their own capabilities, including the mechanisms used to produce further improvements.
 
 Recent progress in self-training, agent memory, harness optimization, automated AI research, self-modifying coding agents, and evolutionary search has made RSI increasingly relevant as an empirical research direction rather than only a theoretical idea.
@@ -18,7 +16,8 @@ The taxonomy is organizational rather than mutually exclusive; many systems span
 
 ## Contents
 
-- [Fundamentals & Getting Started](#fundamentals--getting-started)
+Fundamentals & Getting Started
+<!--lint ignore awesome-toc-->
 - [Model-level RSI](#model-level-rsi)
   - [Self-Training & Self-Reward](#self-training--self-reward)
   - [Synthetic Data & Self-Distillation](#synthetic-data--self-distillation)
