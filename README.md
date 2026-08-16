@@ -28,6 +28,7 @@ The taxonomy is organizational rather than mutually exclusive; many systems span
   - [Prompt & Program Optimization](#prompt--program-optimization)
   - [Context & Memory Evolution](#context--memory-evolution)
   - [Harness & Scaffold Evolution](#harness--scaffold-evolution)
+  - [Extensible Harness Substrates](#extensible-harness-substrates)
   - [Self-Verification & Self-Correction](#self-verification--self-correction)
   - [Self-Evolving Agent Frameworks](#self-evolving-agent-frameworks)
 - [Multi-Agent Self-Improvement](#multi-agent-self-improvement)
@@ -129,6 +130,13 @@ Methods that improve prompts, memory, verification, tools, or agent policies aro
 - [AutoHarness: Improving LLM Agents by Automatically Synthesizing a Code Harness](https://arxiv.org/abs/2603.03329) - Synthesizes and iteratively refines executable harnesses from environment feedback, eliminating illegal actions across 145 TextArena games. (arXiv 2026)
 - [MemoHarness: Agent Harnesses That Learn from Experience](https://arxiv.org/abs/2607.14159) - Learns case-adaptive configurations across six harness control dimensions from execution diagnoses and a reusable experience bank. (arXiv 2026)
 - [MetaSkill-Evolve: Recursive Self-Improvement of LLM Agents via Two-Timescale Meta-Skill Evolution](https://arxiv.org/abs/2607.05297) - Evolves task skills in a fast loop and the meta-skills governing its Analyzer, Retriever, Allocator, Proposer, and Evolver in a slower recursive loop. (arXiv 2026)
+
+### Extensible Harness Substrates
+
+- [Agent Zero](https://github.com/agent0ai/agent-zero) - Open agentic framework whose prompts, tools, skills, plugins, and multi-agent profiles can be inspected, replaced, and extended.
+- [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) - Open-source agent harness from DeepSeek AI built around an everything-is-a-plugin architecture.
+- [OpenClaw](https://github.com/openclaw/openclaw) - Personal-agent substrate whose Gateway connects models, tools, sessions, and channels while skills and plugins extend its capabilities.
+- [Pi](https://github.com/earendil-works/pi) - Self-extensible coding-agent harness with a reusable agent runtime, terminal UI, and unified multi-provider LLM API.
 
 ### Self-Verification & Self-Correction
 
@@ -279,16 +287,26 @@ Benchmarks grouped by how directly they provide evidence about recursive self-im
 
 - [ACE](https://github.com/ace-agent/ace) - Official implementation of Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models. (2025)
 - [ADAS](https://github.com/ShengranHu/ADAS) - Official implementation of a meta-agent that searches over executable agent designs. (2024)
+- [AgentFactory](https://github.com/zzatpku/AgentFactory) - Self-evolving framework that accumulates and reuses executable subagents to improve future task solving. (2026)
 - [AI Scientist](https://github.com/SakanaAI/AI-Scientist) - End-to-end system for generating machine-learning ideas, running experiments, and writing research papers. (2024)
 - [ALMA](https://github.com/zksha/alma) - Official implementation of Learning to Continually Learn via Meta-learning Agentic Memory Designs. (2026)
 - [autoresearch](https://github.com/karpathy/autoresearch) - Runs an autonomous loop that edits an LLM training program, trains for five minutes, and keeps only changes that improve validation bits per byte. (2026)
+- [Continual Harness](https://github.com/sethkarten/continual-harness) - Self-improving agent harness that adapts online from experience while maintaining a continuous environment trajectory. (2026)
 - [Darwin Gödel Machine](https://github.com/jennyzzt/dgm) - Official self-modifying coding-agent implementation with open-ended archive-based evolution. (2025)
+- [EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) - Self-evolving agent framework for automatically building, evaluating, and optimizing agentic workflows. (2025)
 - [Evolutionary Model Merge](https://github.com/SakanaAI/evolutionary-model-merge) - Evolves combinations of open models in parameter and data-flow space. (2024)
+- [EvolveR](https://github.com/KnowledgeXLab/EvolveR) - Self-evolving LLM-agent framework that improves through a closed-loop, experience-driven lifecycle. (2025)
 - [FunSearch](https://github.com/google-deepmind/funsearch) - Reference implementation of LLM-guided evolutionary program search with executable evaluators. (2023)
 - [Gödel Agent](https://github.com/Arvid-pku/Godel_Agent) - Official implementation of Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement. (2024)
+- [Hermes Agent](https://github.com/NousResearch/hermes-agent) - Self-improving personal agent with a built-in learning loop that creates and refines skills from experience. (2026)
+- [HyperAgents](https://github.com/facebookresearch/HyperAgents) - Self-referential agent framework in which an editable meta-agent improves itself and the task agent for computable objectives. (2026)
+- [Letta Code](https://github.com/letta-ai/letta-code) - Memory-first coding-agent harness whose long-lived agents rewrite context and learn skills from experience. (2025)
+- [Memento-Skills](https://github.com/Memento-Teams/Memento-Skills) - Self-evolving agent framework that retrieves, evaluates, repairs, and rewrites persistent skills through reflective learning. (2026)
+- [MLEvolve](https://github.com/InternScience/MLEvolve) - Self-evolving multi-agent framework for end-to-end machine-learning algorithm discovery using progressive search and experience-driven memory. (2026)
 - [OpenEvolve](https://github.com/algorithmicsuperintelligence/openevolve) - Open-source evolutionary coding agent inspired by AlphaEvolve-style program optimization. (2025)
 - [POET](https://github.com/uber-research/poet) - Reference implementation for co-evolving environments and their paired agents. (2019)
 - [SEAL](https://github.com/Continual-Intelligence/SEAL) - Official code for language models that generate their own adaptation data and update instructions. (2025)
+- [SIA](https://github.com/hexo-ai/sia) - Self-improving AI framework that iteratively updates an agent harness and, when configured, the target model's weights. (2026)
 - [Voyager](https://github.com/MineDojo/Voyager) - Embodied lifelong-learning agent with automatic curriculum, iterative prompting, and a reusable skill library. (2023)
 
 ## Blog Posts & Discussions
