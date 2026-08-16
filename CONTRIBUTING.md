@@ -28,7 +28,8 @@ Use this format:
 - Write exactly one concise, neutral description sentence.
 - End every description with a period.
 - Use the resource's official title and preserve model or system version names exactly.
-- Avoid promotional language, tracking parameters, and duplicate entries.
+- Avoid promotional language and tracking parameters.
+- Avoid duplicate resources or identical links. A paper and its official implementation may be listed separately when they serve different purposes.
 
 Every submission or pull request must also provide:
 
@@ -40,9 +41,8 @@ Every submission or pull request must also provide:
 
 ## Ordering
 
-- Sort general resources alphabetically by title within each subsection.
-- When a subsection is explicitly chronological, sort by publication date from newest to oldest and include the year consistently.
-- Do not mix alphabetical and chronological ordering within the same subsection.
+- Sort research resources by publication year from newest to oldest; within the same year, sort alphabetically by title.
+- Sort non-research resources, such as Related Awesome Lists and Tools, alphabetically by title.
 
 ## Pull Requests
 
