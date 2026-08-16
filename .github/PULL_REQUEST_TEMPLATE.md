@@ -29,3 +29,5 @@
 - [ ] I searched the list and open pull requests for duplicates.
 - [ ] I used the resource's official title and canonical URL.
 - [ ] I placed the entry in the most specific applicable subsection and followed its ordering rules.
+- [ ] I verified the publication status against a primary or authoritative source.
+- [ ] npx awesome-lint@2.3.0 passes locally.
