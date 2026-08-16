@@ -24,6 +24,9 @@ Recursive self-improvement (RSI) is the process by which an AI system improves i
 - [Safety, Alignment & Theory](#safety-alignment--theory)
 - [Introspection & Self-Modeling](#introspection--self-modeling)
 - [Benchmarks & Evaluations](#benchmarks--evaluations)
+  - [Direct RSI & Self-Improvement Evaluations](#direct-rsi--self-improvement-evaluations)
+  - [Automated AI R&D Evaluations](#automated-ai-rd-evaluations)
+  - [Long-Horizon & Agent Capability Evaluations](#long-horizon--agent-capability-evaluations)
 - [Frameworks & Tools](#frameworks--tools)
 - [Blog Posts & Discussions](#blog-posts--discussions)
 - [Talks & Videos](#talks--videos)
@@ -197,24 +200,32 @@ Research on systems that estimate, recognize, or reason about their own capabili
 
 ## Benchmarks & Evaluations
 
-Benchmarks for measuring autonomous research, machine-learning engineering, and iterative software improvement.
+Benchmarks grouped by how directly they provide evidence about recursive self-improvement, from explicit improvement loops to enabling research and long-horizon agent capabilities.
+
+### Direct RSI & Self-Improvement Evaluations
 
 - [RSIBench-Data](https://arxiv.org/abs/2607.25886) - Isolates data-centric RSI by asking agents to iteratively improve training-data strategies against checkpoint feedback under a fixed post-training stack. (2026)
-- [Long-Horizon-Terminal-Bench](https://arxiv.org/abs/2607.08964) - Evaluates agents on 46 terminal tasks requiring sustained execution across hundreds of episodes with dense intermediate rewards. (2026)
-- [OSWorld 2.0](https://arxiv.org/abs/2606.29537) - Measures computer-use agents on 108 realistic end-to-end workflows whose median human completion time is about 1.6 hours. (2026)
 - [PostTrainBench: Can LLM Agents Automate LLM Post-Training?](https://arxiv.org/abs/2603.08640) - Gives autonomous agents one base model, one H100 GPU, and ten hours to research and execute the strongest post-training strategy they can find. (2026)
 - [RSI-Bench](https://github.com/sunghunkwag/rsi-bench) - Provides an open-source six-axis framework for measuring self-modification depth, improvement trajectories, operator discovery, adaptation, safety, and goal generation. (2026)
-- [OpenAI RSI Index](https://llm-stats.com/benchmarks/rsi-index) - Tracks OpenAI's aggregate internal evaluations for debugging research systems, optimizing training and kernels, and improving other models, but is not externally reproducible. (2026)
-- [SWE-Bench Pro](https://arxiv.org/abs/2509.16941) - Tests coding agents on 1,865 contamination-resistant enterprise tasks designed to require hours or days of professional software engineering. (2025)
-- [MCPMark](https://arxiv.org/abs/2509.24002) - Stress-tests realistic stateful MCP workflows across SaaS, development, browser, filesystem, and database environments with programmatic grading. (2025)
-- [METR Task-Completion Time Horizon](https://arxiv.org/abs/2503.14499) - Estimates the human-equivalent task duration at which an agent succeeds with a given probability on non-trivially parallelizable software tasks. (2025)
-- [MLAgentBench](https://github.com/snap-stanford/MLAgentBench) - Tests whether language agents can autonomously execute and improve machine-learning experiments from research instructions. (2023)
-- [MLE-bench](https://github.com/openai/mle-bench) - Measures end-to-end machine-learning engineering performance across 75 Kaggle competitions and is used to track model self-improvement capability. (2024)
-- [PaperBench](https://github.com/openai/preparedness/tree/main/project/paperbench) - Evaluates agents on replicating state-of-the-art AI research from paper descriptions. (2025)
+- [OpenAI RSI Index](https://openai.com/index/gpt-5-6/) - Reports OpenAI's aggregate internal evaluations for debugging research systems, optimizing kernels and training recipes, running machine-learning experiments, and improving another model, but is not externally reproducible. (2026)
+
+### Automated AI R&D Evaluations
+
 - [RE-Bench](https://github.com/METR/RE-Bench) - Compares AI agents with human experts on open-ended machine-learning research-engineering tasks under fixed time budgets. (2024)
+- [PaperBench](https://github.com/openai/frontier-evals/tree/main/project/paperbench) - Evaluates agents on replicating state-of-the-art AI research from paper descriptions. (2025)
+- [MLE-bench](https://github.com/openai/mle-bench) - Measures end-to-end machine-learning engineering performance across 75 Kaggle competitions and is used to track model self-improvement capability. (2024)
+- [MLAgentBench](https://github.com/snap-stanford/MLAgentBench) - Tests whether language agents can autonomously execute and improve machine-learning experiments from research instructions. (2023)
+
+### Long-Horizon & Agent Capability Evaluations
+
+- [METR Task-Completion Time Horizon](https://arxiv.org/abs/2503.14499) - Estimates the human-equivalent task duration at which an agent succeeds with a given probability on non-trivially parallelizable software tasks. (2025)
+- [SWE-Bench Pro](https://arxiv.org/abs/2509.16941) - Tests coding agents on 1,865 contamination-resistant enterprise tasks designed to require hours or days of professional software engineering. (2025)
+- [Long-Horizon-Terminal-Bench](https://arxiv.org/abs/2607.08964) - Evaluates agents on 46 terminal tasks requiring sustained execution across hundreds of episodes with dense intermediate rewards. (2026)
+- [OSWorld 2.0](https://arxiv.org/abs/2606.29537) - Measures computer-use agents on 108 realistic end-to-end workflows whose median human completion time is about 1.6 hours. (2026)
+- [MCPMark](https://arxiv.org/abs/2509.24002) - Stress-tests realistic stateful MCP workflows across SaaS, development, browser, filesystem, and database environments with programmatic grading. (2025)
+- [TheAgentCompany](https://arxiv.org/abs/2412.14161) - Evaluates agents on 175 cross-application workplace tasks inside a simulated software company with result and checkpoint grading. (2024)
 - [SWE-bench](https://github.com/SWE-bench/SWE-bench) - Provides reproducible real-world software issues used to evaluate coding agents and empirical self-modification systems such as DGM. (2023)
 - [SWE-bench Verified](https://openai.com/index/introducing-swe-bench-verified/) - Supplies a human-validated subset that reduces broken or underspecified tasks when measuring iterative coding-agent improvements. (2024)
-- [TheAgentCompany](https://arxiv.org/abs/2412.14161) - Evaluates agents on 175 cross-application workplace tasks inside a simulated software company with result and checkpoint grading. (2024)
 
 ## Frameworks & Tools
 
