@@ -1,0 +1,84 @@
+name: Suggest a resource
+description: Propose a resource for inclusion in Awesome RSI.
+title: "[Resource]: "
+labels:
+  - resource suggestion
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a resource. Please search the list and open issues first, then answer every required RSI question below.
+  - type: input
+    id: resource-title
+    attributes:
+      label: Resource title
+      description: Use the official title and preserve model or system version names exactly.
+      placeholder: Official resource title
+    validations:
+      required: true
+  - type: input
+    id: canonical-url
+    attributes:
+      label: Canonical URL
+      description: Link to the paper, official project, repository, or other primary source without tracking parameters.
+      placeholder: https://example.com/resource
+    validations:
+      required: true
+  - type: input
+    id: proposed-section
+    attributes:
+      label: Proposed section
+      description: Name the most specific README section where this resource belongs.
+      placeholder: Self-Evolving Agent Frameworks
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Suggested description
+      description: Provide a concise, neutral one-sentence description suitable for the list.
+    validations:
+      required: true
+  - type: textarea
+    id: improvement-target
+    attributes:
+      label: What is being improved?
+      description: Identify the model, agent policy, prompt, memory, harness, codebase, optimizer, or other target.
+    validations:
+      required: true
+  - type: textarea
+    id: persistence
+    attributes:
+      label: Does the improvement persist across iterations?
+      description: State what artifact or behavior carries forward, or explicitly state that it does not.
+    validations:
+      required: true
+  - type: textarea
+    id: mechanism-improvement
+    attributes:
+      label: Is the improvement mechanism itself subject to improvement?
+      description: Explain whether and how the process producing improvements can itself change.
+    validations:
+      required: true
+  - type: textarea
+    id: rsi-relevance
+    attributes:
+      label: Why is this specifically relevant to RSI?
+      description: Connect the work directly to recursive self-improvement, persistent self-improvement, or evaluation or safety evidence for those systems.
+    validations:
+      required: true
+  - type: input
+    id: publication-status
+    attributes:
+      label: Publication status
+      description: Include the status, venue, and year where applicable.
+      placeholder: "conference: ICML (2025)"
+    validations:
+      required: true
+  - type: checkboxes
+    id: duplicate-check
+    attributes:
+      label: Duplicate check
+      options:
+        - label: I searched the list and open issues for this resource or an identical link.
+          required: true

@@ -1,0 +1,68 @@
+name: Correct metadata or taxonomy
+description: Report incorrect metadata, publication status, venue, year, or classification.
+title: "[Metadata]: "
+labels:
+  - metadata correction
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to propose a verifiable correction to an existing entry. Prefer primary sources for publication and venue claims.
+  - type: input
+    id: resource-title
+    attributes:
+      label: Resource title
+      description: Enter the title exactly as it currently appears in the list.
+    validations:
+      required: true
+  - type: input
+    id: resource-url
+    attributes:
+      label: Resource or entry URL
+      description: Link to the affected resource or provide a README anchor.
+      placeholder: https://example.com/resource
+    validations:
+      required: true
+  - type: dropdown
+    id: correction-type
+    attributes:
+      label: Correction type
+      description: Select the primary kind of correction needed.
+      options:
+        - Taxonomy or section
+        - Publication status or venue
+        - Publication year
+        - Title, authorship, or version
+        - Description
+        - Other metadata
+    validations:
+      required: true
+  - type: textarea
+    id: current-metadata
+    attributes:
+      label: Current metadata or classification
+      description: Quote the current text or identify the current section.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-correction
+    attributes:
+      label: Proposed correction
+      description: Provide the exact replacement text or target section and explain what is incorrect.
+    validations:
+      required: true
+  - type: input
+    id: evidence-url
+    attributes:
+      label: Supporting source
+      description: Link to a primary or authoritative source that verifies the correction.
+      placeholder: https://example.com/official-source
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any relevant notes about taxonomy, publication status, venue, or version ambiguity.
+    validations:
+      required: false

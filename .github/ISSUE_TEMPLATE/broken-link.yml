@@ -1,0 +1,59 @@
+name: Broken link
+description: Report an unavailable, redirected, or incorrect link in the list.
+title: "[Broken link]: "
+labels:
+  - broken link
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep the list healthy. Please identify the exact entry and, when possible, provide a canonical replacement.
+  - type: input
+    id: resource-title
+    attributes:
+      label: Resource title
+      description: Enter the title of the affected list entry.
+    validations:
+      required: true
+  - type: input
+    id: broken-url
+    attributes:
+      label: Broken URL
+      description: Paste the exact URL that is unavailable, redirected incorrectly, or points to the wrong resource.
+      placeholder: https://example.com/broken
+    validations:
+      required: true
+  - type: dropdown
+    id: failure-type
+    attributes:
+      label: Problem observed
+      options:
+        - Page not found or domain unavailable
+        - Access denied or persistent server error
+        - Redirects to an unrelated page
+        - Points to the wrong resource
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: replacement-url
+    attributes:
+      label: Suggested replacement URL
+      description: Provide the canonical replacement if one is available; otherwise enter "None found".
+      placeholder: https://example.com/canonical-replacement
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification details
+      description: Describe when and how you verified the problem, including any HTTP status or error message.
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add archive links, moved-project notes, or other useful context.
+    validations:
+      required: false
