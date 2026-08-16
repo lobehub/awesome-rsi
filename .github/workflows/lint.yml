@@ -21,4 +21,4 @@ jobs:
         with:
           fetch-depth: 0
       - name: Run awesome-lint
-        run: npx --yes awesome-lint
+        run: npx --yes awesome-lint@2.3.0

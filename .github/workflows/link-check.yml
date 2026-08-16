@@ -1,0 +1,33 @@
+name: Weekly External Link Check
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  link-check:
+    name: Check README external links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check external links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --max-retries 5
+            --retry-wait-time 2
+            --exclude '^https?://(www\.)?openreview\.net(/|$)'
+            --exclude '^https?://(www\.)?sciencedirect\.com(/|$)'
+            README.md
+          fail: true
+          failIfEmpty: true
+          format: markdown
+          jobSummary: true
