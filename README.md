@@ -2,67 +2,161 @@
 
 > A curated list of resources on recursive self-improvement in artificial intelligence.
 
-Recursive self-improvement (RSI) is the process by which an AI system improves its own capabilities, including the methods it uses to make further improvements. RSI matters because increasingly autonomous improvement could accelerate AI progress while introducing difficult questions about evaluation, control, and alignment; here, **RSI refers to recursive self-improvement, not the financial Relative Strength Index**.
+Recursive self-improvement (RSI) is the process by which an AI system improves its own capabilities, including the methods it uses to make further improvements. RSI matters because increasingly autonomous improvement could accelerate AI progress while introducing difficult questions about evaluation, control, and alignment. This list is organized by reader stage and technical layer, from foundations through model-, harness-, and system-level improvement; here, **RSI refers to recursive self-improvement, not the financial Relative Strength Index**.
 
 ## Contents
 
-- [Papers](#papers)
-  - [Surveys](#surveys)
-  - [Self-Improving Agents](#self-improving-agents)
-  - [Self-Modifying Code & AutoML](#self-modifying-code--automl)
-  - [Evolutionary & Open-Ended Methods](#evolutionary--open-ended-methods)
-  - [Safety & Alignment](#safety--alignment)
-- [Frameworks & Tools](#frameworks--tools)
+- [Fundamentals & Getting Started](#fundamentals--getting-started)
+- [Model-level RSI](#model-level-rsi)
+  - [Self-Training & Self-Reward](#self-training--self-reward)
+  - [Synthetic Data & Self-Distillation](#synthetic-data--self-distillation)
+  - [Self-Play & Iterative Fine-tuning](#self-play--iterative-fine-tuning)
+  - [Self-Taught Reasoning](#self-taught-reasoning)
+- [Harness-level RSI](#harness-level-rsi)
+  - [Prompt & Program Optimization](#prompt--program-optimization)
+  - [Self-Reflection & Memory](#self-reflection--memory)
+  - [Self-Verification & Self-Correction](#self-verification--self-correction)
+  - [Self-Evolving Agent Frameworks](#self-evolving-agent-frameworks)
+- [Multi-Agent Self-Improvement](#multi-agent-self-improvement)
+- [Coding / Software-Engineering Self-Improvement](#coding--software-engineering-self-improvement)
+- [Evolutionary & Open-Ended RSI](#evolutionary--open-ended-rsi)
+- [Safety, Alignment & Theory](#safety-alignment--theory)
+- [Introspection & Self-Modeling](#introspection--self-modeling)
 - [Benchmarks & Evaluations](#benchmarks--evaluations)
-- [Blog Posts & Articles](#blog-posts--articles)
+- [Frameworks & Tools](#frameworks--tools)
+- [Blog Posts & Discussions](#blog-posts--discussions)
 - [Talks & Videos](#talks--videos)
 - [Related Awesome Lists](#related-awesome-lists)
 
-## Papers
+## Fundamentals & Getting Started
 
-Peer-reviewed papers, preprints, and substantial technical reports that directly study RSI or mechanisms that enable it.
+Foundational papers, formal treatments, and surveys that establish the vocabulary and core questions of RSI.
 
-### Surveys
-
+- [Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663) - Surveys recent self-improvement work by update target and loop closure while separating bounded refinement from open-ended RSI. (2026)
 - [A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems](https://arxiv.org/abs/2508.07407) - Organizes agent evolution around feedback loops, update targets, domain applications, evaluation, and safety. (2025)
 - [A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence](https://arxiv.org/abs/2507.21046) - Surveys what, when, and how foundation-model agents can evolve across models, memory, tools, and architectures. (2025)
 - [A Survey on Self-Evolution of Large Language Models](https://arxiv.org/abs/2404.14387) - Presents a four-stage taxonomy of experience acquisition, refinement, updating, and evaluation for self-evolving LLMs. (2024)
-
-### Self-Improving Agents
-
-- [Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents](https://arxiv.org/abs/2505.22954) - Evolves a coding agent by modifying its own code and retaining empirically validated improvements in an open-ended archive. (2025)
-- [Self-Adapting Language Models](https://arxiv.org/abs/2506.10943) - Introduces SEAL, which generates its own update data and fine-tuning directives to adapt model weights to new tasks. (2025)
-- [Automated Design of Agentic Systems](https://arxiv.org/abs/2408.08435) - Uses a meta-agent to invent and iteratively improve agent architectures represented as executable code. (2024)
-- [Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement](https://arxiv.org/abs/2410.04444) - Lets an agent inspect and rewrite its own logic without relying on a fixed hand-designed optimization routine. (2024)
-- [Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models](https://arxiv.org/abs/2401.01335) - Iteratively improves one language model through self-play preference learning without additional human annotations. (2024)
-- [Self-Rewarding Language Models](https://arxiv.org/abs/2401.10020) - Trains language models to generate and judge their own instruction-following data over repeated alignment rounds. (2024)
-- [The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery](https://arxiv.org/abs/2408.06292) - Automates idea generation, experimentation, paper writing, and review to create a reusable loop for machine-learning research. (2024)
-- [Reflexion: Language Agents with Verbal Reinforcement Learning](https://arxiv.org/abs/2303.11366) - Improves agents across trials by storing natural-language reflections derived from task feedback. (2023)
-- [RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback](https://arxiv.org/abs/2309.00267) - Studies reinforcement learning from AI-generated preferences as a scalable alternative to direct human feedback. (2023)
-- [Self-Refine: Iterative Refinement with Self-Feedback](https://arxiv.org/abs/2303.17651) - Reuses one language model as generator, critic, and refiner to improve outputs over multiple iterations. (2023)
-- [Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation](https://arxiv.org/abs/2310.02304) - Demonstrates an LLM-written scaffolding program that improves the program responsible for making further improvements. (2023)
-- [Voyager: An Open-Ended Embodied Agent with Large Language Models](https://arxiv.org/abs/2305.16291) - Builds an expanding skill library and uses environmental feedback for lifelong autonomous learning in Minecraft. (2023)
-
-### Self-Modifying Code & AutoML
-
-- [AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery](https://arxiv.org/abs/2506.13131) - Combines language-model code generation, automated evaluation, and evolutionary search to improve algorithms, including components used in AI training. (2025)
-- [AutoML-Zero: Evolving Machine Learning Algorithms From Scratch](https://arxiv.org/abs/2003.03384) - Evolves complete learning algorithms from elementary mathematical operations with minimal human design bias. (2020)
-- [Learning to Learn by Gradient Descent by Gradient Descent](https://arxiv.org/abs/1606.04474) - Meta-learns an optimizer whose recurrent update rule can replace a hand-designed optimization algorithm. (2016)
+- [A Formulation of Recursive Self-Improvement and Its Possible Efficiency](https://arxiv.org/abs/1805.06610) - Gives a formal definition of a restricted RSI system and analyzes when efficient recursive improvement is computable. (2018)
+- [From Seed AI to Technological Singularity via Recursively Self-Improving Software](https://arxiv.org/abs/1502.06512) - Defines RSI software, surveys prior approaches, and proposes convergence concepts and computational limits. (2015)
+- [The Singularity: A Philosophical Analysis](https://consc.net/papers/singularity.pdf) - Develops a rigorous philosophical case for an intelligence explosion and examines its assumptions and consequences. (2010)
 - [Gödel Machines: Self-Referential Universal Problem Solvers Making Provably Optimal Self-Improvements](https://arxiv.org/abs/cs/0309048) - Defines a fully self-referential machine that rewrites itself after proving a modification improves expected utility. (2003)
 - [Optimal Ordered Problem Solver](https://arxiv.org/abs/cs/0207097) - Introduces an asymptotically optimal program-search system that reuses solutions to accelerate later problem solving. (2002)
 - [Evolutionary Principles in Self-Referential Learning, or on Learning How to Learn: The Meta-Meta-... Hook](https://people.idsia.ch/~juergen/diploma1987ocr.pdf) - Describes early meta-evolution and self-referential learning mechanisms that recursively improve learning methods. (1987)
+- [Speculations Concerning the First Ultraintelligent Machine](https://www.sciencedirect.com/science/article/pii/S0065245808604180) - Introduces the intelligence-explosion argument in which a machine capable of improving machine design triggers accelerating capability gains. (1965)
 
-### Evolutionary & Open-Ended Methods
+## Model-level RSI
 
+Methods that improve model weights or training behavior through self-generated feedback, data, or reasoning.
+
+### Self-Training & Self-Reward
+
+- [Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models](https://arxiv.org/abs/2401.01335) - Iteratively improves one language model through self-play preference learning without additional human annotations. (2024)
+- [Self-Rewarding Language Models](https://arxiv.org/abs/2401.10020) - Trains language models to generate and judge their own instruction-following data over repeated alignment rounds. (2024)
+- [RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback](https://arxiv.org/abs/2309.00267) - Studies reinforcement learning from AI-generated preferences as a scalable alternative to direct human feedback. (2023)
+
+### Synthetic Data & Self-Distillation
+
+- [Beyond Human Data: Scaling Self-Training for Problem-Solving with Language Models](https://arxiv.org/abs/2312.06585) - Iteratively samples, filters, and retrains on model-generated solutions to scale self-training beyond human demonstrations. (2023)
+- [Self-Alignment with Instruction Backtranslation](https://arxiv.org/abs/2308.06259) - Generates instructions for unlabeled model-written documents and fine-tunes on the resulting synthetic instruction-response pairs. (2023)
+- [Large Language Models Can Self-Improve](https://arxiv.org/abs/2210.11610) - Uses high-confidence model-generated answers as pseudo-labels for iterative fine-tuning on reasoning tasks. (2022)
+- [Self-Instruct: Aligning Language Models with Self-Generated Instructions](https://arxiv.org/abs/2212.10560) - Bootstraps instruction-following data from a model's own generations and filters it before fine-tuning. (2022)
+
+### Self-Play & Iterative Fine-tuning
+
+- [Self-Adapting Language Models](https://arxiv.org/abs/2506.10943) - Introduces SEAL, which generates its own update data and fine-tuning directives to adapt model weights to new tasks. (2025)
+- [Meta-Rewarding Language Models: Self-Improving Alignment with LLM-as-a-Meta-Judge](https://arxiv.org/abs/2407.19594) - Lets a language model judge its own judgments and iteratively improve both evaluation and instruction-following ability. (2024)
+- [Self-Improvement in Language Models: The Sharpening Mechanism](https://arxiv.org/abs/2412.01951) - Formalizes self-improvement as amortizing a model's verifier-guided search into a sharper post-trained policy. (2024)
+- [Self-Play Preference Optimization for Language Model Alignment](https://arxiv.org/abs/2405.00675) - Frames alignment as a two-player game and iteratively updates a policy toward a preference-model Nash equilibrium. (2024)
+- [SELF: Self-Evolution with Language Feedback](https://arxiv.org/abs/2310.00533) - Repeats self-feedback, response refinement, filtering, and fine-tuning so an LLM progressively improves on unlabeled instructions. (2023)
+
+### Self-Taught Reasoning
+
+- [rStar-Math: Small LLMs Can Master Math Reasoning with Self-Evolved Deep Thinking](https://arxiv.org/abs/2501.04519) - Couples Monte Carlo tree search with self-evolved training data and a process preference model to improve mathematical reasoning. (2025)
+- [Quiet-STaR: Language Models Can Teach Themselves to Think Before Speaking](https://arxiv.org/abs/2403.09629) - Trains language models to generate useful internal rationales throughout arbitrary text rather than only on question-answer tasks. (2024)
+- [Language Agent Tree Search Unifies Reasoning, Acting, and Planning in Language Models](https://arxiv.org/abs/2310.04406) - Combines Monte Carlo tree search, model-based value estimates, environment feedback, and self-reflection without updating base weights. (2023)
+- [STaR: Bootstrapping Reasoning With Reasoning](https://arxiv.org/abs/2203.14465) - Alternates rationale generation, answer filtering, rationalization, and fine-tuning to bootstrap reasoning ability. (2022)
+
+## Harness-level RSI
+
+Methods that improve prompts, memory, verification, tools, or agent policies around a model.
+
+### Prompt & Program Optimization
+
+- [Automated Design of Agentic Systems](https://arxiv.org/abs/2408.08435) - Uses a meta-agent to invent and iteratively improve agent architectures represented as executable code. (2024)
+- [TextGrad: Automatic "Differentiation" via Text](https://arxiv.org/abs/2406.07496) - Backpropagates textual feedback through compound AI systems to optimize prompts, code, and other textual variables. (2024)
+- [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](https://arxiv.org/abs/2310.03714) - Compiles declarative LM programs by optimizing prompts and demonstrations against a user-defined metric. (2023)
+- [Large Language Models as Optimizers](https://arxiv.org/abs/2309.03409) - Introduces OPRO, which iteratively proposes and evaluates natural-language solutions and prompts from a history of scored attempts. (2023)
+- [Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution](https://arxiv.org/abs/2309.16797) - Evolves both task prompts and the mutation prompts that generate future prompt improvements. (2023)
+- [Self-Taught Optimizer (STOP): Recursively Self-Improving Code Generation](https://arxiv.org/abs/2310.02304) - Demonstrates an LLM-written scaffolding program that improves the program responsible for making further improvements. (2023)
+
+### Self-Reflection & Memory
+
+- [A-MEM: Agentic Memory for LLM Agents](https://arxiv.org/abs/2502.12110) - Builds a dynamically linked note network whose organization evolves as an agent accumulates new experiences. (2025)
+- [ExpeL: LLM Agents Are Experiential Learners](https://arxiv.org/abs/2308.10144) - Extracts reusable insights from successful and failed trajectories and transfers them to future tasks without weight updates. (2023)
+- [MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250) - Maintains and selectively forgets long-term interaction memories so an agent can adapt its responses over time. (2023)
+- [Reflexion: Language Agents with Verbal Reinforcement Learning](https://arxiv.org/abs/2303.11366) - Improves agents across trials by storing natural-language reflections derived from task feedback. (2023)
+- [Self-Refine: Iterative Refinement with Self-Feedback](https://arxiv.org/abs/2303.17651) - Reuses one language model as generator, critic, and refiner to improve outputs over multiple iterations. (2023)
+
+### Self-Verification & Self-Correction
+
+- [Chain-of-Verification Reduces Hallucination in Large Language Models](https://arxiv.org/abs/2309.11495) - Plans and answers independent verification questions before producing a revised response. (2023)
+- [CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing](https://arxiv.org/abs/2305.11738) - Uses external tools to validate an output and converts the resulting evidence into iterative corrections. (2023)
+- [Large Language Models Cannot Self-Correct Reasoning Yet](https://arxiv.org/abs/2310.01798) - Shows that intrinsic self-correction can degrade reasoning without reliable external feedback and defines an important negative baseline. (2023)
+- [Let's Verify Step by Step](https://arxiv.org/abs/2305.20050) - Trains process reward models to score intermediate reasoning steps and guide more reliable solution selection. (2023)
+- [Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171) - Samples diverse reasoning paths and selects their most consistent answer to improve inference-time reliability. (2022)
+
+### Self-Evolving Agent Frameworks
+
+- [EvoAgent: An Evolvable Agent Framework with Skill Learning and Multi-Agent Delegation](https://arxiv.org/abs/2604.20133) - Accumulates structured skills through a feedback loop and delegates complex tasks through a hierarchy of sub-agents. (2026)
+- [Alita-G: Self-Evolving Generative Agent for Agent Generation](https://arxiv.org/abs/2510.23601) - Generates, abstracts, and curates reusable MCP tools from successful trajectories to turn a generalist agent into a domain specialist. (2025)
+- [MemEvolve: Meta-Evolution of Agent Memory Systems](https://arxiv.org/abs/2512.18746) - Jointly evolves experiential knowledge and the architecture that encodes, stores, retrieves, and manages agent memory. (2025)
+- [Agent-Pro: Learning to Evolve via Policy-Level Reflection and Optimization](https://arxiv.org/abs/2402.17574) - Refines an agent's beliefs and behavioral policy from interactive experience using reflection and search. (2024)
+- [Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement](https://arxiv.org/abs/2410.04444) - Lets an agent inspect and rewrite its own logic without relying on a fixed hand-designed optimization routine. (2024)
+- [Self-evolving Agents with Reflective and Memory-Augmented Abilities](https://arxiv.org/abs/2409.00872) - Combines iterative feedback, reflection, and forgetting-aware memory optimization for continual agent adaptation. (2024)
+- [Voyager: An Open-Ended Embodied Agent with Large Language Models](https://arxiv.org/abs/2305.16291) - Builds an expanding skill library and uses environmental feedback for lifelong autonomous learning in Minecraft. (2023)
+
+## Multi-Agent Self-Improvement
+
+Systems that use interaction among multiple agents to improve reasoning, policies, or agent populations.
+
+- [DEBATE, TRAIN, EVOLVE: Self Evolution of Language Model Reasoning](https://arxiv.org/abs/2505.15734) - Fine-tunes a model on its own multi-agent debate traces and repeats the debate-training loop without ground-truth labels. (2025)
+- [EvoAgent: Towards Automatic Multi-Agent Generation via Evolutionary Algorithms](https://arxiv.org/abs/2406.14228) - Applies mutation, crossover, and selection to expand a specialized agent into a diverse multi-agent system. (2024)
+- [SOTOPIA-π: Interactive Learning of Socially Intelligent Language Agents](https://arxiv.org/abs/2403.08715) - Improves an agent policy through behavior cloning and self-reinforcement on filtered multi-agent social interactions. (2024)
+- [Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate](https://arxiv.org/abs/2305.19118) - Uses adversarial debate and a judge to counter degeneration of thought during iterative reflection. (2023)
+- [Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325) - Iterates proposals and peer critiques among model instances to converge on more factual and accurate answers. (2023)
+
+## Coding / Software-Engineering Self-Improvement
+
+Agents and training loops that improve code, software-engineering performance, or their own implementations.
+
+- [A Self-Improving Coding Agent](https://arxiv.org/abs/2504.15228) - Demonstrates a coding agent that edits its own implementation and empirically improves on SWE-bench Verified. (2025)
+- [Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents](https://arxiv.org/abs/2505.22954) - Evolves a coding agent by modifying its own code and retaining empirically validated improvements in an open-ended archive. (2025)
+- [The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery](https://arxiv.org/abs/2408.06292) - Automates idea generation, experimentation, paper writing, and review to create a reusable loop for machine-learning research. (2024)
+- [Training Software Engineering Agents and Verifiers with SWE-Gym](https://arxiv.org/abs/2412.21139) - Supplies executable repository tasks and trajectories for training both SWE agents and inference-time verifiers. (2024)
+- [AgentCoder: Multi-Agent-based Code Generation with Iterative Testing and Optimisation](https://arxiv.org/abs/2312.13010) - Coordinates programmer, test-designer, and test-executor agents in a feedback loop that iteratively repairs generated code. (2023)
+- [Teaching Large Language Models to Self-Debug](https://arxiv.org/abs/2304.05128) - Teaches models to inspect execution results, explain their code, and repair failures through iterative prompting. (2023)
+
+## Evolutionary & Open-Ended RSI
+
+Evolutionary, quality-diversity, and open-ended processes that continually discover stronger solutions or learning systems.
+
+- [AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery](https://arxiv.org/abs/2506.13131) - Combines language-model code generation, automated evaluation, and evolutionary search to improve algorithms, including components used in AI training. (2025)
 - [Mathematical Discoveries from Program Search with Large Language Models](https://www.nature.com/articles/s41586-023-06924-6) - Introduces FunSearch, an evolutionary loop that pairs a frozen code model with evaluators to discover new programs and mathematical results. (2024)
+- [AutoML-Zero: Evolving Machine Learning Algorithms From Scratch](https://arxiv.org/abs/2003.03384) - Evolves complete learning algorithms from elementary mathematical operations with minimal human design bias. (2020)
 - [AI-GAs: AI-Generating Algorithms, an Alternate Paradigm for Producing General Artificial Intelligence](https://arxiv.org/abs/1905.10985) - Proposes open-ended systems that automatically generate environments, architectures, and learning algorithms. (2019)
 - [Paired Open-Ended Trailblazer (POET): Endlessly Generating Increasingly Complex and Diverse Learning Environments and Their Solutions](https://arxiv.org/abs/1901.01753) - Co-evolves environments and agents while transferring solutions between emerging challenges. (2019)
+- [Learning to Learn by Gradient Descent by Gradient Descent](https://arxiv.org/abs/1606.04474) - Meta-learns an optimizer whose recurrent update rule can replace a hand-designed optimization algorithm. (2016)
 - [Quality Diversity: A New Frontier for Evolutionary Computation](https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2016.00040/full) - Formalizes search for collections that are simultaneously diverse and high-performing within their niches. (2016)
 - [Illuminating Search Spaces by Mapping Elites](https://arxiv.org/abs/1504.04909) - Introduces MAP-Elites for discovering a diverse archive of locally high-quality solutions. (2015)
 - [POWERPLAY: Training an Increasingly General Problem Solver by Continually Searching for the Simplest Still Unsolvable Problem](https://arxiv.org/abs/1112.5309) - Alternates between inventing new tasks and modifying a solver so its verified skill set continually expands. (2011)
 
-### Safety & Alignment
+## Safety, Alignment & Theory
 
+Safety, oversight, incentive, and theoretical work relevant to increasingly capable self-improving systems.
+
+- [Your Agent May Misevolve: Emergent Risks in Self-evolving LLM Agents](https://arxiv.org/abs/2509.26354) - Studies harmful drift across model, memory, tool, and workflow evolution pathways and proposes the concept of misevolution. (2025)
+- [AI Sandbagging: Language Models can Strategically Underperform on Evaluations](https://arxiv.org/abs/2406.07358) - Shows that models can selectively hide capabilities or target lower scores, undermining evaluation-based governance of self-improvement. (2024)
+- [Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training](https://arxiv.org/abs/2401.05566) - Demonstrates deceptive policies that remain hidden through standard safety training and can become more robust to detection. (2024)
 - [Model Evaluation for Extreme Risks](https://arxiv.org/abs/2305.15324) - Proposes capability and alignment evaluations for dangerous emergent abilities, including autonomous replication and adaptation. (2023)
 - [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073) - Uses written principles and model-generated critiques to scale supervision while retaining explicit behavioral constraints. (2022)
 - [Optimal Policies Tend to Seek Power](https://arxiv.org/abs/1912.01683) - Proves conditions under which optimal agents are incentivized to preserve options and seek control of their environment. (2021)
@@ -71,56 +165,72 @@ Peer-reviewed papers, preprints, and substantial technical reports that directly
 - [Scalable Agent Alignment via Reward Modeling: A Research Direction](https://arxiv.org/abs/1811.07871) - Outlines recursive reward modeling for supervising agents on tasks too complex for direct human evaluation. (2018)
 - [Concrete Problems in AI Safety](https://arxiv.org/abs/1606.06565) - Frames practical research problems such as reward hacking, scalable oversight, safe exploration, and robustness to distribution shift. (2016)
 - [Safely Interruptible Agents](https://auai.org/~w-auai/uai2016/proceedings/papers/68.pdf) - Shows how reinforcement-learning agents can be designed without incentives to resist human interruption. (2016)
-- [Bounded Recursive Self-Improvement](https://arxiv.org/abs/1312.6764) - Studies an implemented goal-directed system that improves its behavior through an explicitly bounded self-modeling loop. (2013)
 - [Intelligence Explosion Microeconomics](https://intelligence.org/files/IEM.pdf) - Models the returns and bottlenecks that determine whether recursive improvement accelerates, plateaus, or becomes explosive. (2013)
 
-## Frameworks & Tools
+## Introspection & Self-Modeling
 
-- [ADAS](https://github.com/ShengranHu/ADAS) - Official implementation of a meta-agent that searches over executable agent designs.
-- [AI Scientist](https://github.com/SakanaAI/AI-Scientist) - End-to-end system for generating machine-learning ideas, running experiments, and writing research papers.
-- [auto-sklearn](https://github.com/automl/auto-sklearn) - Automated machine-learning toolkit for model selection, hyperparameter optimization, and ensembling.
-- [Darwin Gödel Machine](https://github.com/jennyzzt/dgm) - Official self-modifying coding-agent implementation with open-ended archive-based evolution.
-- [Evolutionary Model Merge](https://github.com/SakanaAI/evolutionary-model-merge) - Evolves combinations of open models in parameter and data-flow space.
-- [FunSearch](https://github.com/google-deepmind/funsearch) - Reference implementation of LLM-guided evolutionary program search with executable evaluators.
-- [NNI](https://github.com/microsoft/nni) - Neural architecture search, hyperparameter tuning, pruning, and model-compression toolkit.
-- [OpenEvolve](https://github.com/algorithmicsuperintelligence/openevolve) - Open-source evolutionary coding agent inspired by AlphaEvolve-style program optimization.
-- [POET](https://github.com/uber-research/poet) - Reference implementation for co-evolving environments and their paired agents.
-- [SEAL](https://github.com/Continual-Intelligence/SEAL) - Official code for language models that generate their own adaptation data and update instructions.
-- [Voyager](https://github.com/MineDojo/Voyager) - Embodied lifelong-learning agent with automatic curriculum, iterative prompting, and a reusable skill library.
+Research on systems that estimate, recognize, or reason about their own capabilities and behavior.
+
+- [Tell me about yourself: LLMs are aware of their learned behaviors](https://arxiv.org/abs/2501.11120) - Finds that fine-tuned models can articulate learned behavioral tendencies without explicit descriptions of those behaviors in training data. (2025)
+- [Looking Inward: Language Models Can Learn About Themselves by Introspection](https://arxiv.org/abs/2410.13787) - Tests privileged self-prediction by comparing a model's forecasts of its own behavior with those of other models. (2024)
+- [Self-Recognition in Language Models](https://arxiv.org/abs/2407.06946) - Tests whether models can identify their own outputs using model-generated security questions and finds no general self-recognition. (2024)
+- [Do Large Language Models Know What They Don't Know?](https://arxiv.org/abs/2305.18153) - Evaluates model self-knowledge by testing recognition of unanswerable and unknowable questions. (2023)
+- [Language Models (Mostly) Know What They Know](https://arxiv.org/abs/2207.05221) - Measures whether models can evaluate their own claims and predict which questions they know how to answer. (2022)
+- [Bounded Recursive Self-Improvement](https://arxiv.org/abs/1312.6764) - Studies an implemented goal-directed system that improves its behavior through an explicitly bounded self-modeling loop. (2013)
 
 ## Benchmarks & Evaluations
 
-- [MLAgentBench](https://github.com/snap-stanford/MLAgentBench) - Tests whether language agents can autonomously execute and improve machine-learning experiments from research instructions.
-- [MLE-bench](https://github.com/openai/mle-bench) - Measures end-to-end machine-learning engineering performance across 75 Kaggle competitions and is used to track model self-improvement capability.
-- [PaperBench](https://github.com/openai/preparedness/tree/main/project/paperbench) - Evaluates agents on replicating state-of-the-art AI research from paper descriptions.
-- [RE-Bench](https://github.com/METR/RE-Bench) - Compares AI agents with human experts on open-ended machine-learning research-engineering tasks under fixed time budgets.
-- [SWE-bench](https://github.com/SWE-bench/SWE-bench) - Provides reproducible real-world software issues used to evaluate coding agents and empirical self-modification systems such as DGM.
-- [SWE-bench Verified](https://openai.com/index/introducing-swe-bench-verified/) - Supplies a human-validated subset that reduces broken or underspecified tasks when measuring iterative coding-agent improvements.
+Benchmarks for measuring autonomous research, machine-learning engineering, and iterative software improvement.
 
-## Blog Posts & Articles
+- [MLAgentBench](https://github.com/snap-stanford/MLAgentBench) - Tests whether language agents can autonomously execute and improve machine-learning experiments from research instructions. (2023)
+- [MLE-bench](https://github.com/openai/mle-bench) - Measures end-to-end machine-learning engineering performance across 75 Kaggle competitions and is used to track model self-improvement capability. (2024)
+- [PaperBench](https://github.com/openai/preparedness/tree/main/project/paperbench) - Evaluates agents on replicating state-of-the-art AI research from paper descriptions. (2025)
+- [RE-Bench](https://github.com/METR/RE-Bench) - Compares AI agents with human experts on open-ended machine-learning research-engineering tasks under fixed time budgets. (2024)
+- [SWE-bench](https://github.com/SWE-bench/SWE-bench) - Provides reproducible real-world software issues used to evaluate coding agents and empirical self-modification systems such as DGM. (2023)
+- [SWE-bench Verified](https://openai.com/index/introducing-swe-bench-verified/) - Supplies a human-validated subset that reduces broken or underspecified tasks when measuring iterative coding-agent improvements. (2024)
 
-- [AlphaEvolve: A Gemini-Powered Coding Agent for Designing Advanced Algorithms](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/) - Google DeepMind explains AlphaEvolve's evaluator-guided evolution loop and its applications to computing and AI training.
-- [Evidence on Recursive Self-Improvement from Current ML](https://www.lesswrong.com/posts/byKF3mnaNRrbkDPWv/evidence-on-recursive-self-improvement-from-current-ml) - Reviews empirical evidence for and against strong returns from AI-assisted AI research.
-- [FunSearch: Making New Discoveries in Mathematical Sciences Using Large Language Models](https://deepmind.google/blog/funsearch-making-new-discoveries-in-mathematical-sciences-using-large-language-models/) - Google DeepMind describes how evolutionary program search produced verifiable mathematical and algorithmic discoveries.
-- [Metalearning Machines Learn to Learn](https://people.idsia.ch/~juergen/metalearning.html) - Jürgen Schmidhuber traces self-referential meta-learning from 1987 through Gödel Machines and modern learned optimizers.
-- [Recursive Self-Improvement](https://www.alignmentforum.org/w/recursive-self-improvement) - The Alignment Forum overview connects self-improving AI to takeoff dynamics, seed AI, and control concerns.
-- [The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery](https://sakana.ai/ai-scientist/) - Sakana AI presents its automated research pipeline, results, limitations, and open implementation.
-- [The Darwin Gödel Machine: AI That Improves Itself by Rewriting Its Own Code](https://sakana.ai/dgm/) - Sakana AI explains DGM's empirical alternative to proof-based Gödel Machine self-modification.
-- [When AI Builds Itself](https://www.anthropic.com/institute/recursive-self-improvement) - Anthropic analyzes early evidence, possible paths, and governance challenges for AI-driven AI development.
+## Frameworks & Tools
+
+- [ADAS](https://github.com/ShengranHu/ADAS) - Official implementation of a meta-agent that searches over executable agent designs. (2024)
+- [AI Scientist](https://github.com/SakanaAI/AI-Scientist) - End-to-end system for generating machine-learning ideas, running experiments, and writing research papers. (2024)
+- [auto-sklearn](https://github.com/automl/auto-sklearn) - Automated machine-learning toolkit for model selection, hyperparameter optimization, and ensembling. (2015)
+- [Darwin Gödel Machine](https://github.com/jennyzzt/dgm) - Official self-modifying coding-agent implementation with open-ended archive-based evolution. (2025)
+- [Evolutionary Model Merge](https://github.com/SakanaAI/evolutionary-model-merge) - Evolves combinations of open models in parameter and data-flow space. (2024)
+- [FunSearch](https://github.com/google-deepmind/funsearch) - Reference implementation of LLM-guided evolutionary program search with executable evaluators. (2023)
+- [NNI](https://github.com/microsoft/nni) - Neural architecture search, hyperparameter tuning, pruning, and model-compression toolkit. (2018)
+- [OpenEvolve](https://github.com/algorithmicsuperintelligence/openevolve) - Open-source evolutionary coding agent inspired by AlphaEvolve-style program optimization. (2025)
+- [POET](https://github.com/uber-research/poet) - Reference implementation for co-evolving environments and their paired agents. (2019)
+- [SEAL](https://github.com/Continual-Intelligence/SEAL) - Official code for language models that generate their own adaptation data and update instructions. (2025)
+- [Voyager](https://github.com/MineDojo/Voyager) - Embodied lifelong-learning agent with automatic curriculum, iterative prompting, and a reusable skill library. (2023)
+
+## Blog Posts & Discussions
+
+- [AlphaEvolve: A Gemini-Powered Coding Agent for Designing Advanced Algorithms](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/) - Google DeepMind explains AlphaEvolve's evaluator-guided evolution loop and its applications to computing and AI training. (2025)
+- [Evidence on Recursive Self-Improvement from Current ML](https://www.lesswrong.com/posts/byKF3mnaNRrbkDPWv/evidence-on-recursive-self-improvement-from-current-ml) - Reviews empirical evidence for and against strong returns from AI-assisted AI research. (2023)
+- [FunSearch: Making New Discoveries in Mathematical Sciences Using Large Language Models](https://deepmind.google/blog/funsearch-making-new-discoveries-in-mathematical-sciences-using-large-language-models/) - Google DeepMind describes how evolutionary program search produced verifiable mathematical and algorithmic discoveries. (2023)
+- [Metalearning Machines Learn to Learn](https://people.idsia.ch/~juergen/metalearning.html) - Jürgen Schmidhuber traces self-referential meta-learning from 1987 through Gödel Machines and modern learned optimizers. (2020)
+- [Recursive Self-Improvement](https://www.alignmentforum.org/w/recursive-self-improvement) - The Alignment Forum overview connects self-improving AI to takeoff dynamics, seed AI, and control concerns. (2016)
+- [The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery](https://sakana.ai/ai-scientist/) - Sakana AI presents its automated research pipeline, results, limitations, and open implementation. (2024)
+- [The Darwin Gödel Machine: AI That Improves Itself by Rewriting Its Own Code](https://sakana.ai/dgm/) - Sakana AI explains DGM's empirical alternative to proof-based Gödel Machine self-modification. (2025)
+- [When AI Builds Itself](https://www.anthropic.com/institute/recursive-self-improvement) - Anthropic analyzes early evidence, possible paths, and governance challenges for AI-driven AI development. (2025)
 
 ## Talks & Videos
 
-- [Escape Velocity: The Inflection Point for Recursive Self Improvement](https://slideslive.com/39064188/escape-velocity-the-inflection-point-for-recursive-self-improvement) - Louis Kirsch discusses automated AI research and the conditions required for sustained recursive improvement at the ICLR 2026 RSI workshop.
-- [Gödel Machine](https://www.youtube.com/watch?v=voczu4I3_xQ) - Jürgen Schmidhuber gives a concise explanation of self-referential, proof-guided code rewriting and its computability limits.
-- [ICLR 2026 Workshop on AI with Recursive Self-Improvement](https://iclr.cc/virtual/2026/workshop/10000796) - Official video archive for invited talks, contributed work, and panels focused specifically on RSI.
-- [Self-Improving Foundation Models Without Human Supervision](https://iclr.cc/virtual/2025/workshop/23971) - Official ICLR 2025 workshop recordings on synthetic data, weak-to-strong learning, and autonomous adaptation.
+- [Escape Velocity: The Inflection Point for Recursive Self Improvement](https://slideslive.com/39064188/escape-velocity-the-inflection-point-for-recursive-self-improvement) - Louis Kirsch discusses automated AI research and the conditions required for sustained recursive improvement at the ICLR 2026 RSI workshop. (2026)
+- [Gödel Machine](https://www.youtube.com/watch?v=voczu4I3_xQ) - Jürgen Schmidhuber gives a concise explanation of self-referential, proof-guided code rewriting and its computability limits. (2015)
+- [ICLR 2026 Workshop on AI with Recursive Self-Improvement](https://iclr.cc/virtual/2026/workshop/10000796) - Official video archive for invited talks, contributed work, and panels focused specifically on RSI. (2026)
+- [Self-Improving Foundation Models Without Human Supervision](https://iclr.cc/virtual/2025/workshop/23971) - Official ICLR 2025 workshop recordings on synthetic data, weak-to-strong learning, and autonomous adaptation. (2025)
 
 ## Related Awesome Lists
 
-- [Awesome AI Agents](https://github.com/e2b-dev/awesome-ai-agents) - Broad directory of autonomous-agent projects and infrastructure that can serve as components or baselines for self-improving systems.
-- [Awesome AutoML Papers](https://github.com/hibayesian/awesome-automl-papers) - Curated literature on automated model selection, architecture search, hyperparameter optimization, and related techniques.
-- [Awesome Self-Improving Agents](https://github.com/selfimproving-agent/awesome-Self-Improving-Agents) - Focused bibliography of foundation-model agents that update their models, memory, tools, prompts, or workflows.
+- [Awesome AI Agents](https://github.com/e2b-dev/awesome-ai-agents) - Broad directory of autonomous-agent projects and infrastructure that can serve as components or baselines for self-improving systems. (2023)
+- [Awesome AutoML Papers](https://github.com/hibayesian/awesome-automl-papers) - Curated literature on automated model selection, architecture search, hyperparameter optimization, and related techniques. (2018)
+- [Awesome Self-Improving Agents](https://github.com/selfimproving-agent/awesome-Self-Improving-Agents) - Focused bibliography of foundation-model agents that update their models, memory, tools, prompts, or workflows. (2024)
 
 ## Contributing
 
 Contributions are welcome. Please read the [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
+
+<h2 id="license">License</h2>
+
+This project is licensed under the [CC0 1.0 Universal license](LICENSE).
