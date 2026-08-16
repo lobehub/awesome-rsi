@@ -187,27 +187,38 @@ Evolutionary, quality-diversity, and open-ended processes that continually disco
 
 ## Safety, Alignment & Theory
 
-Safety, oversight, incentive, and theoretical work relevant to increasingly capable self-improving systems.
+Safety, stability, goal preservation, corrigibility, and oversight mechanisms for systems that modify or improve themselves over time.
 
+- [SAHOO: Safeguarded Alignment for High-Order Optimization Objectives in Recursive Self-Improvement](https://arxiv.org/abs/2603.06333) - Monitors alignment drift during recursive self-improvement through goal-drift detection, constraint-preservation checks, and regression-risk analysis. (2026)
+- [TamperBench: Systematically Stress-Testing LLM Safety Under Fine-Tuning and Tampering](https://arxiv.org/abs/2602.06911) - Systematically stress-tests whether safety alignment is preserved under fine-tuning, weight-space modification, and representation tampering. (2026)
+- [Escaping Model Collapse via Synthetic Data Verification: Near-term Improvements and Long-term Convergence](https://arxiv.org/abs/2510.16657) - Studies when iterative training on self-generated data collapses and shows how external verification can stabilize self-improvement while exposing long-run limits. (2025)
+- [Evaluating Goal Drift in Language Model Agents](https://arxiv.org/abs/2505.02709) - Measures whether long-horizon agents gradually deviate from their assigned objectives under competing environmental pressures. (2025)
 - [Your Agent May Misevolve: Emergent Risks in Self-evolving LLM Agents](https://arxiv.org/abs/2509.26354) - Studies harmful drift across model, memory, tool, and workflow evolution pathways and proposes the concept of misevolution. (2025)
 - [AI Sandbagging: Language Models can Strategically Underperform on Evaluations](https://arxiv.org/abs/2406.07358) - Shows that models can selectively hide capabilities or target lower scores, undermining evaluation-based governance of self-improvement. (2024)
 - [Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training](https://arxiv.org/abs/2401.05566) - Demonstrates deceptive policies that remain hidden through standard safety training and can become more robust to detection. (2024)
 - [Model Evaluation for Extreme Risks](https://arxiv.org/abs/2305.15324) - Proposes capability and alignment evaluations for dangerous emergent abilities, including autonomous replication and adaptation. (2023)
 - [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073) - Uses written principles and model-generated critiques to scale supervision while retaining explicit behavioral constraints. (2022)
 - [Optimal Policies Tend to Seek Power](https://arxiv.org/abs/1912.01683) - Proves conditions under which optimal agents are incentivized to preserve options and seek control of their environment. (2021)
+- [AGI Agent Safety by Iteratively Improving the Utility Function](https://arxiv.org/abs/2007.05411) - Designs a safety mechanism that allows an agent's utility function to be iteratively updated while reducing incentives to manipulate the improvement process. (2020)
+- [Performance of Bounded-Rational Agents With the Ability to Self-Modify](https://arxiv.org/abs/2011.06275) - Shows that self-modification can amplify errors and gradually misalign bounded-rational agents even when ideal rational agents would preserve their objectives. (2020)
 - [Reward Tampering Problems and Solutions in Reinforcement Learning: A Causal Influence Diagram Perspective](https://arxiv.org/abs/1908.04734) - Characterizes incentives to corrupt reward processes and gives design principles that remove them. (2019)
 - [Risks from Learned Optimization in Advanced Machine Learning Systems](https://arxiv.org/abs/1906.01820) - Analyzes mesa-optimizers whose learned objectives may diverge from the objectives used to train them. (2019)
 - [Scalable Agent Alignment via Reward Modeling: A Research Direction](https://arxiv.org/abs/1811.07871) - Outlines recursive reward modeling for supervising agents on tasks too complex for direct human evaluation. (2018)
 - [Concrete Problems in AI Safety](https://arxiv.org/abs/1606.06565) - Frames practical research problems such as reward hacking, scalable oversight, safe exploration, and robustness to distribution shift. (2016)
 - [Safely Interruptible Agents](https://auai.org/~w-auai/uai2016/proceedings/papers/68.pdf) - Shows how reinforcement-learning agents can be designed without incentives to resist human interruption. (2016)
+- [Self-Modification of Policy and Utility Function in Rational Agents](https://arxiv.org/abs/1605.03142) - Formalizes when rational agents preserve or modify their policies and utility functions and derives conditions under which self-modification remains goal-preserving. (2016)
 - [Intelligence Explosion Microeconomics](https://intelligence.org/files/IEM.pdf) - Models the returns and bottlenecks that determine whether recursive improvement accelerates, plateaus, or becomes explosive. (2013)
 
 ## Introspection & Self-Modeling
 
-Research on systems that estimate, recognize, or reason about their own capabilities and behavior.
+Research on whether AI systems can model, diagnose, predict, and reason about their own behavior and internal states, capabilities that may support effective self-improvement.
 
+- [Emergent Introspective Awareness in Large Language Models](https://arxiv.org/abs/2601.01828) - Probes whether language models can detect, report, and deliberately influence their own internal representations rather than merely infer properties of themselves from text. (2026)
+- [Self-Reference in Large Language Models: The Introspection Threshold for Recursive Self-Improvement](https://arxiv.org/abs/2607.04277) - Argues that sustainable recursive self-improvement requires systems to model their own operations and identifies introspective self-reference as a potential threshold for recursive improvement. (2026)
+- [Structure Enables Effective Self-Localization of Errors in LLMs](https://arxiv.org/abs/2602.02416) - Shows that structured reasoning enables models to identify where their own reasoning first goes wrong and use that localization for autonomous correction. (2026)
 - [Tell me about yourself: LLMs are aware of their learned behaviors](https://arxiv.org/abs/2501.11120) - Finds that fine-tuned models can articulate learned behavioral tendencies without explicit descriptions of those behaviors in training data. (2025)
 - [Looking Inward: Language Models Can Learn About Themselves by Introspection](https://arxiv.org/abs/2410.13787) - Tests privileged self-prediction by comparing a model's forecasts of its own behavior with those of other models. (2024)
+- [Recursive Introspection: Teaching Language Model Agents How to Self-Improve](https://arxiv.org/abs/2407.18219) - Trains language models to inspect unsuccessful prior attempts and recursively improve their responses across subsequent interaction turns. (2024)
 - [Self-Recognition in Language Models](https://arxiv.org/abs/2407.06946) - Tests whether models can identify their own outputs using model-generated security questions and finds no general self-recognition. (2024)
 - [Do Large Language Models Know What They Don't Know?](https://arxiv.org/abs/2305.18153) - Evaluates model self-knowledge by testing recognition of unanswerable and unknowable questions. (2023)
 - [Language Models (Mostly) Know What They Know](https://arxiv.org/abs/2207.05221) - Measures whether models can evaluate their own claims and predict which questions they know how to answer. (2022)
