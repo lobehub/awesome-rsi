@@ -18,6 +18,7 @@ The taxonomy is organizational rather than mutually exclusive; many systems span
 
 Fundamentals & Getting Started
 <!--lint ignore awesome-toc-->
+- [Scope & Terminology](#scope--terminology)
 - [Model-level RSI](#model-level-rsi)
   - [Self-Training & Self-Reward](#self-training--self-reward)
   - [Synthetic Data & Self-Distillation](#synthetic-data--self-distillation)
@@ -52,6 +53,14 @@ Fundamentals & Getting Started
 - [Blog Posts & Discussions](#blog-posts--discussions)
 - [Talks & Videos](#talks--videos)
 - [Related Awesome Lists](#related-awesome-lists)
+
+## Scope & Terminology
+
+<!--lint ignore awesome-list-item-->
+- **Self-refinement** — improves the current output without a persistent change to the system.
+- **Persistent self-improvement** — changes to weights, memory, skills, prompts, harness, or code that carry into the next round.
+- **Recursive self-improvement** — the mechanism that produces improvements is itself the object of improvement.
+- **RSI substrate** — exposes an agent's own structure as a modifiable object, but does not necessarily form an automatic self-improvement loop by default.
 
 ## Fundamentals & Getting Started
 
@@ -136,6 +145,8 @@ Methods that improve prompts, memory, verification, tools, or agent policies aro
 ### Extensible Harness Substrates
 
 Extensible agent runtimes that expose prompts, tools, skills, memory, plugins, or control flow as modifiable surfaces. These systems do not necessarily implement self-improvement by default, but can serve as substrates for RSI experiments.
+
+General extensibility alone is insufficient. An RSI substrate should expose agent-relevant runtime components such as prompts, memory, skills, tools, or control flow as programmatically modifiable surfaces suitable for persistent self-modification experiments.
 
 - [Agent Zero](https://github.com/agent0ai/agent-zero) - Open agentic framework whose prompts, tools, skills, plugins, and multi-agent profiles can be inspected, replaced, and extended.
 - [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) - Open-source agent harness from DeepSeek AI built around an everything-is-a-plugin architecture.
