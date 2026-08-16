@@ -14,6 +14,8 @@ A resource should:
 
 Broad enabling methods are not sufficient on their own. A contribution must make a specific, evidence-based case for its relationship to recursive or persistent self-improvement rather than merely sharing techniques such as prompting, synthetic data, memory, search, or multi-agent interaction.
 
+Canonical enabling works may be included when they establish a mechanism that is directly reused by later self-improving systems.
+
 Resources about the financial Relative Strength Index are out of scope.
 
 ## Entry Format
