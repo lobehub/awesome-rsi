@@ -377,7 +377,3 @@ Benchmarks grouped by how directly they provide evidence about recursive self-im
 ## Contributing
 
 Contributions are welcome. Please read the [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
-
-<h2 id="license">License</h2>
-
-This project is licensed under the [CC0 1.0 Universal license](LICENSE).
