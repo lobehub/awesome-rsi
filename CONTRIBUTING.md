@@ -53,6 +53,6 @@ Every submission or pull request must also provide:
 - Include complete answers to the four required questions and the Publication status field above.
 - Place the entry in the most specific applicable subsection.
 - Keep formatting consistent with surrounding entries and update the Contents section if you add or rename a heading.
-- Verify that `npx awesome-lint` passes before requesting review.
+- Verify that `npx --yes awesome-lint@2.3.0` passes before requesting review.
 
 By contributing, you agree that your contribution is released under the repository's [CC0 1.0 Universal license](LICENSE).
