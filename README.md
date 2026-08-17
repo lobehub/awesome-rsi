@@ -8,7 +8,7 @@ Awesome RSI collects and organizes important work across these areas, including 
 
 Not every work listed here demonstrates RSI in the strict sense. Some represent bounded self-improvement or enabling techniques that may contribute to more complete recursive systems.
 
-If you are new to the topic, start with [Fundamentals & Getting Started](#fundamentals--getting-started). If you already know the basics, explore the sections most relevant to your interests.
+If you are new to the topic, start with Fundamentals & Getting Started. If you already know the basics, explore the sections most relevant to your interests.
 
 This is a community-maintained and evolving list. Contributions, missing papers, new benchmarks, frameworks, and suggestions for improving the taxonomy are very welcome.
 
@@ -16,9 +16,8 @@ The taxonomy is organizational rather than mutually exclusive; many systems span
 
 ## Contents
 
-Fundamentals & Getting Started
-<!--lint ignore awesome-toc-->
 - [Scope & Terminology](#scope--terminology)
+- [Fundamentals & Getting Started](#fundamentals--getting-started)
 - [Model-level RSI](#model-level-rsi)
   - [Self-Training & Self-Reward](#self-training--self-reward)
   - [Synthetic Data & Self-Distillation](#synthetic-data--self-distillation)
@@ -29,7 +28,7 @@ Fundamentals & Getting Started
   - [Context & Memory Evolution](#context--memory-evolution)
   - [Harness & Scaffold Evolution](#harness--scaffold-evolution)
   - [Extensible Harness Substrates](#extensible-harness-substrates)
-  - [Self-Verification & Self-Correction](#self-verification--self-correction)
+  - [Self-Verification & Self-Correction — Enabling Foundations](#self-verification--self-correction--enabling-foundations)
   - [Self-Evolving Agent Frameworks](#self-evolving-agent-frameworks)
 - [Multi-Agent Self-Improvement](#multi-agent-self-improvement)
   - [Co-Evolution](#co-evolution)
@@ -47,7 +46,7 @@ Fundamentals & Getting Started
   - [Automated AI R&D Evaluations](#automated-ai-rd-evaluations)
   - [Long-Horizon & Agent Capability Evaluations](#long-horizon--agent-capability-evaluations)
 - [Frameworks & Tools](#frameworks--tools)
-  - [Self-Modifying / Self-Evolving Agents](#self-modifying--self-evolving-agents)
+  - [Self-Modifying / Self-Evolving Systems](#self-modifying--self-evolving-systems)
   - [Harness / Memory / Skill Evolution](#harness--memory--skill-evolution)
   - [Automated Search / AI R&D](#automated-search--ai-rd)
 - [Blog Posts & Discussions](#blog-posts--discussions)
@@ -56,11 +55,15 @@ Fundamentals & Getting Started
 
 ## Scope & Terminology
 
-<!--lint ignore awesome-list-item-->
-- **Self-refinement** — improves the current output without a persistent change to the system.
-- **Persistent self-improvement** — changes to weights, memory, skills, prompts, harness, or code that carry into the next round.
-- **Recursive self-improvement** — the mechanism that produces improvements is itself the object of improvement.
-- **RSI substrate** — exposes an agent's own structure as a modifiable object, but does not necessarily form an automatic self-improvement loop by default.
+For this list, we use the following operational distinctions:
+
+**Self-refinement** — improves the current output without a persistent change to the system.
+
+**Persistent self-improvement** — changes to weights, memory, skills, prompts, harness, or code that carry into the next round.
+
+**Recursive self-improvement** — the mechanism that produces improvements is itself the object of improvement.
+
+**RSI substrate** — exposes an agent's own structure as a modifiable object, but does not necessarily form an automatic self-improvement loop by default.
 
 ## Fundamentals & Getting Started
 
@@ -80,7 +83,7 @@ Foundational papers, formal treatments, and surveys that establish the vocabular
 
 ## Model-level RSI
 
-Methods that improve model weights or training behavior through self-generated feedback, data, or reasoning.
+Methods that improve model weights or training behavior through self-generated feedback, data, or reasoning, including canonical enabling methods later reused in persistent self-improvement loops.
 
 ### Self-Training & Self-Reward
 
@@ -153,7 +156,9 @@ General extensibility alone is insufficient. An RSI substrate should expose agen
 - [OpenClaw](https://github.com/openclaw/openclaw) - Personal-agent substrate whose Gateway connects models, tools, sessions, and channels while skills and plugins extend its capabilities.
 - [Pi](https://github.com/earendil-works/pi) - Self-extensible coding-agent harness with a reusable agent runtime, terminal UI, and unified multi-provider LLM API.
 
-### Self-Verification & Self-Correction
+### Self-Verification & Self-Correction — Enabling Foundations
+
+Primarily bounded self-refinement and verification methods that serve as building blocks for persistent self-improving systems.
 
 - [Chain-of-Verification Reduces Hallucination in Large Language Models](https://arxiv.org/abs/2309.11495) - Plans and answers independent verification questions before producing a revised response. (Findings of ACL 2024)
 - [CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing](https://arxiv.org/abs/2305.11738) - Uses external tools to validate an output and converts the resulting evidence into iterative corrections. (ICLR 2024)
@@ -300,7 +305,7 @@ Benchmarks grouped by how directly they provide evidence about recursive self-im
 
 ## Frameworks & Tools
 
-### Self-Modifying / Self-Evolving Agents
+### Self-Modifying / Self-Evolving Systems
 
 - [AgentFactory](https://github.com/zzatpku/AgentFactory) - Self-evolving framework that accumulates and reuses executable subagents to improve future task solving. (2026)
 - [Darwin Gödel Machine](https://github.com/jennyzzt/dgm) - Official self-modifying coding-agent implementation with open-ended archive-based evolution. (2025)
