@@ -1,6 +1,6 @@
 # Awesome RSI (Recursive Self-Improvement) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-Recursive Self-Improvement (RSI) refers to AI systems improving their own capabilities, including the mechanisms used to produce further improvements.
+Recursive Self-Improvement (RSI) refers to processes in which AI systems improve their own capabilities and can also improve the mechanisms that generate subsequent improvements.
 
 Recent progress in self-training, agent memory, harness optimization, automated AI research, self-modifying coding agents, and evolutionary search has made RSI increasingly relevant as an empirical research direction rather than only a theoretical idea.
 

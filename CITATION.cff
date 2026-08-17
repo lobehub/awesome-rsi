@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this list, please cite it as below."
+title: "Awesome RSI: A curated research map of Recursive Self-Improvement"
+authors:
+  - name: "Max Means Best"
+    github: "MaxForAI"
+type: generic
+version: "2026.08"
+date-released: "2026-08-17"
+abstract: "A curated research map of Recursive Self-Improvement (RSI): models, agents, harnesses, automated AI R&D, benchmarks, and safety."
+repository-code: "https://github.com/lobehub/awesome-rsi"
+license: "CC0-1.0"
+keywords:
+  - "recursive self-improvement"
+  - "self-evolving agents"
+  - "agent harness"
+  - "automated AI research"
