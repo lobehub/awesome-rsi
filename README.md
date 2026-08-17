@@ -153,7 +153,7 @@ General extensibility alone is insufficient. An RSI substrate should expose agen
 
 - [Agent Zero](https://github.com/agent0ai/agent-zero) - Open agentic framework whose prompts, tools, skills, plugins, and multi-agent profiles can be inspected, replaced, and extended.
 - [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) - Open-source agent harness from DeepSeek AI built around an everything-is-a-plugin architecture.
-- [OpenClaw](https://github.com/openclaw/openclaw) - Personal-agent substrate whose Gateway connects models, tools, sessions, and channels while skills and plugins extend its capabilities.
+- [OpenClaw](https://github.com/openclaw/openclaw) - Persistent agent runtime with workspace-scoped skills and a Skill Workshop where agents can draft reusable skill changes for review and application.
 - [Pi](https://github.com/earendil-works/pi) - Self-extensible coding-agent harness with a reusable agent runtime, terminal UI, and unified multi-provider LLM API.
 
 ### Self-Verification & Self-Correction — Enabling Foundations
@@ -190,6 +190,8 @@ Systems that use interaction among multiple agents to improve reasoning, policie
 
 ### Inference-time Debate
 
+Primarily current-run improvement via multi-agent debate, without persistent system change.
+
 - [Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate](https://arxiv.org/abs/2305.19118) - Uses adversarial debate and a judge to counter degeneration of thought during iterative reflection. (EMNLP 2024)
 - [Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325) - Iterates proposals and peer critiques among model instances to converge on more factual and accurate answers. (ICML 2024)
 
@@ -204,11 +206,15 @@ Agents and training loops that improve code, software-engineering performance, o
 
 ### Iterative Repair & Training
 
+Mixes current-run repair loops with methods whose learned improvements persist into later iterations.
+
 - [Training Software Engineering Agents and Verifiers with SWE-Gym](https://arxiv.org/abs/2412.21139) - Supplies executable repository tasks and trajectories for training both SWE agents and inference-time verifiers. (ICML 2025)
 - [Teaching Large Language Models to Self-Debug](https://arxiv.org/abs/2304.05128) - Teaches models to inspect execution results, explain their code, and repair failures through iterative prompting. (ICLR 2024)
 - [AgentCoder: Multi-Agent-based Code Generation with Iterative Testing and Optimisation](https://arxiv.org/abs/2312.13010) - Coordinates programmer, test-designer, and test-executor agents in a feedback loop that iteratively repairs generated code. (arXiv 2023)
 
 ## Automated AI R&D
+
+Systems that automate parts of AI research and development, including experimentation, post-training, algorithm discovery, and the improvement of other AI systems.
 
 - [Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering](https://arxiv.org/abs/2607.28568) - Connects execution-grounded operator training with long-horizon evolution in the open OpenMLE stack, using machine-learning engineering as an AI4AI testbed for RSI. (arXiv 2026)
 - [FT-Dojo: Towards Autonomous LLM Fine-Tuning with Language Agents](https://arxiv.org/abs/2603.01712) - Turns data collection, training, evaluation, diagnosis, and strategy revision into an executable environment for autonomous fine-tuning agents. (arXiv 2026)
@@ -307,35 +313,35 @@ Benchmarks grouped by how directly they provide evidence about recursive self-im
 
 ### Self-Modifying / Self-Evolving Systems
 
-- [AgentFactory](https://github.com/zzatpku/AgentFactory) - Self-evolving framework that accumulates and reuses executable subagents to improve future task solving. (2026)
-- [Darwin Gödel Machine](https://github.com/jennyzzt/dgm) - Official self-modifying coding-agent implementation with open-ended archive-based evolution. (2025)
-- [Gödel Agent](https://github.com/Arvid-pku/Godel_Agent) - Official implementation of Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement. (2024)
-- [Hermes Agent](https://github.com/NousResearch/hermes-agent) - Self-improving personal agent with a built-in learning loop that creates and refines skills from experience. (2026)
-- [HyperAgents](https://github.com/facebookresearch/HyperAgents) - Self-referential agent framework in which an editable meta-agent improves itself and the task agent for computable objectives. (2026)
-- [SEAL](https://github.com/Continual-Intelligence/SEAL) - Official code for language models that generate their own adaptation data and update instructions. (2025)
-- [SIA](https://github.com/hexo-ai/sia) - Self-improving AI framework that iteratively updates an agent harness and, when configured, the target model's weights. (2026)
+- [AgentFactory](https://github.com/zzatpku/AgentFactory) - Self-evolving framework that accumulates and reuses executable subagents to improve future task solving.
+- [Darwin Gödel Machine](https://github.com/jennyzzt/dgm) - Official self-modifying coding-agent implementation with open-ended archive-based evolution.
+- [Gödel Agent](https://github.com/Arvid-pku/Godel_Agent) - Official implementation of Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement.
+- [Hermes Agent](https://github.com/NousResearch/hermes-agent) - Self-improving personal agent with a built-in learning loop that creates and refines skills from experience.
+- [HyperAgents](https://github.com/facebookresearch/HyperAgents) - Self-referential agent framework in which an editable meta-agent improves itself and the task agent for computable objectives.
+- [SEAL](https://github.com/Continual-Intelligence/SEAL) - Official code for language models that generate their own adaptation data and update instructions.
+- [SIA](https://github.com/hexo-ai/sia) - Self-improving AI framework that iteratively updates an agent harness and, when configured, the target model's weights.
 
 ### Harness / Memory / Skill Evolution
 
-- [ACE](https://github.com/ace-agent/ace) - Official implementation of Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models. (2025)
-- [ALMA](https://github.com/zksha/alma) - Official implementation of Learning to Continually Learn via Meta-learning Agentic Memory Designs. (2026)
-- [Continual Harness](https://github.com/sethkarten/continual-harness) - Self-improving agent harness that adapts online from experience while maintaining a continuous environment trajectory. (2026)
-- [EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) - Self-evolving agent framework for automatically building, evaluating, and optimizing agentic workflows. (2025)
-- [EvolveR](https://github.com/KnowledgeXLab/EvolveR) - Self-evolving LLM-agent framework that improves through a closed-loop, experience-driven lifecycle. (2025)
-- [Letta Code](https://github.com/letta-ai/letta-code) - Memory-first coding-agent harness whose long-lived agents rewrite context and learn skills from experience. (2025)
-- [Memento-Skills](https://github.com/Memento-Teams/Memento-Skills) - Self-evolving agent framework that retrieves, evaluates, repairs, and rewrites persistent skills through reflective learning. (2026)
-- [Voyager](https://github.com/MineDojo/Voyager) - Embodied lifelong-learning agent with automatic curriculum, iterative prompting, and a reusable skill library. (2023)
+- [ACE](https://github.com/ace-agent/ace) - Official implementation of Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models.
+- [ALMA](https://github.com/zksha/alma) - Official implementation of Learning to Continually Learn via Meta-learning Agentic Memory Designs.
+- [Continual Harness](https://github.com/sethkarten/continual-harness) - Self-improving agent harness that adapts online from experience while maintaining a continuous environment trajectory.
+- [EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) - Self-evolving agent framework for automatically building, evaluating, and optimizing agentic workflows.
+- [EvolveR](https://github.com/KnowledgeXLab/EvolveR) - Self-evolving LLM-agent framework that improves through a closed-loop, experience-driven lifecycle.
+- [Letta Code](https://github.com/letta-ai/letta-code) - Memory-first coding-agent harness whose long-lived agents rewrite context and learn skills from experience.
+- [Memento-Skills](https://github.com/Memento-Teams/Memento-Skills) - Self-evolving agent framework that retrieves, evaluates, repairs, and rewrites persistent skills through reflective learning.
+- [Voyager](https://github.com/MineDojo/Voyager) - Embodied lifelong-learning agent with automatic curriculum, iterative prompting, and a reusable skill library.
 
 ### Automated Search / AI R&D
 
-- [ADAS](https://github.com/ShengranHu/ADAS) - Official implementation of a meta-agent that searches over executable agent designs. (2024)
-- [AI Scientist](https://github.com/SakanaAI/AI-Scientist) - End-to-end system for generating machine-learning ideas, running experiments, and writing research papers. (2024)
-- [autoresearch](https://github.com/karpathy/autoresearch) - Runs an autonomous loop that edits an LLM training program, trains for five minutes, and keeps only changes that improve validation bits per byte. (2026)
-- [Evolutionary Model Merge](https://github.com/SakanaAI/evolutionary-model-merge) - Evolves combinations of open models in parameter and data-flow space. (2024)
-- [FunSearch](https://github.com/google-deepmind/funsearch) - Reference implementation of LLM-guided evolutionary program search with executable evaluators. (2023)
-- [MLEvolve](https://github.com/InternScience/MLEvolve) - Self-evolving multi-agent framework for end-to-end machine-learning algorithm discovery using progressive search and experience-driven memory. (2026)
-- [OpenEvolve](https://github.com/algorithmicsuperintelligence/openevolve) - Open-source evolutionary coding agent inspired by AlphaEvolve-style program optimization. (2025)
-- [POET](https://github.com/uber-research/poet) - Reference implementation for co-evolving environments and their paired agents. (2019)
+- [ADAS](https://github.com/ShengranHu/ADAS) - Official implementation of a meta-agent that searches over executable agent designs.
+- [AI Scientist](https://github.com/SakanaAI/AI-Scientist) - End-to-end system for generating machine-learning ideas, running experiments, and writing research papers.
+- [autoresearch](https://github.com/karpathy/autoresearch) - Runs an autonomous loop that edits an LLM training program, trains for five minutes, and keeps only changes that improve validation bits per byte.
+- [Evolutionary Model Merge](https://github.com/SakanaAI/evolutionary-model-merge) - Evolves combinations of open models in parameter and data-flow space.
+- [FunSearch](https://github.com/google-deepmind/funsearch) - Reference implementation of LLM-guided evolutionary program search with executable evaluators.
+- [MLEvolve](https://github.com/InternScience/MLEvolve) - Self-evolving multi-agent framework for end-to-end machine-learning algorithm discovery using progressive search and experience-driven memory.
+- [OpenEvolve](https://github.com/algorithmicsuperintelligence/openevolve) - Open-source evolutionary coding agent inspired by AlphaEvolve-style program optimization.
+- [POET](https://github.com/uber-research/poet) - Reference implementation for co-evolving environments and their paired agents.
 
 ## Blog Posts & Discussions
 
