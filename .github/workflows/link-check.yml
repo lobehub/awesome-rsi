@@ -26,6 +26,8 @@ jobs:
             --retry-wait-time 2
             --exclude '^https?://(www\.)?openreview\.net(/|$)'
             --exclude '^https?://(www\.)?sciencedirect\.com(/|$)'
+            --exclude '^https?://(www\.)?openai\.com(/|$)'
+            --exclude '^https?://www\.lesswrong\.com(/|$)'
             README.md
           fail: true
           failIfEmpty: true
