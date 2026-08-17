@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this list, please cite it as below."
 title: "Awesome RSI: A curated research map of Recursive Self-Improvement"
 authors:
-  - name: "Max Means Best"
+  - name: "MaxForAI"
     github: "MaxForAI"
 type: generic
 version: "2026.08"
