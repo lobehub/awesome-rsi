@@ -3,8 +3,8 @@ message: "If you use this list, please cite it as below."
 title: "Awesome RSI: A curated research map of Recursive Self-Improvement"
 authors:
   - name: "MaxForAI"
-    github: "MaxForAI"
-type: generic
+    website: "https://github.com/MaxForAI"
+type: software
 version: "2026.08"
 date-released: "2026-08-17"
 abstract: "A curated research map of Recursive Self-Improvement (RSI): models, agents, harnesses, automated AI R&D, benchmarks, and safety."
@@ -15,3 +15,9 @@ keywords:
   - "self-evolving agents"
   - "agent harness"
   - "automated AI research"
+preferred-citation:
+  type: generic
+  title: "Awesome RSI: A curated research map of Recursive Self-Improvement"
+  authors:
+    - name: "MaxForAI"
+  year: 2026

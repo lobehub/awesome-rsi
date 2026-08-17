@@ -171,7 +171,7 @@ Primarily bounded self-refinement and verification methods that serve as buildin
 
 ### Self-Evolving Agent Frameworks
 
-- [AgentFactory: A Self-Evolving Framework Through Executable Subagent Accumulation and Reuse](https://arxiv.org/abs/2603.18000) - Preserves successful solutions as executable subagents and continually refines them from execution feedback for reuse on future tasks. (ACL 2026)
+- [AgentFactory: A Self-Evolving Framework Through Executable Subagent Accumulation and Reuse](https://arxiv.org/abs/2603.18000) - Preserves successful solutions as executable subagents and continually refines them from execution feedback for reuse on future tasks. (ACL 2026 System Demonstrations)
 - [EvoAgent: An Evolvable Agent Framework with Skill Learning and Multi-Agent Delegation](https://arxiv.org/abs/2604.20133) - Accumulates structured skills through a feedback loop and delegates complex tasks through a hierarchy of sub-agents. (arXiv 2026)
 - [Hyperagents](https://arxiv.org/abs/2603.19461) - Combines a task agent with an editable meta-agent whose self-modification procedure can itself evolve and transfer improvements across domains. (arXiv 2026)
 - [SIA: Self Improving AI with Harness & Weight Updates](https://arxiv.org/abs/2605.27276) - Uses task feedback to update both an agent's harness and its model weights within one self-improving loop. (arXiv 2026)
