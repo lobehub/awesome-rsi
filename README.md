@@ -132,6 +132,7 @@ Methods that improve prompts, memory, verification, tools, or agent policies aro
 ### Context & Memory Evolution
 
 - [Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models](https://arxiv.org/abs/2510.04618) - Evolves context as a structured playbook through generation, reflection, and curation while avoiding destructive context collapse. (ICLR 2026)
+- [EvolveR: Self-Evolving LLM Agents through an Experience-Driven Lifecycle](https://arxiv.org/abs/2510.16079) - Distills interaction trajectories into reusable strategic principles, retrieves them during future tasks, and reinforces the agent policy in a closed experience loop. (ICML 2026)
 - [Learning to Continually Learn via Meta-learning Agentic Memory Designs](https://arxiv.org/abs/2602.07755) - Uses a meta-agent to discover executable memory schemas and retrieval and update mechanisms that continually improve from experience. (arXiv 2026)
 - [A-MEM: Agentic Memory for LLM Agents](https://arxiv.org/abs/2502.12110) - Builds a dynamically linked note network whose organization evolves as an agent accumulates new experiences. (NeurIPS 2025)
 - [ExpeL: LLM Agents Are Experiential Learners](https://arxiv.org/abs/2308.10144) - Extracts reusable insights from successful and failed trajectories and transfers them to future tasks without weight updates. (AAAI 2024)
@@ -142,6 +143,7 @@ Methods that improve prompts, memory, verification, tools, or agent policies aro
 
 - [Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses](https://arxiv.org/abs/2604.25850) - Autonomously evolves tools, middleware, memory, and prompts through observable edits whose predictions are verified on later tasks. (arXiv 2026)
 - [AutoHarness: Improving LLM Agents by Automatically Synthesizing a Code Harness](https://arxiv.org/abs/2603.03329) - Synthesizes and iteratively refines executable harnesses from environment feedback, eliminating illegal actions across 145 TextArena games. (arXiv 2026)
+- [Continual Harness: Online Adaptation for Self-Improving Foundation Agents](https://arxiv.org/abs/2605.09998) - Refines prompts, sub-agents, skills, and memory online within a single continuous trajectory and extends the loop to model-weight co-learning. (arXiv 2026)
 - [MemoHarness: Agent Harnesses That Learn from Experience](https://arxiv.org/abs/2607.14159) - Learns case-adaptive configurations across six harness control dimensions from execution diagnoses and a reusable experience bank. (arXiv 2026)
 - [MetaSkill-Evolve: Recursive Self-Improvement of LLM Agents via Two-Timescale Meta-Skill Evolution](https://arxiv.org/abs/2607.05297) - Evolves task skills in a fast loop and the meta-skills governing its Analyzer, Retriever, Allocator, Proposer, and Evolver in a slower recursive loop. (arXiv 2026)
 
@@ -169,8 +171,12 @@ Primarily bounded self-refinement and verification methods that serve as buildin
 
 ### Self-Evolving Agent Frameworks
 
+- [AgentFactory: A Self-Evolving Framework Through Executable Subagent Accumulation and Reuse](https://arxiv.org/abs/2603.18000) - Preserves successful solutions as executable subagents and continually refines them from execution feedback for reuse on future tasks. (ACL 2026)
 - [EvoAgent: An Evolvable Agent Framework with Skill Learning and Multi-Agent Delegation](https://arxiv.org/abs/2604.20133) - Accumulates structured skills through a feedback loop and delegates complex tasks through a hierarchy of sub-agents. (arXiv 2026)
+- [Hyperagents](https://arxiv.org/abs/2603.19461) - Combines a task agent with an editable meta-agent whose self-modification procedure can itself evolve and transfer improvements across domains. (arXiv 2026)
+- [SIA: Self Improving AI with Harness & Weight Updates](https://arxiv.org/abs/2605.27276) - Uses task feedback to update both an agent's harness and its model weights within one self-improving loop. (arXiv 2026)
 - [Alita-G: Self-Evolving Generative Agent for Agent Generation](https://arxiv.org/abs/2510.23601) - Generates, abstracts, and curates reusable MCP tools from successful trajectories to turn a generalist agent into a domain specialist. (arXiv 2025)
+- [EvoAgentX: An Automated Framework for Evolving Agentic Workflows](https://arxiv.org/abs/2507.03616) - Unifies workflow generation, execution, evaluation, and evolutionary optimization across agent prompts, tools, and topologies. (arXiv 2025)
 - [Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement](https://arxiv.org/abs/2410.04444) - Lets an agent inspect and rewrite its own logic without relying on a fixed hand-designed optimization routine. (ACL 2025)
 - [MemEvolve: Meta-Evolution of Agent Memory Systems](https://arxiv.org/abs/2512.18746) - Jointly evolves experiential knowledge and the architecture that encodes, stores, retrieves, and manages agent memory. (arXiv 2025)
 - [Self-evolving Agents with Reflective and Memory-Augmented Abilities](https://arxiv.org/abs/2409.00872) - Combines iterative feedback, reflection, and forgetting-aware memory optimization for continual agent adaptation. (Neurocomputing 2025)
@@ -218,6 +224,7 @@ Systems that automate parts of AI research and development, including experiment
 
 - [Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering](https://arxiv.org/abs/2607.28568) - Connects execution-grounded operator training with long-horizon evolution in the open OpenMLE stack, using machine-learning engineering as an AI4AI testbed for RSI. (arXiv 2026)
 - [FT-Dojo: Towards Autonomous LLM Fine-Tuning with Language Agents](https://arxiv.org/abs/2603.01712) - Turns data collection, training, evaluation, diagnosis, and strategy revision into an executable environment for autonomous fine-tuning agents. (arXiv 2026)
+- [MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery](https://arxiv.org/abs/2606.06473) - Combines progressive graph search, retrospective memory, and hierarchical code generation for long-horizon end-to-end machine-learning algorithm discovery. (arXiv 2026)
 - [Towards End-to-End Automation of AI Research (The AI Scientist-v2)](https://doi.org/10.1038/s41586-026-10265-5) - Uses template-free agentic tree search to propose hypotheses, run experiments, analyze results, and write complete research papers. (Nature 2026)
 - [Towards Execution-Grounded Automated AI Research](https://arxiv.org/abs/2601.14525) - Converts LLM pre-training and post-training into executable research environments where evolutionary search learns from experimental outcomes. (arXiv 2026)
 - [The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery](https://arxiv.org/abs/2408.06292) - Automates idea generation, experimentation, paper writing, and review to create a reusable loop for machine-learning research. (arXiv 2024)
