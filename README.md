@@ -360,6 +360,7 @@ Benchmarks grouped by how directly they provide evidence about recursive self-im
 ## Blog Posts & Discussions
 
 - [A Taxonomy of Self-Evolving Agents](https://lsl.zone/blog/2026/a-taxonomy-of-self-evolving-agents/) - Distinguishes Model, Harness, and Artifact evolution, complementing this list's own taxonomy. (2026)
+- [Hyra: A Simple and Effective Agent for Scientific Discovery](https://hy.tencent.com/research/hyra) - Tencent Hunyuan report on Hyra-1.0, a recursively self-improving agent for performance-oriented research and engineering tasks, with produced research artifacts open-sourced in a companion repository. (2026)
 - [AlphaEvolve: A Gemini-Powered Coding Agent for Designing Advanced Algorithms](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/) - Google DeepMind explains AlphaEvolve's evaluator-guided evolution loop and its applications to computing and AI training. (2025)
 - [The Darwin Gödel Machine: AI That Improves Itself by Rewriting Its Own Code](https://sakana.ai/dgm/) - Sakana AI explains DGM's empirical alternative to proof-based Gödel Machine self-modification. (2025)
 - [When AI Builds Itself](https://www.anthropic.com/institute/recursive-self-improvement) - Anthropic analyzes early evidence, possible paths, and governance challenges for AI-driven AI development. (2025)
