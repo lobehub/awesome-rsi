@@ -151,6 +151,7 @@ Methods that improve prompts, memory, verification, tools, or agent policies aro
 - [EvoHarness-RL: Learning Self-Evolving Runtime Harness for Long-Horizon LLM Agents](https://arxiv.org/abs/2608.05446) - Trains agents to construct and coordinate evolving Belief, Progress, and Experience state during long-horizon execution. (COLM 2026 LLA Workshop)
 - [MemoHarness: Agent Harnesses That Learn from Experience](https://arxiv.org/abs/2607.14159) - Learns case-adaptive configurations across six harness control dimensions from execution diagnoses and a reusable experience bank. (arXiv 2026)
 - [MetaSkill-Evolve: Recursive Self-Improvement of LLM Agents via Two-Timescale Meta-Skill Evolution](https://arxiv.org/abs/2607.05297) - Evolves task skills in a fast loop and the meta-skills governing its Analyzer, Retriever, Allocator, Proposer, and Evolver in a slower recursive loop. (arXiv 2026)
+- [SkillOpt: Executive Strategy for Self-Evolving Agent Skills](https://arxiv.org/abs/2605.23904) - Trains a single skill document as the external state of a frozen agent, with a separate optimizer model proposing bounded edits accepted only on strict held-out validation gains. (arXiv 2026)
 
 ### Extensible Harness Substrates
 
@@ -361,6 +362,7 @@ Benchmarks grouped by how directly they provide evidence about recursive self-im
 ## Blog Posts & Discussions
 
 - [A Taxonomy of Self-Evolving Agents](https://lsl.zone/blog/2026/a-taxonomy-of-self-evolving-agents/) - Distinguishes Model, Harness, and Artifact evolution, complementing this list's own taxonomy. (2026)
+- [Harness Engineering for Self-Improvement](https://lilianweng.github.io/posts/2026-07-04-harness/) - Survey of harness engineering as a near-term path to recursive self-improvement, covering harness design patterns, context and workflow optimization, self-improving harnesses, evolutionary search, and joint optimization with model weights. (2026)
 - [AlphaEvolve: A Gemini-Powered Coding Agent for Designing Advanced Algorithms](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/) - Google DeepMind explains AlphaEvolve's evaluator-guided evolution loop and its applications to computing and AI training. (2025)
 - [The Darwin Gödel Machine: AI That Improves Itself by Rewriting Its Own Code](https://sakana.ai/dgm/) - Sakana AI explains DGM's empirical alternative to proof-based Gödel Machine self-modification. (2025)
 - [When AI Builds Itself](https://www.anthropic.com/institute/recursive-self-improvement) - Anthropic analyzes early evidence, possible paths, and governance challenges for AI-driven AI development. (2025)
