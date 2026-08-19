@@ -360,6 +360,7 @@ Benchmarks grouped by how directly they provide evidence about recursive self-im
 ## Blog Posts & Discussions
 
 - [A Taxonomy of Self-Evolving Agents](https://lsl.zone/blog/2026/a-taxonomy-of-self-evolving-agents/) - Distinguishes Model, Harness, and Artifact evolution, complementing this list's own taxonomy. (2026)
+- [AI4AI at Scale: A Full-Pipeline System for Enhancing LLM Agentic Capabilities](https://xyz-lab.ai/blogs/ai4ai-at-scale/) - Industry technical report on a bounded, verification-gated AI-for-AI loop where agent teams diagnose failures and apply scoped changes across data, post-training, runtime, and infrastructure, with accepted and rejected attempts banked as auditable experience. (2026)
 - [AlphaEvolve: A Gemini-Powered Coding Agent for Designing Advanced Algorithms](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/) - Google DeepMind explains AlphaEvolve's evaluator-guided evolution loop and its applications to computing and AI training. (2025)
 - [The Darwin Gödel Machine: AI That Improves Itself by Rewriting Its Own Code](https://sakana.ai/dgm/) - Sakana AI explains DGM's empirical alternative to proof-based Gödel Machine self-modification. (2025)
 - [When AI Builds Itself](https://www.anthropic.com/institute/recursive-self-improvement) - Anthropic analyzes early evidence, possible paths, and governance challenges for AI-driven AI development. (2025)
