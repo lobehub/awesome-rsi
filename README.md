@@ -362,6 +362,7 @@ Benchmarks grouped by how directly they provide evidence about recursive self-im
 ## Blog Posts & Discussions
 
 - [A Taxonomy of Self-Evolving Agents](https://lsl.zone/blog/2026/a-taxonomy-of-self-evolving-agents/) - Distinguishes Model, Harness, and Artifact evolution, complementing this list's own taxonomy. (2026)
+- [First Steps Toward Automated AI Research](https://recursive.com/articles/first-steps-toward-automated-ai-research) - Describes an automated research system that closes the full loop from idea proposal through implementation, experiments, validation, and selection of the next experiment, with three reported SOTA results and open-sourced artifacts. (2026)
 - [Harness Engineering for Self-Improvement](https://lilianweng.github.io/posts/2026-07-04-harness/) - Survey of harness engineering as a near-term path to recursive self-improvement, covering harness design patterns, context and workflow optimization, self-improving harnesses, evolutionary search, and joint optimization with model weights. (2026)
 - [AlphaEvolve: A Gemini-Powered Coding Agent for Designing Advanced Algorithms](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/) - Google DeepMind explains AlphaEvolve's evaluator-guided evolution loop and its applications to computing and AI training. (2025)
 - [The Darwin Gödel Machine: AI That Improves Itself by Rewriting Its Own Code](https://sakana.ai/dgm/) - Sakana AI explains DGM's empirical alternative to proof-based Gödel Machine self-modification. (2025)
