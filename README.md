@@ -309,6 +309,7 @@ Benchmarks grouped by how directly they provide evidence about recursive self-im
 ### Automated AI R&D Evaluations
 
 - [AutoLab: Can Frontier Models Solve Long-Horizon Auto Research and Engineering Tasks?](https://arxiv.org/abs/2606.05080) - Expert-curated benchmark of 36 realistic long-horizon, closed-loop optimization tasks for evaluating frontier agents on automated research and engineering. (arXiv 2026)
+- [MLS-Bench: A Holistic and Rigorous Assessment of AI Systems on Building Better AI](https://arxiv.org/abs/2605.08678) - Benchmark of 140 tasks across 12 ML research domains measuring whether AI systems can invent generalizable and scalable ML methods. (arXiv 2026)
 - [MLE-bench](https://github.com/openai/mle-bench) - Measures end-to-end machine-learning engineering performance across 75 Kaggle competitions and is used to track model self-improvement capability. (ICLR 2025)
 - [PaperBench](https://github.com/openai/frontier-evals/tree/main/project/paperbench) - Evaluates agents on replicating state-of-the-art AI research from paper descriptions. (ICML 2025)
 - [RE-Bench](https://github.com/METR/RE-Bench) - Compares AI agents with human experts on open-ended machine-learning research-engineering tasks under fixed time budgets. (ICML 2025)
