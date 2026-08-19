@@ -307,6 +307,7 @@ Benchmarks grouped by how directly they provide evidence about recursive self-im
 
 ### Automated AI R&D Evaluations
 
+- [FrontierCS: Evolving Challenges for Evolving Intelligence](https://arxiv.org/abs/2512.15699) - Benchmark of 156 expert-designed, unsolved open-ended computer science problems built to keep testing research-capable AI without saturating. (ICML 2026)
 - [MLE-bench](https://github.com/openai/mle-bench) - Measures end-to-end machine-learning engineering performance across 75 Kaggle competitions and is used to track model self-improvement capability. (ICLR 2025)
 - [PaperBench](https://github.com/openai/frontier-evals/tree/main/project/paperbench) - Evaluates agents on replicating state-of-the-art AI research from paper descriptions. (ICML 2025)
 - [RE-Bench](https://github.com/METR/RE-Bench) - Compares AI agents with human experts on open-ended machine-learning research-engineering tasks under fixed time budgets. (ICML 2025)
