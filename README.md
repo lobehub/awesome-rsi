@@ -37,6 +37,7 @@ The taxonomy is organizational rather than mutually exclusive; many systems span
   - [Self-Modifying Coding Agents](#self-modifying-coding-agents)
   - [Iterative Repair & Training](#iterative-repair--training)
 - [Automated AI R&D](#automated-ai-rd)
+- [Embodied & Physical Self-Improvement](#embodied--physical-self-improvement)
 - [Evolutionary & Open-Ended RSI](#evolutionary--open-ended-rsi)
 - [Safety, Alignment & Theory](#safety-alignment--theory)
   - [Supporting Safety Foundations](#supporting-safety-foundations)
@@ -71,6 +72,7 @@ Foundational papers, formal treatments, and surveys that establish the vocabular
 
 - [A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence](https://arxiv.org/abs/2507.21046) - Surveys what, when, and how foundation-model agents can evolve across models, memory, tools, and architectures. (TMLR 2026)
 - [Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/abs/2607.07663) - Surveys recent self-improvement work by update target and loop closure while separating bounded refinement from open-ended RSI. (arXiv 2026)
+- [Self-evolving Embodied AI](https://arxiv.org/abs/2602.04411) - Defines the self-evolving embodied AI paradigm across memory self-updating, task self-switching, environment self-prediction, embodiment self-adaptation, and model self-evolution, and systematically reviews work on each component. (arXiv 2026)
 - [A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems](https://arxiv.org/abs/2508.07407) - Organizes agent evolution around feedback loops, update targets, domain applications, evaluation, and safety. (arXiv 2025)
 - [A Survey on Self-Evolution of Large Language Models](https://arxiv.org/abs/2404.14387) - Presents a four-stage taxonomy of experience acquisition, refinement, updating, and evaluation for self-evolving LLMs. (arXiv 2024)
 - [A Formulation of Recursive Self-Improvement and Its Possible Efficiency](https://arxiv.org/abs/1805.06610) - Gives a formal definition of a restricted RSI system and analyzes when efficient recursive improvement is computable. (arXiv 2018)
@@ -235,6 +237,17 @@ Systems that automate parts of AI research and development, including experiment
 - [Towards End-to-End Automation of AI Research (The AI Scientist-v2)](https://doi.org/10.1038/s41586-026-10265-5) - Uses template-free agentic tree search to propose hypotheses, run experiments, analyze results, and write complete research papers. (Nature 2026)
 - [Towards Execution-Grounded Automated AI Research](https://arxiv.org/abs/2601.14525) - Converts LLM pre-training and post-training into executable research environments where evolutionary search learns from experimental outcomes. (arXiv 2026)
 - [The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery](https://arxiv.org/abs/2408.06292) - Automates idea generation, experimentation, paper writing, and review to create a reusable loop for machine-learning research. (arXiv 2024)
+
+## Embodied & Physical Self-Improvement
+
+Systems that use interaction with physical or simulated environments to generate persistent improvements in robot policies, skills, harnesses, world models, or the research process around them.
+
+- [ASPIRE: Agentic /Skills Discovery for Robotics](https://arxiv.org/abs/2607.00272) - Diagnoses failures from robot execution traces, edits code-as-policy, and stores validated repairs in a skill library for persistent reuse across tasks and embodiments at NVIDIA GEAR. (arXiv 2026)
+- [ENPIRE: Agentic Robot Policy Self-Improvement in the Real World](https://arxiv.org/abs/2606.19980) - Uses a coding agent from NVIDIA GEAR, CMU, and UC Berkeley to run a real-robot autoresearch loop that resets, rolls out, verifies, edits policy, training-infrastructure, or algorithm code, and reruns, with scaling to robot fleets. (arXiv 2026)
+- [MineEvolve: Self-Evolution with Accumulated Knowledge for Long-Horizon Embodied Minecraft Agents](https://arxiv.org/abs/2603.13131) - Converts successful experience into reusable skills and failures into executable guardrails that continually guide an LLM planner without model-parameter updates. (arXiv 2026)
+- [RISE: Self-Improving Robot Policy with Compositional World Model](https://arxiv.org/abs/2602.11075) - Continuously generates imagined rollouts with a compositional world model, estimates their advantages, and updates the robot policy, with training code and pretrained dynamics models released. (RSS 2026)
+- [Self-Evolving Embodied Agents via Skill-Harness Evolution](https://arxiv.org/abs/2608.11350) - Keeps model weights frozen while the same model acts as planner and optimizer, using environment rollouts to continually evolve reusable skills and a context-code harness. (arXiv 2026)
+- [Self-Improving Vision-Language-Action Models with Data Generation via Residual RL](https://iclr.cc/virtual/2026/poster/10008318) - Uses residual reinforcement learning to target VLA failure regions and generate recovery trajectories that are distilled back into a generalist policy, forming a data-to-policy self-improvement flywheel. (ICLR 2026)
 
 ## Evolutionary & Open-Ended RSI
 
