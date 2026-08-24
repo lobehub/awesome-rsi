@@ -14,9 +14,26 @@ A resource should:
 
 Broad enabling methods are not sufficient on their own. A contribution must make a specific, evidence-based case for its relationship to recursive or persistent self-improvement rather than merely sharing techniques such as prompting, synthetic data, memory, search, or multi-agent interaction.
 
+Meta-learning, continual or lifelong learning, online learning, and test-time adaptation are related enabling families, but are not sufficient for inclusion unless the system controls or generates persistent updates from its own experience.
+
 Canonical enabling works may be included when they establish a mechanism that is directly reused by later self-improving systems.
 
 Resources about the financial Relative Strength Index are out of scope.
+
+## Benchmark and Capability Proxy Admission
+
+General capability benchmarks are out of scope unless they measure a bottleneck
+that directly constrains persistent or recursive self-improvement.
+
+Relevant bottlenecks may include:
+- autonomous AI research and engineering;
+- long-horizon autonomous execution;
+- adaptive interaction and generalization in novel environments;
+- self-modification or improvement of models, agents, harnesses, or code.
+
+Difficulty alone is insufficient for inclusion.
+General knowledge and closed-ended reasoning benchmarks are out of scope unless
+there is specific evidence connecting them to self-improvement capability.
 
 ## Entry Format
 
