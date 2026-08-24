@@ -75,6 +75,29 @@ body:
       placeholder: "conference: ICML (2025)"
     validations:
       required: true
+  - type: textarea
+    id: public-artifacts
+    attributes:
+      label: Public artifacts
+      description: List the public artifacts available for reproducing reported evaluations. Enter "Not applicable" if the resource does not report an evaluation.
+      placeholder: |
+        Official implementation:
+        Public data / checkpoints:
+        Public evaluation harness:
+    validations:
+      required: true
+  - type: dropdown
+    id: evaluation-artifact-status
+    attributes:
+      label: Evaluation artifact status
+      description: Select the artifact availability classification defined in CONTRIBUTING.md.
+      options:
+        - Open
+        - Partial
+        - Internal
+        - Not applicable
+    validations:
+      required: true
   - type: checkboxes
     id: duplicate-check
     attributes:
