@@ -44,8 +44,9 @@ The taxonomy is organizational rather than mutually exclusive; many systems span
 - [Introspection & Self-Modeling](#introspection--self-modeling)
 - [Benchmarks & Evaluations](#benchmarks--evaluations)
   - [Direct RSI & Self-Improvement Evaluations](#direct-rsi--self-improvement-evaluations)
-  - [Automated AI R&D Evaluations](#automated-ai-rd-evaluations)
-  - [Long-Horizon & Agent Capability Evaluations](#long-horizon--agent-capability-evaluations)
+  - [Frontier Lab Self-Improvement & AI R&D Evaluation Frameworks](#frontier-lab-self-improvement--ai-rd-evaluation-frameworks)
+  - [AI R&D Capability Proxies](#ai-rd-capability-proxies)
+  - [Agent Capability Proxies](#agent-capability-proxies)
 - [Frameworks & Tools](#frameworks--tools)
   - [Self-Modifying / Self-Evolving Systems](#self-modifying--self-evolving-systems)
   - [Harness / Memory / Skill Evolution](#harness--memory--skill-evolution)
@@ -310,16 +311,21 @@ Research on whether AI systems can model, diagnose, predict, and reason about th
 
 ## Benchmarks & Evaluations
 
-Benchmarks grouped by how directly they provide evidence about recursive self-improvement, from explicit improvement loops to enabling research and long-horizon agent capabilities.
+Benchmarks are separated into direct self-improvement evaluations, frontier-lab evaluation frameworks, and capability proxies. Proxy benchmarks are included only when they measure a bottleneck that directly constrains persistent or recursive self-improvement.
 
 ### Direct RSI & Self-Improvement Evaluations
 
-- [OpenAI RSI Index](https://openai.com/index/gpt-5-6/) - Reports OpenAI's aggregate internal evaluations for debugging research systems, optimizing kernels and training recipes, running machine-learning experiments, and improving another model, but is not externally reproducible. (OpenAI internal 2026)
 - [PostTrainBench: Can LLM Agents Automate LLM Post-Training?](https://arxiv.org/abs/2603.08640) - Gives autonomous agents one base model, one H100 GPU, and ten hours to research and execute the strongest post-training strategy they can find. (ICML 2026)
 - [RSI-Bench](https://github.com/sunghunkwag/rsi-bench) - Provides an open-source six-axis framework for measuring self-modification depth, improvement trajectories, operator discovery, adaptation, safety, and goal generation. (community framework 2026)
 - [RSIBench-Data](https://arxiv.org/abs/2607.25886) - Isolates data-centric RSI by asking agents to iteratively improve training-data strategies against checkpoint feedback under a fixed post-training stack. (arXiv 2026)
 
-### Automated AI R&D Evaluations
+### Frontier Lab Self-Improvement & AI R&D Evaluation Frameworks
+
+- [OpenAI AI Self-Improvement Evaluations](https://deploymentsafety.openai.com/gpt-5-6) - Tracks AI Self-Improvement capability under the Preparedness Framework using Internal Research Debugging, KernelGen 1P, NanoGPT, PostTrainBench Lite, MLE-Bench Revised, and related evaluations aggregated into an RSI Index. (OpenAI System Card 2026)
+- [Anthropic Autonomous AI R&D Evaluations](https://www.anthropic.com/transparency/model-report) - Defines the Responsible Scaling Policy AI R&D-4 capability threshold as fully automating the work of an entry-level, remote-only researcher and evaluates models and safeguards against it. (Anthropic Model Report 2026)
+- [Google DeepMind Frontier Safety Framework (FSF) ML R&D](https://deepmind.google/blog/strengthening-our-frontier-safety-framework/) - Uses dedicated CCLs, TCLs, and evaluation protocols for Machine Learning R&D capabilities that could significantly accelerate or automate AI research and development. (Google DeepMind Blog 2026)
+
+### AI R&D Capability Proxies
 
 - [AutoLab: Can Frontier Models Solve Long-Horizon Auto Research and Engineering Tasks?](https://arxiv.org/abs/2606.05080) - Expert-curated benchmark of 36 realistic long-horizon, closed-loop optimization tasks for evaluating frontier agents on automated research and engineering. (arXiv 2026)
 - [MLS-Bench: A Holistic and Rigorous Assessment of AI Systems on Building Better AI](https://arxiv.org/abs/2605.08678) - Benchmark of 140 tasks across 12 ML research domains measuring whether AI systems can invent generalizable and scalable ML methods. (arXiv 2026)
@@ -328,8 +334,9 @@ Benchmarks grouped by how directly they provide evidence about recursive self-im
 - [RE-Bench](https://github.com/METR/RE-Bench) - Compares AI agents with human experts on open-ended machine-learning research-engineering tasks under fixed time budgets. (ICML 2025)
 - [MLAgentBench](https://github.com/snap-stanford/MLAgentBench) - Tests whether language agents can autonomously execute and improve machine-learning experiments from research instructions. (ICML 2024)
 
-### Long-Horizon & Agent Capability Evaluations
+### Agent Capability Proxies
 
+- [ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence](https://arxiv.org/abs/2603.24621) - Requires agents to explore unfamiliar interactive environments, infer goals, model environment dynamics, remember, and plan, measuring adaptive interaction and generalization bottlenecks for self-improvement. (arXiv 2026)
 - [Long-Horizon-Terminal-Bench](https://arxiv.org/abs/2607.08964) - Evaluates agents on 46 terminal tasks requiring sustained execution across hundreds of episodes with dense intermediate rewards. (arXiv 2026)
 - [OSWorld 2.0](https://arxiv.org/abs/2606.29537) - Measures computer-use agents on 108 realistic end-to-end workflows whose median human completion time is about 1.6 hours. (arXiv 2026)
 - [MCPMark](https://arxiv.org/abs/2509.24002) - Stress-tests realistic stateful MCP workflows across SaaS, development, browser, filesystem, and database environments with programmatic grading. (arXiv 2025)
