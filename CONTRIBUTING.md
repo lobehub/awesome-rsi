@@ -35,6 +35,21 @@ Difficulty alone is insufficient for inclusion.
 General knowledge and closed-ended reasoning benchmarks are out of scope unless
 there is specific evidence connecting them to self-improvement capability.
 
+## Artifact Availability
+
+Entries that report evaluations should state which artifacts are public.
+
+Open
+The task set or generative task source, scoring logic, and evaluation harness
+needed to rerun the evaluation are publicly available.
+
+Partial
+Some important artifacts are public, but a material part of the data,
+infrastructure, evaluation set, or execution environment is unavailable.
+
+Internal
+The reported evaluation materially depends on non-public tasks or infrastructure.
+
 ## Entry Format
 
 Use this format:

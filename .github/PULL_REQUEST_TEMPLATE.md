@@ -24,6 +24,14 @@
 
 <!-- Identify the status and include the venue and year where applicable, for example: arXiv preprint (2026), workshop: AutoRL@ICML (2024), conference: ICML (2025), or journal: Nature (2026). -->
 
+### Public artifacts
+Official implementation:
+Public data / checkpoints:
+Public evaluation harness:
+
+### Evaluation artifact status
+Open / Partial / Internal / Not applicable
+
 ## Checklist
 
 - [ ] I searched the list and open pull requests for duplicates.
