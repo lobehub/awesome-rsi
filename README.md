@@ -2,9 +2,9 @@
 
 Recursive Self-Improvement (RSI) refers to processes in which AI systems improve their own capabilities and can also improve the mechanisms that generate subsequent improvements.
 
-Recent progress in self-training, agent memory, harness optimization, automated AI research, self-modifying coding agents, and evolutionary search has made RSI increasingly relevant as an empirical research direction rather than only a theoretical idea.
+Recent progress in self-training, agent memory, harness optimization, embodied self-improvement, automated AI research, self-modifying coding agents, and evolutionary search has made RSI increasingly relevant as an empirical research direction rather than only a theoretical idea.
 
-Awesome RSI collects and organizes important work across these areas, including model-level self-improvement, context and memory evolution, harness and scaffold evolution, multi-agent systems, automated AI research, benchmarks, and safety.
+Awesome RSI collects and organizes important work across these areas, including model-level self-improvement, context and memory evolution, harness and scaffold evolution, embodied and physical self-improvement, multi-agent systems, automated AI research, benchmarks, and safety.
 
 Not every work listed here demonstrates RSI in the strict sense. Some represent bounded self-improvement or enabling techniques that may contribute to more complete recursive systems.
 
@@ -321,9 +321,9 @@ Benchmarks are separated into direct self-improvement evaluations, frontier-lab 
 
 ### Frontier Lab Self-Improvement & AI R&D Evaluation Frameworks
 
-- [OpenAI AI Self-Improvement Evaluations](https://deploymentsafety.openai.com/gpt-5-6) - Tracks AI Self-Improvement capability under the Preparedness Framework using Internal Research Debugging, KernelGen 1P, NanoGPT, PostTrainBench Lite, MLE-Bench Revised, and related evaluations aggregated into an RSI Index. (OpenAI System Card 2026)
 - [Anthropic Autonomous AI R&D Evaluations](https://www.anthropic.com/transparency/model-report) - Defines the Responsible Scaling Policy AI R&D-4 capability threshold as fully automating the work of an entry-level, remote-only researcher and evaluates models and safeguards against it. (Anthropic Model Report 2026)
 - [Google DeepMind Frontier Safety Framework (FSF) ML R&D](https://deepmind.google/blog/strengthening-our-frontier-safety-framework/) - Uses dedicated CCLs, TCLs, and evaluation protocols for Machine Learning R&D capabilities that could significantly accelerate or automate AI research and development. (Google DeepMind Blog 2026)
+- [OpenAI AI Self-Improvement Evaluations](https://deploymentsafety.openai.com/gpt-5-6) - Tracks AI Self-Improvement capability under the Preparedness Framework using Internal Research Debugging, KernelGen 1P, NanoGPT, PostTrainBench Lite, MLE-Bench Revised, and related evaluations aggregated into an RSI Index. (OpenAI System Card 2026)
 
 ### AI R&D Capability Proxies
 

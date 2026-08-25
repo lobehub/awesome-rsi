@@ -50,6 +50,9 @@ infrastructure, evaluation set, or execution environment is unavailable.
 Internal
 The reported evaluation materially depends on non-public tasks or infrastructure.
 
+Not applicable
+The resource does not report an evaluation requiring reproducibility artifacts.
+
 ## Entry Format
 
 Use this format:
@@ -72,6 +75,7 @@ Every submission or pull request must also provide:
 3. **Is the improvement mechanism itself subject to improvement?** Explain whether and how the process producing improvements can itself change.
 4. **Why is this specifically relevant to RSI?** Connect the work directly to recursive self-improvement, persistent self-improvement, or evaluation or safety evidence for those systems.
 5. **Publication status:** Identify the status and include the venue and year where applicable, for example `arXiv preprint (2026)`, `workshop: AutoRL@ICML (2024)`, `conference: ICML (2025)`, or `journal: Nature (2026)`.
+6. **Public artifacts and evaluation artifact status**
 
 ## Ordering
 
