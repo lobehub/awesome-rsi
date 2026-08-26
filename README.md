@@ -233,6 +233,7 @@ Mixes current-run repair loops with methods whose learned improvements persist i
 
 Systems that automate parts of AI research and development, including experimentation, post-training, algorithm discovery, and the improvement of other AI systems.
 
+- [AutoResearch: Insight In, Hallucination Out](https://arxiv.org/abs/2608.17906) - Connects grounded idea generation with coordinated execution agents that implement, diagnose, and independently review experiments before accepting research conclusions. (arXiv 2026)
 - [Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering](https://arxiv.org/abs/2607.28568) - Connects execution-grounded operator training with long-horizon evolution in the open OpenMLE stack, using machine-learning engineering as an AI4AI testbed for RSI. (arXiv 2026)
 - [FT-Dojo: Towards Autonomous LLM Fine-Tuning with Language Agents](https://arxiv.org/abs/2603.01712) - Turns data collection, training, evaluation, diagnosis, and strategy revision into an executable environment for autonomous fine-tuning agents. (arXiv 2026)
 - [MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery](https://arxiv.org/abs/2606.06473) - Combines progressive graph search, retrospective memory, and hierarchical code generation for long-horizon end-to-end machine-learning algorithm discovery. (arXiv 2026)
