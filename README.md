@@ -91,6 +91,7 @@ Methods that improve model weights or training behavior through self-generated f
 
 ### Self-Training & Self-Reward
 
+- [DRACO: Fine-Grained Credit Assignment with Dynamic Rubrics for Long-Horizon Agent Training](https://arxiv.org/abs/2609.04094) - Trains long-horizon tool-using agents with reinforcement learning from rubric scores assigned by an LLM judge instead of ground-truth outcomes, redistributing each score over the steps behind every criterion, and shows that the policy model can act as its own judge and still reach verifier-trained performance. (arXiv 2026)
 - [EvoLM: Self-Evolving Language Models through Co-Evolved Discriminative Rubrics](https://arxiv.org/abs/2605.03871) - Alternately trains one model to generate discriminative rubrics and improve its policy from rubric-conditioned rewards without human annotations or external reward models. (arXiv 2026)
 - [RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback](https://arxiv.org/abs/2309.00267) - Studies reinforcement learning from AI-generated preferences as a scalable alternative to direct human feedback. (ICML 2024)
 - [Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models](https://arxiv.org/abs/2401.01335) - Iteratively improves one language model through self-play preference learning without additional human annotations. (ICML 2024)
