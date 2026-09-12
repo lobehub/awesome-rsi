@@ -257,6 +257,7 @@ Systems that use interaction with physical or simulated environments to generate
 
 Evolutionary, quality-diversity, and open-ended processes that continually discover stronger solutions or learning systems.
 
+- [EnvHarness: Awakening Static Worlds for Agent Learning](https://arxiv.org/abs/2608.19880) - Wraps static environments in programmable plug-in components synthesized from an agent's own failure trajectories, enabling continued co-evolution of the policy and its training environments. (ICML 2026)
 - [PACEvolve: Enabling Long-Horizon Progress-Aware Consistent Evolution](https://arxiv.org/abs/2601.10657) - Combines hierarchical context management, backtracking, and adaptive sampling to sustain collaborative long-horizon evolutionary search. (arXiv 2026)
 - [AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery](https://arxiv.org/abs/2506.13131) - Combines language-model code generation, automated evaluation, and evolutionary search to improve algorithms, including components used in AI training. (arXiv 2025)
 - [Higher Order and Self-Referential Evolution for Population-based Methods](https://openreview.net/forum?id=3tk6AES1Aj) - Evolves mutation rates and higher-order meta-mutation rates, including a self-referential top-level parameter that modifies itself. (ICML 2024 AutoRL Workshop)
