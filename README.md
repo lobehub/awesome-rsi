@@ -201,6 +201,7 @@ Systems that use interaction among multiple agents to improve reasoning, policie
 
 ### Co-Evolution
 
+- [G-Zero: Self-Play for Open-Ended Generation from Zero Data](https://arxiv.org/abs/2605.09959) - Co-evolves a Proposer that finds capability gaps and a Generator that closes them, using an intrinsic hint-conditioned predictive-shift reward instead of an external judge for open-ended generation. (arXiv 2026)
 - [Agent0: Unleashing Self-Evolving Agents from Zero Data via Tool-Integrated Reasoning](https://arxiv.org/abs/2511.16043) - Co-evolves curriculum and executor agents initialized from the same base model to improve tool-using reasoning without human-curated data. (arXiv 2025)
 - [DEBATE, TRAIN, EVOLVE: Self Evolution of Language Model Reasoning](https://arxiv.org/abs/2505.15734) - Fine-tunes a model on its own multi-agent debate traces and repeats the debate-training loop without ground-truth labels. (EMNLP 2025)
 - [EvoAgent: Towards Automatic Multi-Agent Generation via Evolutionary Algorithms](https://arxiv.org/abs/2406.14228) - Applies mutation, crossover, and selection to expand a specialized agent into a diverse multi-agent system. (NAACL 2025)
