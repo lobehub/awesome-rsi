@@ -1,3 +1,5 @@
+![Awesome RSI — A Research Map of Recursive Self-Improvement](assets/awesome-rsi-map.png)
+
 # Awesome RSI (Recursive Self-Improvement) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 Recursive Self-Improvement (RSI) refers to processes in which AI systems improve their own capabilities and can also improve the mechanisms that generate subsequent improvements.
@@ -91,6 +93,7 @@ Methods that improve model weights or training behavior through self-generated f
 
 ### Self-Training & Self-Reward
 
+- [DRACO: Fine-Grained Credit Assignment with Dynamic Rubrics for Long-Horizon Agent Training](https://arxiv.org/abs/2609.04094) - Trains long-horizon tool-using agents with reinforcement learning from rubric scores assigned by an LLM judge instead of ground-truth outcomes, redistributing each score over the steps behind every criterion, and shows that the policy model can act as its own judge and still reach verifier-trained performance. (arXiv 2026)
 - [EvoLM: Self-Evolving Language Models through Co-Evolved Discriminative Rubrics](https://arxiv.org/abs/2605.03871) - Alternately trains one model to generate discriminative rubrics and improve its policy from rubric-conditioned rewards without human annotations or external reward models. (arXiv 2026)
 - [RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback](https://arxiv.org/abs/2309.00267) - Studies reinforcement learning from AI-generated preferences as a scalable alternative to direct human feedback. (ICML 2024)
 - [Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models](https://arxiv.org/abs/2401.01335) - Iteratively improves one language model through self-play preference learning without additional human annotations. (ICML 2024)
@@ -201,6 +204,7 @@ Systems that use interaction among multiple agents to improve reasoning, policie
 
 ### Co-Evolution
 
+- [R-Zero: Self-Evolving Reasoning LLM from Zero Data](https://arxiv.org/abs/2508.05004) - Co-evolves a Challenger that proposes questions at the edge of a Solver's ability with a Solver trained on majority-vote pseudo-labels, starting from a single base model and no external data. (ICLR 2026)
 - [Agent0: Unleashing Self-Evolving Agents from Zero Data via Tool-Integrated Reasoning](https://arxiv.org/abs/2511.16043) - Co-evolves curriculum and executor agents initialized from the same base model to improve tool-using reasoning without human-curated data. (arXiv 2025)
 - [DEBATE, TRAIN, EVOLVE: Self Evolution of Language Model Reasoning](https://arxiv.org/abs/2505.15734) - Fine-tunes a model on its own multi-agent debate traces and repeats the debate-training loop without ground-truth labels. (EMNLP 2025)
 - [EvoAgent: Towards Automatic Multi-Agent Generation via Evolutionary Algorithms](https://arxiv.org/abs/2406.14228) - Applies mutation, crossover, and selection to expand a specialized agent into a diverse multi-agent system. (NAACL 2025)
