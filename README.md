@@ -133,6 +133,7 @@ Methods that improve model weights or training behavior through self-generated f
 Methods that improve prompts, memory, verification, tools, or agent policies around a model.
 
 ### Prompt & Program Optimization
+- [SelfOp: An Optimization Algorithm for Self-Improving Security Agents](https://arxiv.org/abs/2609.22792) - Treats context optimization as chain-rule-inspired textual gradient descent, propagating error signals backward through the evaluator and the agent's trajectory to commit per-instance improvements to a frozen agent's instructions, skills, and reference documents. (arXiv 2026)
 
 - [Automated Design of Agentic Systems](https://arxiv.org/abs/2408.08435) - Uses a meta-agent to invent and iteratively improve agent architectures represented as executable code. (ICLR 2025)
 - [TextGrad: Automatic "Differentiation" via Text](https://arxiv.org/abs/2406.07496) - Backpropagates textual feedback through compound AI systems to optimize prompts, code, and other textual variables. (Nature 2025)
