@@ -388,6 +388,7 @@ Benchmarks are separated into direct self-improvement evaluations, frontier-lab 
 - [Gödel Agent](https://github.com/Arvid-pku/Godel_Agent) - Official implementation of Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement.
 - [Hermes Agent](https://github.com/NousResearch/hermes-agent) - Self-improving personal agent with a built-in learning loop that creates and refines skills from experience.
 - [HyperAgents](https://github.com/facebookresearch/HyperAgents) - Self-referential agent framework in which an editable meta-agent improves itself and the task agent for computable objectives.
+- [OpenAmer](https://github.com/openamer/openamer) - Windows-native personal agent runtime with a built-in self-improvement loop that rewrites its own code and skills from experience, keeps persistent memory, and coordinates peer instances over a local agent-to-agent mesh.
 - [SEAL](https://github.com/Continual-Intelligence/SEAL) - Official code for language models that generate their own adaptation data and update instructions.
 - [SIA](https://github.com/hexo-ai/sia) - Self-improving AI framework that iteratively updates an agent harness and, when configured, the target model's weights.
 
