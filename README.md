@@ -280,6 +280,7 @@ Systems that use interaction with physical or simulated environments to generate
 ## Evolutionary & Open-Ended RSI
 
 Evolutionary, quality-diversity, and open-ended processes that continually discover stronger solutions or learning systems.
+- [Dream-RSI: Recursive Self-Improvement through Evolving Worlds](https://arxiv.org/abs/2609.14858) - Reuses accumulated discovery history as a replay simulator over the realized search space, giving off-policy feedback for refining exploration policies without paying for repeated online rollouts. (arXiv 2026)
 
 - [EnvHarness: Awakening Static Worlds for Agent Learning](https://arxiv.org/abs/2608.19880) - Wraps static environments in programmable plug-in components synthesized from an agent's own failure trajectories, enabling continued co-evolution of the policy and its training environments. (arXiv 2026)
 - [PACEvolve: Enabling Long-Horizon Progress-Aware Consistent Evolution](https://arxiv.org/abs/2601.10657) - Combines hierarchical context management, backtracking, and adaptive sampling to sustain collaborative long-horizon evolutionary search. (arXiv 2026)
