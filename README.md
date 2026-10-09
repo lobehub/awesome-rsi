@@ -216,6 +216,7 @@ Systems that use interaction among multiple agents to improve reasoning, policie
 ### Co-Evolution
 
 - [G-Zero: Self-Play for Open-Ended Generation from Zero Data](https://arxiv.org/abs/2605.09959) - Co-evolves a Proposer that finds capability gaps and a Generator that closes them, using an intrinsic hint-conditioned predictive-shift reward instead of an external judge for open-ended generation. (arXiv 2026)
+- [Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing](https://arxiv.org/abs/2602.04837) - Treats a group of agents as the single evolutionary unit so that early exploratory diversity is shared across members instead of lost in isolated branches. (arXiv 2026)
 - [MM-Zero: Self-Evolving Multi-Model Vision Language Models From Zero Data](https://arxiv.org/abs/2603.09206) - Co-evolves Proposer, Coder, and Solver roles from one base model to render their own visual training data and improve vision-language reasoning from zero data. (arXiv 2026)
 - [R-Zero: Self-Evolving Reasoning LLM from Zero Data](https://arxiv.org/abs/2508.05004) - Co-evolves a Challenger that proposes questions at the edge of a Solver's ability with a Solver trained on majority-vote pseudo-labels, starting from a single base model and no external data. (ICLR 2026)
 - [TTCS: Test-Time Curriculum Synthesis for Self-Evolving](https://arxiv.org/abs/2601.22628) - Co-evolves a question synthesizer and a solver at test time so that self-generated curricula stabilize self-consistency-rewarded parameter updates on the test distribution. (arXiv 2026)
