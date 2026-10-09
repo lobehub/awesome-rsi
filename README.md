@@ -242,6 +242,7 @@ Agents and training loops that improve code, software-engineering performance, o
 - [Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents](https://arxiv.org/abs/2505.22954) - Evolves a coding agent by modifying its own code and retaining empirically validated improvements in an open-ended archive. (ICLR 2026)
 - [Mendel Gödel Machine: Recursive Self-Improving Coding Agents via Comparative Evolution](https://arxiv.org/abs/2608.07645) - Derives self-modification from an agent's archive rather than one failure at a time, adding reaction-norm mutations across multiple tasks and cross-lineage hybridization against reference agents. (arXiv 2026)
 - [A Self-Improving Coding Agent](https://arxiv.org/abs/2504.15228) - Demonstrates a coding agent that edits its own implementation and empirically improves on SWE-bench Verified. (ICLR 2025 SSI-FM Workshop)
+- [Huxley-Gödel Machine: Human-Level Coding Agent Development by an Approximation of the Optimal Self-Improving Machine](https://arxiv.org/abs/2510.21614) - Identifies a mismatch between a coding agent's own benchmark score and its metaproductivity, and steers self-modification with a descendant-aggregating Clade Meta Productivity metric. (arXiv 2025)
 
 ### Iterative Repair & Training
 
