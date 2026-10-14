@@ -479,3 +479,5 @@ Benchmarks are separated into direct self-improvement evaluations, frontier-lab 
 ## Contributing
 
 Contributions are welcome. Please read the [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
+
+- [T-384 smoke test dead link](https://github.com/lobehub/awesome-rsi/blob/main/THIS-PAGE-DOES-NOT-EXIST-xyz123.md)
