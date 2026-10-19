@@ -237,7 +237,7 @@ Primarily bounded self-refinement and verification methods that serve as buildin
 Systems that use interaction among multiple agents to improve reasoning, policies, or agent populations.
 
 ### Co-Evolution
-
+- [Evolve as a Team: Collaborative Self-Evolution for LLM-based Multi-Agent Systems](https://arxiv.org/abs/2605.29790) - Uses post-task communication over preserved agent-local contexts to persistently improve individual scaffolds, inter-agent collaboration, and team organization from execution experience. (arXiv 2026)
 - [G-Zero: Self-Play for Open-Ended Generation from Zero Data](https://arxiv.org/abs/2605.09959) - Co-evolves a Proposer that finds capability gaps and a Generator that closes them, using an intrinsic hint-conditioned predictive-shift reward instead of an external judge for open-ended generation. (arXiv 2026)
 - [Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing](https://arxiv.org/abs/2602.04837) - Treats a group of agents as the single evolutionary unit so that early exploratory diversity is shared across members instead of lost in isolated branches. (arXiv 2026)
 - [MM-Zero: Self-Evolving Multi-Model Vision Language Models From Zero Data](https://arxiv.org/abs/2603.09206) - Co-evolves Proposer, Coder, and Solver roles from one base model to render their own visual training data and improve vision-language reasoning from zero data. (arXiv 2026)
