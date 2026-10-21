@@ -392,6 +392,7 @@ Benchmarks are separated into direct self-improvement evaluations, frontier-lab 
 - [PaperBench](https://github.com/openai/frontier-evals/tree/main/project/paperbench) - Evaluates agents on replicating state-of-the-art AI research from paper descriptions. (ICML 2025)
 - [RE-Bench](https://github.com/METR/RE-Bench) - Compares AI agents with human experts on open-ended machine-learning research-engineering tasks under fixed time budgets. (ICML 2025)
 - [MLAgentBench](https://github.com/snap-stanford/MLAgentBench) - Tests whether language agents can autonomously execute and improve machine-learning experiments from research instructions. (ICML 2024)
+- [SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](https://arxiv.org/abs/2610.21082) - Builds 248 cases from real corrections that senior researchers made to research agents on 26 projects. Four of five frontier models score below chance. (arXiv 2026)
 
 ### Agent Capability Proxies
 
