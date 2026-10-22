@@ -473,8 +473,10 @@ Benchmarks are separated into direct self-improvement evaluations, frontier-lab 
 ## Related Awesome Lists
 
 - [Awesome AI Agents](https://github.com/e2b-dev/awesome-ai-agents) - Broad directory of autonomous-agent projects and infrastructure that can serve as components or baselines for self-improving systems. (2023)
+- [Awesome Agentic ML](https://github.com/vicfei/awesome-agentic-ml) - Agents that build models: automated data engineering, training runs, distillation, and synthetic data. (2026)
 - [Awesome AutoML Papers](https://github.com/hibayesian/awesome-automl-papers) - Curated literature on automated model selection, architecture search, hyperparameter optimization, and related techniques. (2018)
 - [Awesome Self-Improving Agents](https://github.com/selfimproving-agent/awesome-Self-Improving-Agents) - Focused bibliography of foundation-model agents that update their models, memory, tools, prompts, or workflows. (2024)
+- [Awesome Self-Improving Coding Agents](https://github.com/vicfei/awesome-self-improving-coding-agents) - Vertical map of RSI for software engineering: systems, benchmarks and safety with evidence labels and a daily arXiv radar. (2026)
 
 ## Contributing
 
