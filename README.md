@@ -272,6 +272,7 @@ Agents and training loops that improve code, software-engineering performance, o
 
 Mixes current-run repair loops with methods whose learned improvements persist into later iterations.
 
+- [Learning from Repair Experience: Self-Evolving Agents for Automated Vulnerability Repair](https://arxiv.org/abs/2605.30105) - Builds a quality-scored experience bank so an AVR agent reuses prior repair trajectories across long-horizon vulnerability repairs. (ICSE 2027)
 - [Training Software Engineering Agents and Verifiers with SWE-Gym](https://arxiv.org/abs/2412.21139) - Supplies executable repository tasks and trajectories for training both SWE agents and inference-time verifiers. (ICML 2025)
 - [Teaching Large Language Models to Self-Debug](https://arxiv.org/abs/2304.05128) - Teaches models to inspect execution results, explain their code, and repair failures through iterative prompting. (ICLR 2024)
 - [AgentCoder: Multi-Agent-based Code Generation with Iterative Testing and Optimisation](https://arxiv.org/abs/2312.13010) - Coordinates programmer, test-designer, and test-executor agents in a feedback loop that iteratively repairs generated code. (arXiv 2023)
