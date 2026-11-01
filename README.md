@@ -420,6 +420,7 @@ Benchmarks are separated into direct self-improvement evaluations, frontier-lab 
 ### Harness / Memory / Skill Evolution
 
 - [ACE](https://github.com/ace-agent/ace) - Official implementation of Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models.
+- [agent-qa](https://vostride.com/docs/agent-qa/self-improvement) - Turns verified application-test evidence into persistent memidex facts, cautions and procedures reused on later runs, with evidence gates controlling local promotion.
 - [ALMA](https://github.com/zksha/alma) - Official implementation of Learning to Continually Learn via Meta-learning Agentic Memory Designs.
 - [Continual Harness](https://github.com/sethkarten/continual-harness) - Self-improving agent harness that adapts online from experience while maintaining a continuous environment trajectory.
 - [EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) - Self-evolving agent framework for automatically building, evaluating, and optimizing agentic workflows.
