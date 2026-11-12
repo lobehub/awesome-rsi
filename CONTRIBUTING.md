@@ -134,7 +134,7 @@ If a genuinely mixed dated/undated direct-entry list is introduced later, it mus
 | Model-level RSI / Self-Taught Reasoning | 3 | 全带年份 / Year |
 | Harness-level RSI / Prompt & Program Optimization | 7 | 全带年份 / Year |
 | Harness-level RSI / Context & Memory Evolution | 11 | 全带年份 / Year |
-| Harness-level RSI / Harness & Scaffold Evolution | 15 | 全带年份 / Year |
+| Harness-level RSI / Harness & Scaffold Evolution | 16 | 全带年份 / Year |
 | Harness-level RSI / Extensible Harness Substrates | 4 | 全无年份 / Alphabetical |
 | Harness-level RSI / Self-Verification & Self-Correction — Enabling Foundations | 6 | 全带年份 / Year |
 | Harness-level RSI / Self-Evolving Agent Frameworks | 13 | 全带年份 / Year |
