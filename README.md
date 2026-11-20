@@ -483,6 +483,7 @@ Benchmarks are separated into direct self-improvement evaluations, frontier-lab 
 - [Awesome AI Agents](https://github.com/e2b-dev/awesome-ai-agents) - Broad directory of autonomous-agent projects and infrastructure that can serve as components or baselines for self-improving systems. (2023)
 - [Awesome AutoML Papers](https://github.com/hibayesian/awesome-automl-papers) - Curated literature on automated model selection, architecture search, hyperparameter optimization, and related techniques. (2018)
 - [Awesome Self-Improving Agents](https://github.com/selfimproving-agent/awesome-Self-Improving-Agents) - Focused bibliography of foundation-model agents that update their models, memory, tools, prompts, or workflows. (2024)
+- [BeforeRSI](https://github.com/Cherish0925/BeforeRSI) - Interactive Chinese–English research landscape connecting model, harness, and joint self-improvement mechanisms to literature and research relationships. (2026)
 
 ## Contributing
 
