@@ -1,0 +1,43 @@
+name: Check Order
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  check-order:
+    name: check-order
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    continue-on-error: true # Report-only; deliberately not a required check.
+    steps:
+      - name: Read trusted policy and checker
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: policy
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Read candidate merge tree
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          path: candidate
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up policy runtime
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.14' # Unicode 16.0.0 is checked by the trusted script.
+      - name: Report ordering
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          python3 -I policy/.github/scripts/check_order.py \
+            --repo candidate --base "$BASE_SHA" --head "$HEAD_SHA" \
+            --candidate HEAD --report-only --summary "$GITHUB_STEP_SUMMARY"

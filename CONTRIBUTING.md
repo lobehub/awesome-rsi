@@ -78,6 +78,8 @@ Two guard rails:
 
 A submission must state the status; a locator for each public component; what each missing component is and why it is unavailable; and any evaluation the resource itself flags as non-reproducible.
 
+Artifact status is the author's declaration. Maintainers do not rewrite it on the author's behalf; they identify “should be X + missing components” and ask the author to correct the submission.
+
 Status is recorded in the submission metadata. Entries in this README do not carry status markers; where reproducibility is materially limited, state that plainly in the entry description instead.
 
 ## Entry Format
@@ -85,12 +87,13 @@ Status is recorded in the submission metadata. Entries in this README do not car
 Use this format:
 
 ```markdown
-- [Resource Name](https://example.com) - One sentence explaining what the resource covers and why it is relevant.
+- [Research Resource Name](https://example.com/paper) - One concise, neutral description sentence. (Venue 2026)
+- [Tool Name](https://example.com/tool) - One concise, neutral description sentence.
 ```
 
 - Include a working direct link.
-- Write exactly one concise, neutral description sentence.
-- End every description with a period.
+- Write exactly one concise, neutral description sentence, read through its first sentence-ending punctuation.
+- End that description sentence with a period before any publication annotation. The trailing publication annotation is metadata, so the entire Markdown line need not end with a period.
 - Use the resource's official title and preserve model or system version names exactly.
 - Avoid promotional language and tracking parameters.
 - Avoid duplicate resources or identical links. A paper and its official implementation may be listed separately when they serve different purposes.
@@ -106,14 +109,61 @@ Every submission or pull request must also provide:
 
 ## Ordering
 
-- Sort research resources by publication year from newest to oldest; within the same year, sort alphabetically by title.
-- Sort non-research resources, such as Related Awesome Lists and Tools, alphabetically by title.
+Sort entries only within the same heading's direct-entry list. Never sort across headings or flatten a parent and its children. Contents, prose, explanatory bullets, images, and fenced code examples are outside this check.
+
+Each resource-bearing heading must have an explicit policy in the table below and in the checker. Unregistered headings or unsupported entry syntax are “unable to determine”, never a silent pass.
+
+**Year policy:** sort by publication year descending, then by title key ascending, then by the exact original title ascending, then by the exact URL ascending. Take the year only from the final parenthesized publication annotation in the description; permit one trailing period after that annotation for compatibility. That annotation must contain exactly one standalone four-digit year in 1900–2099. Do not infer a year from the title, URL, arXiv identifier, access date, or PR metadata. A missing or ambiguous year requires correction before the order can be determined.
+
+**Alphabetical policy:** sort by title key, exact original title, then exact URL, all ascending; any publication year annotation is ignored for ordering.
+
+**Title key:** take the exact plain-text link label; apply Unicode NFKC normalization, then Unicode lowercase (not locale collation). Do not strip leading articles: the original title string is the sorting subject; apply only the mechanical normalization specified here, without changing the displayed title. Split at whitespace, `/`, and Unicode dash punctuation (category Pd, including the ASCII hyphen). Within each token delete all characters other than Unicode letters and numbers (categories L and N); discard empty tokens. Compare the resulting tuple of tokens lexicographically by Unicode code point; a shorter prefix sorts first. Do not remove accents or use natural-number sorting. Thus `2` and `10` are compared as text. Preserve the displayed official title unchanged.
+
+Original-title and URL tie-breakers compare the exact strings from the Markdown link, case-sensitively by Unicode code point, without URL normalization. Identical title and URL keys tie; preserve their relative order and report duplicates separately through the existing duplicate policy. A title with an empty normalized key is invalid.
+
+A heading containing both papers and frameworks still uses its registered policy: resource type is not guessed from the URL. In year-policy headings, frameworks and reports must also have an authoritative publication/release year annotation. Undated tools belong in an appropriate alphabetical heading. A parent may contain children with different policies; its children remain independent lists.
+
+If a genuinely mixed dated/undated direct-entry list is introduced later, it must first be registered as **Mixed**, with an explicit allowlist of canonical URLs permitted to be undated. Sort dated entries first using the Year key, then allowlisted undated entries using the Alphabetical key. An unlisted missing year is invalid. No current heading is registered as Mixed; adding one requires a reviewed policy-table/checker update, not inference from a missing annotation.
+
+| 完整分区路径 | 条数 | 现状 / 拟定策略 |
+|---|---:|---|
+| Fundamentals & Getting Started | 16 | 全带年份 / Year |
+| Model-level RSI / Self-Training & Self-Reward | 6 | 全带年份 / Year |
+| Model-level RSI / Synthetic Data & Self-Distillation | 6 | 全带年份 / Year |
+| Model-level RSI / Self-Play & Iterative Fine-tuning | 9 | 全带年份 / Year |
+| Model-level RSI / Self-Taught Reasoning | 3 | 全带年份 / Year |
+| Harness-level RSI / Prompt & Program Optimization | 7 | 全带年份 / Year |
+| Harness-level RSI / Context & Memory Evolution | 11 | 全带年份 / Year |
+| Harness-level RSI / Harness & Scaffold Evolution | 16 | 全带年份 / Year |
+| Harness-level RSI / Extensible Harness Substrates | 4 | 全无年份 / Alphabetical |
+| Harness-level RSI / Self-Verification & Self-Correction — Enabling Foundations | 6 | 全带年份 / Year |
+| Harness-level RSI / Self-Evolving Agent Frameworks | 13 | 全带年份 / Year |
+| Multi-Agent Self-Improvement / Co-Evolution | 11 | 全带年份 / Year |
+| Multi-Agent Self-Improvement / Inference-time Debate | 2 | 全带年份 / Year |
+| Coding / Software-Engineering Self-Improvement / Self-Modifying Coding Agents | 4 | 全带年份 / Year |
+| Coding / Software-Engineering Self-Improvement / Iterative Repair & Training | 3 | 全带年份 / Year |
+| Automated AI R&D | 12 | 全带年份 / Year |
+| Embodied & Physical Self-Improvement | 6 | 全带年份 / Year |
+| Evolutionary & Open-Ended RSI | 13 | 全带年份 / Year |
+| Safety, Alignment & Theory（直接条目） | 13 | 全带年份 / Year |
+| Safety, Alignment & Theory / Supporting Safety Foundations | 9 | 全带年份 / Year |
+| Introspection & Self-Modeling | 10 | 全带年份 / Year |
+| Benchmarks & Evaluations / Direct RSI & Self-Improvement Evaluations | 4 | 全带年份，含 community framework / Year |
+| Benchmarks & Evaluations / Frontier Lab Self-Improvement & AI R&D Evaluation Frameworks | 3 | 全带年份，含模型报告与博客 / Year |
+| Benchmarks & Evaluations / AI R&D Capability Proxies | 7 | 全带年份，含仓库链接 / Year |
+| Benchmarks & Evaluations / Agent Capability Proxies | 9 | 全带年份，含官方 benchmark 网页 / Year |
+| Frameworks & Tools / Self-Modifying / Self-Evolving Systems | 7 | 全无年份 / Alphabetical |
+| Frameworks & Tools / Harness / Memory / Skill Evolution | 15 | 全无年份 / Alphabetical |
+| Frameworks & Tools / Automated Search / AI R&D | 8 | 全无年份 / Alphabetical |
+| Blog Posts & Discussions | 14 | 全带年份 / Year |
+| Talks & Videos | 4 | 全带年份 / Year |
+| Related Awesome Lists | 3 | 全带年份，但现规则明确按标题 / Alphabetical |
 
 ## Pull Requests
 
 - Search the list and open pull requests for duplicates before submitting.
 - Prefer one resource per pull request.
-- Include complete answers to the four required questions and the Publication status field above.
+- Include complete answers to all six required submission items above, including Public artifacts and evaluation artifact status, and complete the PR template's pre-submission self-check.
 - Place the entry in the most specific applicable subsection.
 - Keep formatting consistent with surrounding entries and update the Contents section if you add or rename a heading.
 - Verify that `npx --yes awesome-lint@2.3.0` passes before requesting review.

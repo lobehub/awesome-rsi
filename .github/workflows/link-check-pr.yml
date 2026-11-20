@@ -1,0 +1,67 @@
+name: PR New Link Check
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+permissions:
+  contents: read
+
+jobs:
+  new-link-check:
+    name: Check newly added links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Extract newly added links from the pull request diff
+        id: extract
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          # Belt and braces: the SHAs are normally present thanks to fetch-depth: 0.
+          git fetch --no-tags origin "$BASE_SHA" "$HEAD_SHA" >/dev/null 2>&1 || true
+          git diff --unified=0 "$BASE_SHA...$HEAD_SHA" -- '*.md' > pr.diff
+          # Keep added lines only, dropping the "+++ b/file" headers.
+          grep -E '^\+' pr.diff | grep -vE '^\+\+\+' > pr-added-lines.txt || true
+          # Pull URLs out of those added lines and trim trailing punctuation.
+          grep -oE 'https?://[^][()<> ]+' pr-added-lines.txt \
+            | sed -E 's/[".,;:!?)]+$//' \
+            | sort -u > newly-added-links.txt || true
+          count=$(wc -l < newly-added-links.txt | tr -d ' ')
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          echo "Newly added link(s) in this pull request: $count"
+          cat newly-added-links.txt
+
+      - name: Report when the pull request adds no links
+        if: steps.extract.outputs.count == '0'
+        run: echo "No newly added links in this pull request - nothing to check, passing."
+
+      - name: Check newly added links
+        if: steps.extract.outputs.count != '0'
+        uses: lycheeverse/lychee-action@v2.9.0
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --max-retries 5
+            --retry-wait-time 2
+            --exclude '^https?://(www\.)?openreview\.net(/|$)'
+            --exclude '^https?://(www\.)?sciencedirect\.com(/|$)'
+            --exclude '^https?://(www\.)?openai\.com(/|$)'
+            --exclude '^https?://www\.lesswrong\.com(/|$)'
+            newly-added-links.txt
+          fail: true
+          failIfEmpty: false
+          format: markdown
+          jobSummary: true
