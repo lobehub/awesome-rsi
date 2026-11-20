@@ -109,6 +109,8 @@ Every submission or pull request must also provide:
 
 ## Ordering
 
+The required `check-order` check compares the proposed merge with its base. It blocks new out-of-order pairs and reports existing ones. An input the checker cannot interpret fails the check.
+
 Sort entries only within the same heading's direct-entry list. Never sort across headings or flatten a parent and its children. Contents, prose, explanatory bullets, images, and fenced code examples are outside this check.
 
 Each resource-bearing heading must have an explicit policy in the table below and in the checker. Unregistered headings or unsupported entry syntax are “unable to determine”, never a silent pass.
