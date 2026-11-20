@@ -134,7 +134,7 @@ If a genuinely mixed dated/undated direct-entry list is introduced later, it mus
 | Model-level RSI / Self-Taught Reasoning | 3 | 全带年份 / Year |
 | Harness-level RSI / Prompt & Program Optimization | 7 | 全带年份 / Year |
 | Harness-level RSI / Context & Memory Evolution | 11 | 全带年份 / Year |
-| Harness-level RSI / Harness & Scaffold Evolution | 15 | 全带年份 / Year |
+| Harness-level RSI / Harness & Scaffold Evolution | 16 | 全带年份 / Year |
 | Harness-level RSI / Extensible Harness Substrates | 4 | 全无年份 / Alphabetical |
 | Harness-level RSI / Self-Verification & Self-Correction — Enabling Foundations | 6 | 全带年份 / Year |
 | Harness-level RSI / Self-Evolving Agent Frameworks | 13 | 全带年份 / Year |
@@ -142,7 +142,7 @@ If a genuinely mixed dated/undated direct-entry list is introduced later, it mus
 | Multi-Agent Self-Improvement / Inference-time Debate | 2 | 全带年份 / Year |
 | Coding / Software-Engineering Self-Improvement / Self-Modifying Coding Agents | 4 | 全带年份 / Year |
 | Coding / Software-Engineering Self-Improvement / Iterative Repair & Training | 3 | 全带年份 / Year |
-| Automated AI R&D | 11 | 全带年份 / Year |
+| Automated AI R&D | 12 | 全带年份 / Year |
 | Embodied & Physical Self-Improvement | 6 | 全带年份 / Year |
 | Evolutionary & Open-Ended RSI | 13 | 全带年份 / Year |
 | Safety, Alignment & Theory（直接条目） | 13 | 全带年份 / Year |
