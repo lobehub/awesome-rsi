@@ -1,0 +1,5 @@
+# Preprints.org returns 403 to the link checker. Check this paper's DOI record
+# while keeping the publisher's full-text link in the README.
+remap = [
+  '^https://www\.preprints\.org/manuscript/202609\.2680$ https://api.crossref.org/works/10.20944/preprints202609.2680.v1',
+]
