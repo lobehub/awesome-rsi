@@ -180,6 +180,20 @@ class DiffAndScope(unittest.TestCase):
         self.assertEqual(c.exit_code([unknown], True), 2)
         self.assertEqual(c.exit_code([clean], False), 0)
 
+    def test_pr_fails_only_for_new_inversions(self):
+        def check(before, after):
+            base = c.audit(readme(*(entry(t) for t in before)))
+            candidate = c.audit(readme(*(entry(t) for t in after)))
+            return c.exit_code([base, candidate], False)
+
+        # Removing an entry can expose an existing inversion as a new adjacency.
+        self.assertEqual(check('CBA', 'CA'), 0)
+        self.assertEqual(check('BA', 'BAC'), 0)
+        self.assertEqual(check('BA', 'AB'), 0)
+        # The adjacent descent is still C/A, but B now precedes A too.
+        self.assertEqual(check('CAB', 'BCA'), 1)
+        self.assertEqual(check('BA', 'BBA'), 1)
+
     def test_undetermined_cli_and_resolved_pairs(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / 'README.md'
@@ -232,6 +246,8 @@ class GitDriver(unittest.TestCase):
             with contextlib.redirect_stdout(io.StringIO()) as out:
                 self.assertEqual(c.main(args), 0)
             self.assertIn('PR-related', out.getvalue())
+            with contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(c.main(args[:-1]), 1)
             path.unlink()
             git('add', '.'); git('commit', '--amend', '--no-edit')
             with self.assertRaises(c.Undetermined):
@@ -251,7 +267,7 @@ class GitDriver(unittest.TestCase):
             b, n, delta = c.run(tmp, base, head, 'HEAD')
             self.assertFalse(delta['readme_changed'])
             self.assertEqual(n['findings'][0]['scope'], ['BASELINE'])
-            self.assertEqual(c.exit_code([b, n], False), 1)
+            self.assertEqual(c.exit_code([b, n], False), 0)
 
 
 if __name__ == '__main__':
