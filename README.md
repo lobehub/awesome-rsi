@@ -320,6 +320,7 @@ Systems that use interaction with physical or simulated environments to generate
 
 Evolutionary, quality-diversity, and open-ended processes that continually discover stronger solutions or learning systems.
 
+- [Dream-RSI: Recursive Self-Improvement through Evolving Worlds](https://arxiv.org/abs/2609.14858) - Reuses accumulated discovery history as a replay simulator over the realized search space, giving off-policy feedback for refining exploration policies without paying for repeated online rollouts. (arXiv 2026)
 - [EnvHarness: Awakening Static Worlds for Agent Learning](https://arxiv.org/abs/2608.19880) - Wraps static environments in programmable plug-in components synthesized from an agent's own failure trajectories, enabling continued co-evolution of the policy and its training environments. (arXiv 2026)
 - [PACEvolve: Enabling Long-Horizon Progress-Aware Consistent Evolution](https://arxiv.org/abs/2601.10657) - Combines hierarchical context management, backtracking, and adaptive sampling to sustain collaborative long-horizon evolutionary search. (arXiv 2026)
 - [The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators](https://arxiv.org/abs/2606.26294) - Makes the evaluation criterion part of the search loop, holding it fixed within epochs while the utility is revised at epoch boundaries, and corrects reviewer over-acceptance of AI work with a co-evolved adversarial objective. (arXiv 2026)
@@ -403,6 +404,7 @@ Benchmarks are separated into direct self-improvement evaluations, frontier-lab 
 - [AutoLab: Can Frontier Models Solve Long-Horizon Auto Research and Engineering Tasks?](https://arxiv.org/abs/2606.05080) - Expert-curated benchmark of 36 realistic long-horizon, closed-loop optimization tasks for evaluating frontier agents on automated research and engineering. (arXiv 2026)
 - [MLS-Bench: A Holistic and Rigorous Assessment of AI Systems on Building Better AI](https://arxiv.org/abs/2605.08678) - Benchmark of 140 tasks across 12 ML research domains measuring whether AI systems can invent generalizable and scalable ML methods. (arXiv 2026)
 - [SAEScientist-Bench: Can AI Agents Conduct Autonomous SAE Interpretability Research?](https://arxiv.org/abs/2609.09113) - Gives an agent a target concept and a Gemma Scope dictionary of over 131K features to probe contrastively, and measures how close the isolated feature comes to an expert reference across activation rank, concept selectivity, and causal steering. (arXiv 2026)
+- [SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](https://arxiv.org/abs/2610.21082) - Evaluates research judgment on 248 cases from 26 projects by asking models to choose between a research agent's original plan and a senior researcher's correction. (arXiv 2026)
 - [The Meta-Agent Challenge: Are Current Agents Capable of Autonomous Agent Development?](https://arxiv.org/abs/2606.04455) - Gives a code agent a sandbox and an evaluation API to iteratively program an agent artifact across five domains, finding most fall short of human-engineered policies and that hard optimization pressure surfaces ground-truth exfiltration. (arXiv 2026)
 - [MLE-bench](https://github.com/openai/mle-bench) - Measures end-to-end machine-learning engineering performance across 75 Kaggle competitions and is used to track model self-improvement capability. (ICLR 2025)
 - [PaperBench](https://github.com/openai/frontier-evals/tree/main/project/paperbench) - Evaluates agents on replicating state-of-the-art AI research from paper descriptions. (ICML 2025)
@@ -431,6 +433,7 @@ Benchmarks are separated into direct self-improvement evaluations, frontier-lab 
 - [Gödel Agent](https://github.com/Arvid-pku/Godel_Agent) - Official implementation of Gödel Agent: A Self-Referential Agent Framework for Recursive Self-Improvement.
 - [Hermes Agent](https://github.com/NousResearch/hermes-agent) - Self-improving personal agent with a built-in learning loop that creates and refines skills from experience.
 - [HyperAgents](https://github.com/facebookresearch/HyperAgents) - Self-referential agent framework in which an editable meta-agent improves itself and the task agent for computable objectives.
+- [OpenAmer](https://github.com/openamer/openamer) - Provides a personal agent runtime that checks edits to its own code and skill files, retains accepted changes on disk, and restores the previous contents when verification fails.
 - [SEAL](https://github.com/Continual-Intelligence/SEAL) - Official code for language models that generate their own adaptation data and update instructions.
 - [SIA](https://github.com/hexo-ai/sia) - Self-improving AI framework that iteratively updates an agent harness and, when configured, the target model's weights.
 
@@ -494,6 +497,7 @@ Benchmarks are separated into direct self-improvement evaluations, frontier-lab 
 - [Awesome AI Agents](https://github.com/e2b-dev/awesome-ai-agents) - Broad directory of autonomous-agent projects and infrastructure that can serve as components or baselines for self-improving systems. (2023)
 - [Awesome AutoML Papers](https://github.com/hibayesian/awesome-automl-papers) - Curated literature on automated model selection, architecture search, hyperparameter optimization, and related techniques. (2018)
 - [Awesome Self-Improving Agents](https://github.com/selfimproving-agent/awesome-Self-Improving-Agents) - Focused bibliography of foundation-model agents that update their models, memory, tools, prompts, or workflows. (2024)
+- [Awesome Self-Improving Coding Agents](https://github.com/vicfei/awesome-self-improving-coding-agents) - Catalogs software-engineering agents that change their own improvement procedures or retain updates to skills and memory, alongside benchmarks for evaluating them. (2026)
 - [BeforeRSI](https://github.com/Cherish0925/BeforeRSI) - Interactive Chinese–English research landscape connecting model, harness, and joint self-improvement mechanisms to literature and research relationships. (2026)
 
 ## Contributing
