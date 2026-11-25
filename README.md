@@ -391,6 +391,7 @@ Benchmarks are separated into direct self-improvement evaluations, frontier-lab 
 
 ### Direct RSI & Self-Improvement Evaluations
 
+- [Continual-ARC: Measuring Skill Acquisition over a Working Lifetime](https://arxiv.org/abs/2611.14505) - Separates retention of recurring ARC tasks from generalization to unseen tasks by evaluating learners after a task stream and comparing persistent state with a reset baseline. (arXiv 2026)
 - [LongWoF-Bench: Evaluating EvoMap Genes for Verifiable Long-Workflow Tasks](https://arxiv.org/abs/2608.23200) - Provides 778 machine-verifiable long-workflow tasks and shows that Genes consolidated from verifier-confirmed trajectories outperform Skill packages across seven models, linking the gains to verified experience provenance. (arXiv 2026)
 - [PostTrainBench: Can LLM Agents Automate LLM Post-Training?](https://arxiv.org/abs/2603.08640) - Gives autonomous agents one base model, one H100 GPU, and ten hours to research and execute the strongest post-training strategy they can find. (ICML 2026)
 - [RSI-Bench](https://github.com/sunghunkwag/rsi-bench) - Provides an open-source six-axis framework for measuring self-modification depth, improvement trajectories, operator discovery, adaptation, safety, and goal generation. (community framework 2026)
