@@ -52,6 +52,7 @@ jobs:
         uses: lycheeverse/lychee-action@v2.9.0
         with:
           args: >-
+            --config lychee.toml
             --verbose
             --no-progress
             --max-retries 5
