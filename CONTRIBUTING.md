@@ -20,6 +20,25 @@ Canonical enabling works may be included when they establish a mechanism that is
 
 Resources about the financial Relative Strength Index are out of scope.
 
+## Evidence of Self-Improvement
+
+When a resource claims persistent or recursive self-improvement, submissions should explain what evidence supports the claim.
+
+Relevant evidence may include:
+
+- Task-level performance improvements against an appropriate baseline.
+- Persistence of modifications across subsequent tasks or iterations.
+- Performance on independent or held-out evaluations.
+- Comparisons between original and modified improvement procedures.
+- Resource-controlled comparisons covering inference cost, compute, tools, data, and external assistance.
+- Multi-round results demonstrating whether improvements remain useful or transfer to new tasks.
+
+A self-referential architecture, repeated optimization loop, or increasing task score is insufficient on its own to establish improved update capability.
+
+Claims of improver gain should distinguish improvements to the task-solving system from improvements to the mechanism responsible for producing future system updates.
+
+When evidence is incomplete, the resource may still be included if it satisfies the existing inclusion criteria, but its description must not overstate the demonstrated result.
+
 ## Benchmark and Capability Proxy Admission
 
 General capability benchmarks are out of scope unless they measure a bottleneck
@@ -37,33 +56,44 @@ there is specific evidence connecting them to self-improvement capability.
 
 ## Artifact Availability
 
-Entries that report evaluations should state which artifacts are public.
+Every entry that rests on an evaluation must state which artifacts are public. The status classifies the artifacts behind the claim the entry makes, not an arbitrary experiment from the same paper.
 
-Open
-The task set or generative task source, scoring logic, and evaluation harness
-needed to rerun the evaluation are publicly available.
+The reproducibility artifact set has five components: the task set or generative task source; the scoring logic; the evaluation harness; the data or checkpoints; and the execution environment, including any required non-public infrastructure.
 
-Partial
-Some important artifacts are public, but a material part of the data,
-infrastructure, evaluation set, or execution environment is unavailable.
+**Publicly available** means retrievable by anyone through a stable locator (URL, DOI, release tag) without an access request, email gate, payment, licence negotiation, or institutional affiliation.
 
-Internal
-The reported evaluation materially depends on non-public tasks or infrastructure.
+Decide in this order:
 
-Not applicable
-The resource does not report an evaluation requiring reproducibility artifacts.
+1. **Not applicable** — the resource reports no evaluation whose rerun depends on this artifact set. Surveys, position papers, and theory papers that illustrate rather than evaluate qualify. A paper that reports an experiment on a public dataset does not.
+2. **Open** — every component the reported evaluation actually requires is publicly available.
+3. **Internal** — an independent party cannot reproduce any meaningful part of the reported evaluation using only public artifacts. Evaluations that depend on non-public task sets or non-public infrastructure are always Internal, however much ancillary code is released.
+4. **Partial** — everything else: some components are public and a material part is not, but the public part still supports some meaningful, independently checkable part of the evaluation.
+
+The decisive test for Partial vs Internal: using only public artifacts, can an independent party rerun or meaningfully check some part of the reported evaluation? Yes → Partial. No → Internal.
+
+Two guard rails:
+
+- Classify by the strongest claim that can be independently checked, not by intent or by how much code was released. Shipping a training library while withholding the evaluation does not make an entry Partial.
+- Defaults run downward. A claim of Open or Partial that cites no specific public locator, and does not name the non-public components, is set to the lower level until evidence is supplied.
+
+A submission must state the status; a locator for each public component; what each missing component is and why it is unavailable; and any evaluation the resource itself flags as non-reproducible.
+
+Artifact status is the author's declaration. Maintainers do not rewrite it on the author's behalf; they identify “should be X + missing components” and ask the author to correct the submission.
+
+Status is recorded in the submission metadata. Entries in this README do not carry status markers; where reproducibility is materially limited, state that plainly in the entry description instead.
 
 ## Entry Format
 
 Use this format:
 
 ```markdown
-- [Resource Name](https://example.com) - One sentence explaining what the resource covers and why it is relevant.
+- [Research Resource Name](https://example.com/paper) - One concise, neutral description sentence. (Venue 2026)
+- [Tool Name](https://example.com/tool) - One concise, neutral description sentence.
 ```
 
 - Include a working direct link.
-- Write exactly one concise, neutral description sentence.
-- End every description with a period.
+- Write exactly one concise, neutral description sentence, read through its first sentence-ending punctuation.
+- End that description sentence with a period before any publication annotation. The trailing publication annotation is metadata, so the entire Markdown line need not end with a period.
 - Use the resource's official title and preserve model or system version names exactly.
 - Avoid promotional language and tracking parameters.
 - Avoid duplicate resources or identical links. A paper and its official implementation may be listed separately when they serve different purposes.
@@ -79,14 +109,63 @@ Every submission or pull request must also provide:
 
 ## Ordering
 
-- Sort research resources by publication year from newest to oldest; within the same year, sort alphabetically by title.
-- Sort non-research resources, such as Related Awesome Lists and Tools, alphabetically by title.
+The required `check-order` check compares the proposed merge with its base. It blocks new out-of-order pairs and reports existing ones. An input the checker cannot interpret fails the check.
+
+Sort entries only within the same heading's direct-entry list. Never sort across headings or flatten a parent and its children. Contents, prose, explanatory bullets, images, and fenced code examples are outside this check.
+
+Each resource-bearing heading must have an explicit policy in the table below and in the checker. Unregistered headings or unsupported entry syntax are “unable to determine”, never a silent pass.
+
+**Year policy:** sort by publication year descending, then by title key ascending, then by the exact original title ascending, then by the exact URL ascending. Take the year only from the final parenthesized publication annotation in the description; permit one trailing period after that annotation for compatibility. That annotation must contain exactly one standalone four-digit year in 1900–2099. Do not infer a year from the title, URL, arXiv identifier, access date, or PR metadata. A missing or ambiguous year requires correction before the order can be determined.
+
+**Alphabetical policy:** sort by title key, exact original title, then exact URL, all ascending; any publication year annotation is ignored for ordering.
+
+**Title key:** take the exact plain-text link label; apply Unicode NFKC normalization, then Unicode lowercase (not locale collation). Do not strip leading articles: the original title string is the sorting subject; apply only the mechanical normalization specified here, without changing the displayed title. Split at whitespace, `/`, and Unicode dash punctuation (category Pd, including the ASCII hyphen). Within each token delete all characters other than Unicode letters and numbers (categories L and N); discard empty tokens. Compare the resulting tuple of tokens lexicographically by Unicode code point; a shorter prefix sorts first. Do not remove accents or use natural-number sorting. Thus `2` and `10` are compared as text. Preserve the displayed official title unchanged.
+
+Original-title and URL tie-breakers compare the exact strings from the Markdown link, case-sensitively by Unicode code point, without URL normalization. Identical title and URL keys tie; preserve their relative order and report duplicates separately through the existing duplicate policy. A title with an empty normalized key is invalid.
+
+A heading containing both papers and frameworks still uses its registered policy: resource type is not guessed from the URL. In year-policy headings, frameworks and reports must also have an authoritative publication/release year annotation. Undated tools belong in an appropriate alphabetical heading. A parent may contain children with different policies; its children remain independent lists.
+
+If a genuinely mixed dated/undated direct-entry list is introduced later, it must first be registered as **Mixed**, with an explicit allowlist of canonical URLs permitted to be undated. Sort dated entries first using the Year key, then allowlisted undated entries using the Alphabetical key. An unlisted missing year is invalid. No current heading is registered as Mixed; adding one requires a reviewed policy-table/checker update, not inference from a missing annotation.
+
+| 完整分区路径 | 现状 / 拟定策略 |
+|---|---|
+| Fundamentals & Getting Started | 全带年份 / Year |
+| Model-level RSI / Self-Training & Self-Reward | 全带年份 / Year |
+| Model-level RSI / Synthetic Data & Self-Distillation | 全带年份 / Year |
+| Model-level RSI / Self-Play & Iterative Fine-tuning | 全带年份 / Year |
+| Model-level RSI / Self-Taught Reasoning | 全带年份 / Year |
+| Harness-level RSI / Prompt & Program Optimization | 全带年份 / Year |
+| Harness-level RSI / Context & Memory Evolution | 全带年份 / Year |
+| Harness-level RSI / Harness & Scaffold Evolution | 全带年份 / Year |
+| Harness-level RSI / Extensible Harness Substrates | 全无年份 / Alphabetical |
+| Harness-level RSI / Self-Verification & Self-Correction — Enabling Foundations | 全带年份 / Year |
+| Harness-level RSI / Self-Evolving Agent Frameworks | 全带年份 / Year |
+| Multi-Agent Self-Improvement / Co-Evolution | 全带年份 / Year |
+| Multi-Agent Self-Improvement / Inference-time Debate | 全带年份 / Year |
+| Coding / Software-Engineering Self-Improvement / Self-Modifying Coding Agents | 全带年份 / Year |
+| Coding / Software-Engineering Self-Improvement / Iterative Repair & Training | 全带年份 / Year |
+| Automated AI R&D | 全带年份 / Year |
+| Embodied & Physical Self-Improvement | 全带年份 / Year |
+| Evolutionary & Open-Ended RSI | 全带年份 / Year |
+| Safety, Alignment & Theory（直接条目） | 全带年份 / Year |
+| Safety, Alignment & Theory / Supporting Safety Foundations | 全带年份 / Year |
+| Introspection & Self-Modeling | 全带年份 / Year |
+| Benchmarks & Evaluations / Direct RSI & Self-Improvement Evaluations | 全带年份，含 community framework / Year |
+| Benchmarks & Evaluations / Frontier Lab Self-Improvement & AI R&D Evaluation Frameworks | 全带年份，含模型报告与博客 / Year |
+| Benchmarks & Evaluations / AI R&D Capability Proxies | 全带年份，含仓库链接 / Year |
+| Benchmarks & Evaluations / Agent Capability Proxies | 全带年份，含官方 benchmark 网页 / Year |
+| Frameworks & Tools / Self-Modifying / Self-Evolving Systems | 全无年份 / Alphabetical |
+| Frameworks & Tools / Harness / Memory / Skill Evolution | 全无年份 / Alphabetical |
+| Frameworks & Tools / Automated Search / AI R&D | 全无年份 / Alphabetical |
+| Blog Posts & Discussions | 全带年份 / Year |
+| Talks & Videos | 全带年份 / Year |
+| Related Awesome Lists | 全带年份，但现规则明确按标题 / Alphabetical |
 
 ## Pull Requests
 
 - Search the list and open pull requests for duplicates before submitting.
 - Prefer one resource per pull request.
-- Include complete answers to the four required questions and the Publication status field above.
+- Include complete answers to all six required submission items above, including Public artifacts and evaluation artifact status, and complete the PR template's pre-submission self-check.
 - Place the entry in the most specific applicable subsection.
 - Keep formatting consistent with surrounding entries and update the Contents section if you add or rename a heading.
 - Verify that `npx --yes awesome-lint@2.3.0` passes before requesting review.
