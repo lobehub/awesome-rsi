@@ -256,6 +256,7 @@ Systems that use interaction among multiple agents to improve reasoning, policie
 - [DEBATE, TRAIN, EVOLVE: Self Evolution of Language Model Reasoning](https://arxiv.org/abs/2505.15734) - Fine-tunes a model on its own multi-agent debate traces and repeats the debate-training loop without ground-truth labels. (EMNLP 2025)
 - [EvoAgent: Towards Automatic Multi-Agent Generation via Evolutionary Algorithms](https://arxiv.org/abs/2406.14228) - Applies mutation, crossover, and selection to expand a specialized agent into a diverse multi-agent system. (NAACL 2025)
 - [Guided Self-Evolving LLMs with Minimal Human Supervision](https://arxiv.org/abs/2512.02472) - Stabilizes Challenger-Solver co-evolution by grounding question generation in a small set of human examples and mixing them into curriculum-based Solver training. (arXiv 2025)
+- [Richelieu: Self-Evolving LLM-Based Agents for AI Diplomacy](https://proceedings.neurips.cc/paper_files/paper/2024/hash/df2d62b96a4003203450cf89cd338bb7-Abstract-Conference.html) - Accumulates evaluated self-play experiences in memory and retrieves them in later games to improve strategic planning and negotiation in Diplomacy, with the evaluated self-play harness and memory banks not located in the linked sample release. (NeurIPS 2024)
 - [SOTOPIA-π: Interactive Learning of Socially Intelligent Language Agents](https://arxiv.org/abs/2403.08715) - Improves an agent policy through behavior cloning and self-reinforcement on filtered multi-agent social interactions. (ACL 2024)
 
 ### Inference-time Debate
