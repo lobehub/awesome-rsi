@@ -271,12 +271,30 @@ def run(repo, base, head, candidate):
     return compare(base_text, candidate_text, patch)
 
 
+def inversions(result):
+    """Count out-of-order pairs, including pairs separated by other entries."""
+    counts = Counter()
+    for section, entries in result['groups'].items():
+        keys = [entry['key'] for entry in entries]
+        if keys == sorted(keys):
+            continue
+        for index, left in enumerate(keys):
+            for right in keys[index + 1:]:
+                if left > right:
+                    counts[section, left, right] += 1
+    return counts
+
+
 def exit_code(results, report_only):
     if any(r['errors'] for r in results):
         return 2
-    if not report_only and any(r['findings'] for r in results[-1:]):
-        return 1
-    return 0
+    candidate = results[-1]
+    if report_only or not candidate['findings']:
+        return 0
+    if len(results) == 1:
+        return 1  # A standalone audit checks the whole file.
+    base = results[0]
+    return int(bool(inversions(candidate) - inversions(base)))
 
 
 def emit(report, summary):
@@ -316,6 +334,8 @@ def main(argv=None):
             if not attribution['readme_changed']:
                 report['message'] = 'No ordering-related README changes'
         code = exit_code(results, args.report_only)
+        if code == 1 and not args.readme:
+            report['message'] = 'The pull request introduces out-of-order entries.'
         report.update(status='UNDETERMINED' if code == 2 else 'REPORT',
                       report_only=args.report_only, python=sys.version.split()[0],
                       unicode=unicodedata.unidata_version)
