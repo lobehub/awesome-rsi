@@ -156,6 +156,7 @@ Methods that improve prompts, memory, verification, tools, or agent policies aro
 
 ### Prompt & Program Optimization
 
+- [SelfOp: An Optimization Algorithm for Self-Improving Security Agents](https://arxiv.org/abs/2609.22792) - Studies how a frozen security agent's written context changes across iterations and compares successive context versions on held-out tasks. (arXiv 2026)
 - [Automated Design of Agentic Systems](https://arxiv.org/abs/2408.08435) - Uses a meta-agent to invent and iteratively improve agent architectures represented as executable code. (ICLR 2025)
 - [TextGrad: Automatic "Differentiation" via Text](https://arxiv.org/abs/2406.07496) - Backpropagates textual feedback through compound AI systems to optimize prompts, code, and other textual variables. (Nature 2025)
 - [Language Agent Tree Search Unifies Reasoning, Acting, and Planning in Language Models](https://arxiv.org/abs/2310.04406) - Combines Monte Carlo tree search, model-based value estimates, environment feedback, and self-reflection without updating base weights. (ICML 2024)
