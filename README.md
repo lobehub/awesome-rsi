@@ -314,6 +314,7 @@ Systems that use interaction with physical or simulated environments to generate
 - [RISE: Self-Improving Robot Policy with Compositional World Model](https://arxiv.org/abs/2602.11075) - Continuously generates imagined rollouts with a compositional world model, estimates their advantages, and updates the robot policy, with training code and pretrained dynamics models released. (RSS 2026)
 - [Self-Evolving Embodied Agents via Skill-Harness Evolution](https://arxiv.org/abs/2608.11350) - Keeps model weights frozen while the same model acts as planner and optimizer, using environment rollouts to continually evolve reusable skills and a context-code harness. (arXiv 2026)
 - [Self-Improving Vision-Language-Action Models with Data Generation via Residual RL](https://iclr.cc/virtual/2026/poster/10008318) - Uses residual reinforcement learning to target VLA failure regions and generate recovery trajectories that are distilled back into a generalist policy, forming a data-to-policy self-improvement flywheel. (ICLR 2026)
+- [VLM Can Be a Good Assistant: Enhancing Embodied Visual Tracking with Self-Improving Vision-Language Models](https://arxiv.org/abs/2505.20718) - Stores tracking-failure contexts, recovery actions, and reflection insights, then retrieves similar experiences to refine subsequent embodied tracking recovery attempts. (IROS 2025)
 
 ## Evolutionary & Open-Ended RSI
 
