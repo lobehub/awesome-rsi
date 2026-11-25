@@ -391,6 +391,7 @@ Benchmarks are separated into direct self-improvement evaluations, frontier-lab 
 
 ### Direct RSI & Self-Improvement Evaluations
 
+- [Flex-RSI: Benchmarking Recursive Self-Improvement of Frontier Agents](https://arxiv.org/abs/2611.08946) - Evaluates whether an agent improves held-out task performance by revising its executor and its own improvement procedure across rounds. (arXiv 2026)
 - [LongWoF-Bench: Evaluating EvoMap Genes for Verifiable Long-Workflow Tasks](https://arxiv.org/abs/2608.23200) - Provides 778 machine-verifiable long-workflow tasks and shows that Genes consolidated from verifier-confirmed trajectories outperform Skill packages across seven models, linking the gains to verified experience provenance. (arXiv 2026)
 - [PostTrainBench: Can LLM Agents Automate LLM Post-Training?](https://arxiv.org/abs/2603.08640) - Gives autonomous agents one base model, one H100 GPU, and ten hours to research and execute the strongest post-training strategy they can find. (ICML 2026)
 - [RSI-Bench](https://github.com/sunghunkwag/rsi-bench) - Provides an open-source six-axis framework for measuring self-modification depth, improvement trajectories, operator discovery, adaptation, safety, and goal generation. (community framework 2026)
