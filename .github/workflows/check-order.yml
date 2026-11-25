@@ -13,7 +13,6 @@ jobs:
     name: check-order
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    continue-on-error: true # Report-only; deliberately not a required check.
     steps:
       - name: Read trusted policy and checker
         uses: actions/checkout@v7
@@ -33,11 +32,11 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: '3.14' # Unicode 16.0.0 is checked by the trusted script.
-      - name: Report ordering
+      - name: Check ordering against the base branch
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           python3 -I policy/.github/scripts/check_order.py \
             --repo candidate --base "$BASE_SHA" --head "$HEAD_SHA" \
-            --candidate HEAD --report-only --summary "$GITHUB_STEP_SUMMARY"
+            --candidate HEAD --summary "$GITHUB_STEP_SUMMARY"
