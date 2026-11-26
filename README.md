@@ -139,6 +139,7 @@ Methods that improve model weights or training behavior through self-generated f
 
 ### Synthetic Data & Self-Distillation
 
+- [Beyond Self-Consistency: Recursive Self-Improvement at Test Time](https://arxiv.org/abs/2611.30965) - Distills successive unlabeled solution attempts into model weights so the updated model can refine later answers, with gains on five math benchmarks reported by the authors and training code still pending release. (arXiv 2026)
 - [Evolve to Learn: Gradient-aligned experience evolution for model self-improvement](https://arxiv.org/abs/2611.32390) - Uses gradient alignment to select generated experience for self-distillation, with the authors reporting stronger post-distillation results than selection by validation accuracy and code still pending release. (arXiv 2026)
 - [Recurrent Self-Improvement: Dynamic Cross-Loop On-Policy Distillation for Looped Language Models](https://arxiv.org/abs/2610.10623) - Distills the model’s final-loop predictions into an intermediate loop on student-generated rollouts, refreshing the teacher after each shared-weight update, with trained checkpoints pending release. (arXiv 2026)
 - [Recursive Synthesis for Long-Horizon Terminal Tasks](https://arxiv.org/abs/2608.05466) - Treats accepted tasks as seeds for the next round, generating increasingly difficult terminal tasks used for SFT and PPO as enabling work rather than strict RSI. (arXiv 2026)
