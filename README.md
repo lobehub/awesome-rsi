@@ -1,20 +1,20 @@
-![Awesome RSI — A Research Map of Recursive Self-Improvement](assets/awesome-rsi-map.png)
+<h1 align="center">
+  <a href="https://github.com/lobehub/awesome-rsi"><img src="assets/awesome-rsi-map.png" width="836" alt="Awesome RSI — A Research Map of Recursive Self-Improvement"></a>
+</h1>
 
-# Awesome RSI (Recursive Self-Improvement) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<p align="center">
+  <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
+</p>
 
 Recursive Self-Improvement (RSI) refers to processes in which AI systems improve their own capabilities and can also improve the mechanisms that generate subsequent improvements.
 
-Recent progress in self-training, agent memory, harness optimization, embodied self-improvement, automated AI research, self-modifying coding agents, and evolutionary search has made RSI increasingly relevant as an empirical research direction rather than only a theoretical idea.
-
-Awesome RSI collects and organizes important work across these areas, including model-level self-improvement, context and memory evolution, harness and scaffold evolution, embodied and physical self-improvement, multi-agent systems, automated AI research, benchmarks, and safety.
-
-Not every work listed here demonstrates RSI in the strict sense. Some represent bounded self-improvement or enabling techniques that may contribute to more complete recursive systems.
-
-If you are new to the topic, start with Fundamentals & Getting Started. If you already know the basics, explore the sections most relevant to your interests.
-
-This is a community-maintained and evolving list. Contributions, missing papers, new benchmarks, frameworks, and suggestions for improving the taxonomy are very welcome.
-
-The taxonomy is organizational rather than mutually exclusive; many systems span multiple layers and mechanisms.
+<p align="center">
+  <a href="#fundamentals--getting-started">Start with three papers</a> ·
+  <a href="#self-modifying--self-evolving-systems">Explore self-improving systems</a> ·
+  <a href="#direct-rsi--self-improvement-evaluations">Browse RSI evaluations</a> ·
+  <a href="https://github.com/lobehub/awesome-rsi/issues/new?template=suggest-resource.yml">Suggest a paper</a> ·
+  <a href="https://github.com/lobehub/awesome-rsi/releases">Recent releases</a>
+</p>
 
 ## Contents
 
@@ -56,10 +56,12 @@ The taxonomy is organizational rather than mutually exclusive; many systems span
 - [Blog Posts & Discussions](#blog-posts--discussions)
 - [Talks & Videos](#talks--videos)
 - [Related Awesome Lists](#related-awesome-lists)
+- [Citation](#citation)
+- [Star History](#star-history)
 
 ## Scope & Terminology
 
-For this list, we use the following operational distinctions:
+The list also covers bounded forms of self-improvement and techniques that support them. A system can span several categories. We use the following distinctions:
 
 **Self-refinement** — improves the current output without a persistent change to the system.
 
@@ -75,6 +77,8 @@ For this list, we use the following operational distinctions:
 
 <!--lint enable no-emphasis-as-heading-->
 
+[Compare the evidence from six papers](docs/evidence-comparison.md) to see what carries across rounds and which baselines support each claim.
+
 Evidence should be distinguished at three levels:
 
 **Task gain** — The system produces better task outputs or scores, without necessarily demonstrating a persistent change to the system.
@@ -89,7 +93,15 @@ For each system, relevant cross-cutting dimensions include the update target, fe
 
 ## Fundamentals & Getting Started
 
-Foundational papers, formal treatments, and surveys that establish the vocabulary and core questions of RSI.
+Start with one survey and two systems that change in different ways.
+
+**1. What improves?** The survey [From Bounded Self-Refinement to Autonomous Research Loops](https://arxiv.org/pdf/2607.07663) gives two questions to carry into the other papers. What does the system change, and which steps still depend on a human?
+
+**2. What carries over to the next round?** In [STaR](https://arxiv.org/pdf/2203.14465), the model generates explanations and fine-tunes on those that yield a correct answer. Follow one question it initially gets wrong and watch how the supplied answer helps produce an explanation for the next training round.
+
+**3. How is a code change tested and reused?** The [Darwin Gödel Machine](https://arxiv.org/pdf/2505.22954) evaluates modified coding agents on benchmarks and keeps an archive of agents. Trace how an archived version can become the starting point for another edit.
+
+The papers below cover the foundations and surveys in more depth.
 
 - [A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence](https://arxiv.org/abs/2507.21046) - Surveys what, when, and how foundation-model agents can evolve across models, memory, tools, and architectures. (TMLR 2026)
 - [Generalized Agent Iteration: One Formal Framework for Iterative Policy Improvement and Recursive Self-Improvement](https://arxiv.org/abs/2609.13406) - Places iterative policy improvement and recursive self-improvement on one pair of axes, separating them by whether the improving mechanism is part of the agent and whether the evaluation standard is grounded outside it. (arXiv 2026)
@@ -513,3 +525,23 @@ Benchmarks are separated into direct self-improvement evaluations, frontier-lab 
 ## Contributing
 
 Contributions are welcome. Please read the [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
+
+## Citation
+
+```bibtex
+@misc{maxforai2026awesomersi,
+  author = {{MaxForAI}},
+  title  = {{Awesome RSI}: A curated research map of {Recursive Self-Improvement}},
+  year   = {2026},
+  url    = {https://github.com/lobehub/awesome-rsi}
+}
+```
+
+## Star History
+
+<a href="https://www.star-history.com/#lobehub/awesome-rsi&amp;Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=lobehub%2Fawesome-rsi&amp;type=date&amp;theme=dark">
+    <img alt="GitHub stars over time for lobehub/awesome-rsi" src="https://api.star-history.com/svg?repos=lobehub%2Fawesome-rsi&amp;type=date">
+  </picture>
+</a>
