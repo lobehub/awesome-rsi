@@ -215,6 +215,7 @@ Methods that improve prompts, memory, verification, tools, or agent policies aro
 - [Self-Harness: Harnesses That Improve Themselves](https://arxiv.org/abs/2606.09498) - Iteratively identifies agent failure patterns, proposes model-specific harness modifications, and retains changes through regression-based validation. (arXiv 2026)
 - [SkillOpt: Executive Strategy for Self-Evolving Agent Skills](https://arxiv.org/abs/2605.23904) - Trains a single skill document as the external state of a frozen agent, with a separate optimizer model proposing bounded edits accepted only on strict held-out validation gains. (arXiv 2026)
 - [SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness](https://arxiv.org/abs/2609.20519) - Scales harness self-improvement across many environments for rollouts and keeps the four mechanisms that survive selection, spanning action execution, context compaction, observation handling, and delegated reading, cutting recorded token traffic by 44.7-49.0% on EdgeBench. (arXiv 2026)
+- [Which Failure Does an Intervention Repair? When Agent Interventions Help, and Where Self-Evolving Skills Stall](https://arxiv.org/abs/2611.29290) - Tests how frozen skills learned from experience transfer across models and harnesses, using matched runs and failure labels to separate formatting errors from task failures. (arXiv 2026)
 
 ### Extensible Harness Substrates
 
