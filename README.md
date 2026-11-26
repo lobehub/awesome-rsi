@@ -410,6 +410,7 @@ Benchmarks are separated into direct self-improvement evaluations, frontier-lab 
 
 ### Direct RSI & Self-Improvement Evaluations
 
+- [CoEvoBench: Can LLMs Drive Recursive Co-Evolution of Agentic Systems?](https://arxiv.org/abs/2611.27116) - Gives a research agent 24 hours to revise a target agent’s harness or train its model, then evaluates the selected model and harness together on held-out tasks. (arXiv 2026)
 - [Continual-ARC: Measuring Skill Acquisition over a Working Lifetime](https://arxiv.org/abs/2611.14505) - Separates retention of recurring ARC tasks from generalization to unseen tasks by evaluating learners after a task stream and comparing persistent state with a reset baseline. (arXiv 2026)
 - [Flex-RSI: Benchmarking Recursive Self-Improvement of Frontier Agents](https://arxiv.org/abs/2611.08946) - Evaluates whether an agent improves held-out task performance by revising its executor and its own improvement procedure across rounds. (arXiv 2026)
 - [LongWoF-Bench: Evaluating EvoMap Genes for Verifiable Long-Workflow Tasks](https://arxiv.org/abs/2608.23200) - Provides 778 machine-verifiable long-workflow tasks and shows that Genes consolidated from verifier-confirmed trajectories outperform Skill packages across seven models, linking the gains to verified experience provenance. (arXiv 2026)
