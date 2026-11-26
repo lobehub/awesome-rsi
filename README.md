@@ -77,6 +77,8 @@ The list also covers bounded forms of self-improvement and techniques that suppo
 
 <!--lint enable no-emphasis-as-heading-->
 
+[Compare the evidence from six papers](docs/evidence-comparison.md) to see what carries across rounds and which baselines support each claim.
+
 Evidence should be distinguished at three levels:
 
 **Task gain** — The system produces better task outputs or scores, without necessarily demonstrating a persistent change to the system.
