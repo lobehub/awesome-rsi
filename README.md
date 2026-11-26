@@ -1,6 +1,8 @@
-<h1 align="center">
+<p align="center">
   <a href="https://github.com/lobehub/awesome-rsi"><img src="assets/awesome-rsi-map.png" width="836" alt="Awesome RSI — A Research Map of Recursive Self-Improvement"></a>
-</h1>
+</p>
+
+<h1 align="center">Awesome RSI (Recursive Self-Improvement)</h1>
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
