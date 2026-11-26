@@ -56,6 +56,8 @@ The taxonomy is organizational rather than mutually exclusive; many systems span
 - [Blog Posts & Discussions](#blog-posts--discussions)
 - [Talks & Videos](#talks--videos)
 - [Related Awesome Lists](#related-awesome-lists)
+- [Citation](#citation)
+- [Star History](#star-history)
 
 ## Scope & Terminology
 
@@ -511,3 +513,23 @@ Benchmarks are separated into direct self-improvement evaluations, frontier-lab 
 ## Contributing
 
 Contributions are welcome. Please read the [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
+
+## Citation
+
+```bibtex
+@misc{maxforai2026awesomersi,
+  author = {{MaxForAI}},
+  title  = {{Awesome RSI}: A curated research map of {Recursive Self-Improvement}},
+  year   = {2026},
+  url    = {https://github.com/lobehub/awesome-rsi}
+}
+```
+
+## Star History
+
+<a href="https://www.star-history.com/#lobehub/awesome-rsi&amp;Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=lobehub%2Fawesome-rsi&amp;type=date&amp;theme=dark">
+    <img alt="GitHub stars over time for lobehub/awesome-rsi" src="https://api.star-history.com/svg?repos=lobehub%2Fawesome-rsi&amp;type=date">
+  </picture>
+</a>
