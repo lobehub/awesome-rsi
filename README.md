@@ -1,6 +1,10 @@
-![Awesome RSI — A Research Map of Recursive Self-Improvement](assets/awesome-rsi-map.png)
+<h1 align="center">
+  <a href="https://github.com/lobehub/awesome-rsi"><img src="assets/awesome-rsi-map.png" width="836" alt="Awesome RSI — A Research Map of Recursive Self-Improvement"></a>
+</h1>
 
-# Awesome RSI (Recursive Self-Improvement) [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<p align="center">
+  <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
+</p>
 
 Recursive Self-Improvement (RSI) refers to processes in which AI systems improve their own capabilities and can also improve the mechanisms that generate subsequent improvements.
 
